@@ -17944,3 +17944,157 @@
 ##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
 ##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
 ##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49m[RECURSION]] [0;94;49m [N95] Called with diff = -1.0[0;39;49m
+##[[0;93;49m[RECURSION]] [0;94;49m[N95] No recursion. Making a stock transaction with diff=-1.0 directly.[0;39;49m
+##[[0;93;49mItemStock] [0;36;49m[transact()] Creating new StockTransaction. model1 is Item 462, model2 is Order 14[0;39;49m
+##[[0;93;49mItemStock] [0;36;49m[transact()] model1 (Item ID 462). Adding -1.0 to it[0;39;49m
+##[[0;93;49m[RECURSION]] [0;94;49m [SKU33] Called with diff = -1.0[0;39;49m
+##[[0;93;49m[RECURSION]] [0;94;49m[SKU33] No recursion. Making a stock transaction with diff=-1.0 directly.[0;39;49m
+##[[0;93;49mItemStock] [0;36;49m[transact()] Creating new StockTransaction. model1 is Item 28, model2 is Order 14[0;39;49m
+##[[0;93;49mItemStock] [0;36;49m[transact()] model1 (Item ID 28). Adding -1.0 to it[0;39;49m
+##[[0;93;49m[RECURSION]] [0;94;49m [ACTION4] Called with diff = -1.0[0;39;49m
+##[[0;93;49m[RECURSION]] [0;94;49m[ACTION4] No recursion. Making a stock transaction with diff=-1.0 directly.[0;39;49m
+##[[0;93;49mItemStock] [0;36;49m[transact()] Creating new StockTransaction. model1 is Item 5, model2 is Order 14[0;39;49m
+##[[0;93;49mItemStock] [0;36;49m[transact()] model1 (Item ID 5). Adding -1.0 to it[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mVendorsController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mVendorsController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mVendorsController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mPluginManager] [0;32;49mBeginning HOOK before_vendors_show_list[0;39;49m
+##[[0;93;49mPluginManager] [0;32;49mThere are no HOOKs[0;39;49m
+##[[0;93;49mPluginManager] [0;32;49mHOOK COMPLETE[0;39;49m
+##[[0;93;49mPluginManager] [0;32;49mBeginning HOOK after_vendors_show_list[0;39;49m
+##[[0;93;49mPluginManager] [0;32;49mThere are no HOOKs[0;39;49m
+##[[0;93;49mPluginManager] [0;32;49mHOOK COMPLETE[0;39;49m
+##[[0;93;49mVendorsController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mItemsController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mItemsController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mPluginManager] [0;32;49mApplying filter: item_list_columns[0;39;49m
+##[[0;93;49mPluginManager] [0;32;49mFilter item_list_columns done.[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mItemsController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mItemsController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mPluginManager] [0;32;49mApplying filter: item_list_columns[0;39;49m
+##[[0;93;49mPluginManager] [0;32;49mFilter item_list_columns done.[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mVendorsController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mVendorsController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mVendorsController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mPluginManager] [0;32;49mBeginning HOOK before_vendors_show_list[0;39;49m
+##[[0;93;49mPluginManager] [0;32;49mThere are no HOOKs[0;39;49m
+##[[0;93;49mPluginManager] [0;32;49mHOOK COMPLETE[0;39;49m
+##[[0;93;49mPluginManager] [0;32;49mBeginning HOOK after_vendors_show_list[0;39;49m
+##[[0;93;49mPluginManager] [0;32;49mThere are no HOOKs[0;39;49m
+##[[0;93;49mPluginManager] [0;32;49mHOOK COMPLETE[0;39;49m
+##[[0;93;49mVendorsController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mInvoiceNotesController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mInvoiceNotesController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mInvoiceNotesController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mInvoiceNotesController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mInvoiceNotesController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mInvoiceNotesController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mInvoiceNotesController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mInvoiceNotesController] [0;32;49mEnd of request.[0;39;49m

@@ -21,6 +21,7 @@ SalorRetail::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+  config.assets.precompile += ["customer_screen.sass","dropzone.css","generic.sass","home.sass","invoice_default.sass","invoice_default_print.sass","mobile.sass","print.sass","receipts.sass","shipments.sass","scaffolds.css.sass","timepicker.css","ui-min.css","workstation.sass"]
 
   # Raise exception on mass assignment protection for Active Record models
   config.active_record.mass_assignment_sanitizer = :strict

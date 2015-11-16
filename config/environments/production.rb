@@ -74,7 +74,7 @@ SalorRetail::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  # config.assets.precompile += %w( search.js )
+  config.assets.precompile += ["customer_screen.sass","dropzone.css","generic.sass","home.sass","invoice_default.sass","invoice_default_print.sass","mobile.sass","print.sass","receipts.sass","shipments.sass","scaffolds.css.sass","timepicker.css","ui-min.css","workstation.sass"]
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
