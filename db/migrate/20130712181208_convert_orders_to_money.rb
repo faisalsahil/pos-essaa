@@ -5,7 +5,7 @@ class ConvertOrdersToMoney < ActiveRecord::Migration
     fields.each do |field|
       add_column :orders, "#{field}_cents", :integer, :default => 0
       add_column :orders, "#{field}_currency", :string, :default => 'USD'
-      Order.connection.execute("update `orders` set `#{field}_cents` = `#{field}` * 100")
+      Order.connection.execute("update orders set #{field}_cents = #{field} * 100")
       remove_column :orders, field
     end
   end

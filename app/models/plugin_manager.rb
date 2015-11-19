@@ -11,7 +11,7 @@ class PluginManager < AbstractController::Base
   
   def initialize(current_vendor)
     @vendor                 = current_vendor
-    @plugins                = @vendor.plugins.visible
+    @plugins                = @vendor.plugins
     @context                = V8::Context.new
     @context['Salor']       = self
     @context['Params']      = $PARAMS

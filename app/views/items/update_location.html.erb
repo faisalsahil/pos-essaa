@@ -27,7 +27,7 @@ $(function () {
       </td>
       <td valign="top">
         <select name="location_id" id="location_id">
-          <% @current_vendor.locations.visible.each do |location| %>
+          <% @current_vendor.locations.each do |location| %>
             <option value="<%= location.id %>"><%= location.name %></option>
           <% end %>
         </select>

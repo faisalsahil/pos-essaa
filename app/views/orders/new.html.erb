@@ -4,7 +4,7 @@
 
   <%
     items = []
-    @current_order.order_items.visible.each do |oi|
+    @current_order.order_items.each do |oi|
       items << oi.to_json
     end
   %>

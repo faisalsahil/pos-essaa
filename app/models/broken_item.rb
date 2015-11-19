@@ -38,7 +38,7 @@ class BrokenItem < ActiveRecord::Base
 
   def decrement_item_quantity
     if self.item and not self.is_shipment_item then
-      item = self.vendor.items.visible.find_by_sku(self.sku)
+      item = self.vendor.items.find_by_sku(self.sku)
       item.quantity -= self.quantity
       item.save
     end
@@ -46,9 +46,9 @@ class BrokenItem < ActiveRecord::Base
   
   def item
     if self.is_shipment_item then
-      return self.vendor.shipment_items.visible.find_by_sku(self.sku)
+      return self.vendor.shipment_items.find_by_sku(self.sku)
     else
-      return self.vendor.items.visible.find_by_sku(self.sku)
+      return self.vendor.items.find_by_sku(self.sku)
     end
   end
 end

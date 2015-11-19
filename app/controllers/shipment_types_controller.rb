@@ -9,11 +9,11 @@ class ShipmentTypesController < ApplicationController
 
   
   def index
-    @shipment_types = @current_vendor.shipment_types.visible.page(params[:page]).per(@current_vendor.pagination).order("created_at DESC")
+    @shipment_types = @current_vendor.shipment_types.page(params[:page]).per(@current_vendor.pagination).order("created_at DESC")
   end
 
   def show
-    @shipment_type = @current_vendor.shipment_types.visible.find_by_id(params[:id])
+    @shipment_type = @current_vendor.shipment_types.find_by_id(params[:id])
     redirect_to edit_shipment_type_path(@shipment_type)
   end
 
@@ -22,7 +22,7 @@ class ShipmentTypesController < ApplicationController
   end
 
   def edit
-    @shipment_type = @current_vendor.shipment_types.visible.find_by_id(params[:id])
+    @shipment_type = @current_vendor.shipment_types.find_by_id(params[:id])
   end
 
   def create
@@ -38,7 +38,7 @@ class ShipmentTypesController < ApplicationController
   end
 
   def update
-    @shipment_type = @current_vendor.shipment_types.visible.find_by_id(params[:id])
+    @shipment_type = @current_vendor.shipment_types.find_by_id(params[:id])
     if @shipment_type.update_attributes(params[:shipment_type])
       redirect_to shipment_types_path
     else
@@ -47,7 +47,7 @@ class ShipmentTypesController < ApplicationController
   end
 
   def destroy
-    @shipment_type = @current_vendor.shipment_types.visible.find_by_id(params[:id])
+    @shipment_type = @current_vendor.shipment_types.find_by_id(params[:id])
     @shipment_type.hide(@current_user)
     redirect_to shipment_types_path
   end

@@ -141,28 +141,28 @@ class Action < ActiveRecord::Base
     redraw_all_pos_items = nil
    
     if base_item.class != Vendor and base_item.kind_of? ActiveRecord::Base
-      the_vendor.actions.visible.where(:model_type => 'Vendor', :model_id => the_vendor).where(["whento = ? or whento = 'always'",act]).each do |action|
+      the_vendor.actions.where(:model_type => 'Vendor', :model_id => the_vendor).where(["whento = ? or whento = 'always'",act]).each do |action|
         redraw_all_pos_items = Action.apply_action(action, item, act)
       end
       
-      base_item.actions.where(["whento = ? or whento = 'always'",act]).visible.each do |action|
+      base_item.actions.where(["whento = ? or whento = 'always'",act]).each do |action|
         redraw_all_pos_items = Action.apply_action(action, item, act)
       end
 
       if base_item.category then
-        base_item.category.actions.where(["whento = ? or whento = 'always'",act]).visible.each do |action|
+        base_item.category.actions.where(["whento = ? or whento = 'always'",act]).each do |action|
           redraw_all_pos_items = Action.apply_action(action, item, act)
         end
       end
       
       if base_item.location then
-        base_item.location.actions.where(["whento = ? or whento = 'always'",act]).visible.each do |action|
+        base_item.location.actions.where(["whento = ? or whento = 'always'",act]).each do |action|
           redraw_all_pos_items = Action.apply_action(action, item, act)
         end
       end
       
     else
-      the_vendor.actions.visible.where(:model_type => 'Vendor', :model_id => the_vendor.id).where(["whento = ? or whento = 'always'",act]).each do |action|
+      the_vendor.actions.where(:model_type => 'Vendor', :model_id => the_vendor.id).where(["whento = ? or whento = 'always'",act]).each do |action|
         redraw_all_pos_items = action.execute_script(item)
       end
     end
@@ -259,8 +259,8 @@ class Action < ActiveRecord::Base
 
         if action.model.class == Category or action.model.class == Location then
           SalorBase.log_action Action,"[Discount after threshold]: Is a category discount"
-          items_in_cat = item.order.order_items.visible.where(:category_id => action.model.id) if action.model.class == Category
-          items_in_cat = item.order.order_items.visible.where(:category_id => action.model.id) if action.model.class == Location
+          items_in_cat = item.order.order_items.where(:category_id => action.model.id) if action.model.class == Category
+          items_in_cat = item.order.order_items.where(:category_id => action.model.id) if action.model.class == Location
           return if items_in_cat.blank?
           total_quantity = items_in_cat.sum(:quantity)
           SalorBase.log_action Action,"[Discount after threshold]: Total quantity is #{ total_quantity }"

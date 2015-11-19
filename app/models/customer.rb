@@ -82,7 +82,7 @@ class Customer < ActiveRecord::Base
 #   end
 #   
   def json_attrs
-    lc = self.loyalty_cards.visible.last
+    lc = self.loyalty_cards.last
     sku = lc.sku if lc
     points = lc.points if lc
     a = {

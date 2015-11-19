@@ -7,14 +7,14 @@
 class UsersController < ApplicationController
   
   def index
-    @users = @current_vendor.users.visible.order("created_at DESC").page(params[:page]).per(@current_vendor.pagination)
+    @users = @current_vendor.users.order("created_at DESC").page(params[:page]).per(@current_vendor.pagination)
   end
 
   def show
     f, t = assign_from_to(params)
     @from = f
     @to = t
-    @user = @current_vendor.users.visible.find_by_id(params[:id])
+    @user = @current_vendor.users.find_by_id(params[:id])
   end
 
   def new
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 
   def edit
     redirect_to "/saas/users/#{ params[:id] }/edit" and return if defined?(SrSaas) == 'constant'
-    @user = @current_vendor.users.visible.find_by_id(params[:id])
+    @user = @current_vendor.users.find_by_id(params[:id])
   end
 
   def create
@@ -41,7 +41,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = @current_vendor.users.visible.find_by_id(params[:id])
+    @user = @current_vendor.users.find_by_id(params[:id])
     if @user.update_attributes(params[:user])
       if @current_user == @user
         session[:locale] = @user.language
@@ -53,7 +53,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user = @current_vendor.users.visible.find_by_id(params[:id])
+    @user = @current_vendor.users.find_by_id(params[:id])
     @user.hide(@current_user)
     redirect_to users_path
   end

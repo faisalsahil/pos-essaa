@@ -31,7 +31,7 @@ end
 
 company_count = 0
 
-countries = ['us','at','fr','es','el','ru','it','cn', 'hr', 'ca', 'nl']
+countries = ['us']
 languages = ['en','gn','fr','es','el','ru','it','cn', 'hr', 'en', 'nl']
 currencies = ['USD', 'EUR', 'EUR', 'EUR', 'EUR', 'RUB', 'EUR', 'CNY', 'EUR', 'CAD', 'NLG']
 company_count = 1
@@ -458,8 +458,8 @@ company_count.times do |c|
     special_item_objects << item
     
     # create dynamic giftcard item
-    zero_tax_profile = vendor.tax_profiles.visible.find_by_value(0)
-    gift_card_item_type = vendor.item_types.visible.find_by_behavior('gift_card')
+    zero_tax_profile = vendor.tax_profiles.find_by_value(0)
+    gift_card_item_type = vendor.item_types.find_by_behavior('gift_card')
     item = Item.new
     item.company = company
     item.vendor = vendor
@@ -476,8 +476,8 @@ company_count.times do |c|
     special_item_objects << item
     
     # create special DMYACONTO item
-    zero_tax_profile = vendor.tax_profiles.visible.find_by_value(0)
-    aconto_item_type = vendor.item_types.visible.find_by_behavior('aconto')
+    zero_tax_profile = vendor.tax_profiles.find_by_value(0)
+    aconto_item_type = vendor.item_types.find_by_behavior('aconto')
     item = Item.new
     item.company = company
     item.vendor = vendor
@@ -494,8 +494,8 @@ company_count.times do |c|
     coupon_types = [1, 2, 3] # 1=percent, 2=fixed, 3=buyonegetone
     coupon_amounts = [1000, 50, 0]
     coupon_descriptions = ["10%", "50c off", "b1g1"]
-    zero_tax_profile = vendor.tax_profiles.visible.find_by_value(0)
-    coupon_item_type = vendor.item_types.visible.find_by_behavior('coupon')
+    zero_tax_profile = vendor.tax_profiles.find_by_value(0)
+    coupon_item_type = vendor.item_types.find_by_behavior('coupon')
     coupon_types.size.times do |i|
       item = Item.new
       item.company = company

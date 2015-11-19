@@ -30,7 +30,7 @@ class PaymentMethodItem < ActiveRecord::Base
     log_action "payment_method_id=() called"
     # called from orders/print
     
-    pm = self.vendor.payment_methods.visible.find_by_id(pmid)
+    pm = self.vendor.payment_methods.find_by_id(pmid)
     
     if self.unpaid != true
       log_action "payment_method_id=(): we only allow changing unpaid to something else. returning"

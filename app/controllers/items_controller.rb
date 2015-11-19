@@ -24,38 +24,38 @@ class ItemsController < ApplicationController
     end
     
     if @keywords
-      @items = @current_vendor.items.by_keywords(@keywords).visible.where("items.sku NOT LIKE 'DMY%'")
+      @items = @current_vendor.items.by_keywords(@keywords).where("items.sku NOT LIKE 'DMY%'")
       child_item_skus = []
       log_action "XXXXX[recursive find]: @items #{ @items.collect{ |i| i.sku } }"
       @items.each do |i|
         log_action "XXXXX[recursive find]: finding upmost parent for Item id #{ i.id }"
         upmost_parent_sku = i.recursive_parent_sku_chain.last
         log_action "XXXXX[recursive find]: upmost parent sku is #{ upmost_parent_sku }"
-        upmost_parent = @current_vendor.items.visible.find_by_sku(upmost_parent_sku)
+        upmost_parent = @current_vendor.items.find_by_sku(upmost_parent_sku)
         
         bottom_most_child = upmost_parent.recursive_child_sku_chain.last
         log_action "XXXXX[recursive find]: bottom most child sku is #{ bottom_most_child }"
         child_item_skus << bottom_most_child
       end
-      @items = @current_vendor.items.visible.where(:sku => child_item_skus).page(params[:page]).per(@current_vendor.pagination)
+      @items = @current_vendor.items.where(:sku => child_item_skus).page(params[:page]).per(@current_vendor.pagination)
     else
-      @items = @current_vendor.items.visible.where("items.sku NOT LIKE 'DMY%'").where('child_id = 0 or child_id IS  NULL').page(params[:page]).per(@current_vendor.pagination).order(orderby)
+      @items = @current_vendor.items.where("items.sku NOT LIKE 'DMY%'").where('child_id = 0 or child_id IS  NULL').page(params[:page]).per(@current_vendor.pagination).order(orderby)
     end
   end
 
   def show
     if params[:keywords] then
-      @item = @current_vendor.items.visible.by_keywords(params[:keywords]).first
+      @item = @current_vendor.items.by_keywords(params[:keywords]).first
     end
 
-    @item ||= @current_vendor.items.visible.find_by_id(params[:id])
+    @item ||= @current_vendor.items.find_by_id(params[:id])
 
     redirect_to items_path if not @item
     
     @from, @to = assign_from_to(params)
     @from = @from ? @from.beginning_of_day : 1.month.ago.beginning_of_day
     @to = @to ? @to.end_of_day : DateTime.now
-    @sold_times = @current_vendor.order_items.visible.where(:sku => @item.sku, :refunded => nil, :completed_at => @from..@to, :is_quote => nil, :is_proforma => nil).where("is_buyback = false OR is_buyback IS NULL").sum(:quantity)
+    @sold_times = @current_vendor.order_items.where(:sku => @item.sku, :refunded => nil, :completed_at => @from..@to, :is_quote => nil, :is_proforma => nil).where("is_buyback = false OR is_buyback IS NULL").sum(:quantity)
   end
 
   
@@ -65,7 +65,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = @current_vendor.items.visible.where(["id = ? or sku = ?",params[:id],params[:keywords]]).first
+    @item = @current_vendor.items.where(["id = ? or sku = ?",params[:id],params[:keywords]]).first
     if @item
       @histories = @item.histories.order("created_at DESC").limit(20)
       #@item.item_stocks.build if not @item.item_stocks.any?
@@ -109,7 +109,7 @@ class ItemsController < ApplicationController
 #   end
 
   def update
-    @item = @current_vendor.items.visible.find_by_id(params[:id])
+    @item = @current_vendor.items.find_by_id(params[:id])
     params[:item][:currency] = @current_vendor.currency
     
     @item.attributes = params[:item]
@@ -126,11 +126,11 @@ class ItemsController < ApplicationController
   end
   
   def gift_cards
-    @gift_cards_sold = @current_vendor.order_items.visible.where(:behavior => "gift_card", :activated => nil, :paid => true)
+    @gift_cards_sold = @current_vendor.order_items.where(:behavior => "gift_card", :activated => nil, :paid => true)
   end
 
   def destroy
-    @item = @current_vendor.items.visible.find_by_id(params[:id])
+    @item = @current_vendor.items.find_by_id(params[:id])
     @item.hide(@current_user.id)
     redirect_to items_path
   end
@@ -150,9 +150,10 @@ class ItemsController < ApplicationController
     
     if params[:klass] == 'Item' then
       if params[:keywords].empty? then
-        @items = @current_vendor.items.visible.page(params[:page]).per(@current_vendor.pagination)
+        @items = @current_vendor.items.page(params[:page]).per(@current_vendor.pagination)
       else
-        @items = @current_vendor.items.visible.by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination)
+        @items = @current_vendor.items.where("lower(name) LIKE ? OR lower(sku) like ?", "%"+params[:keywords].downcase+"%", "%"+params[:keywords].downcase+"%")
+        # @items = @current_vendor.items.by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination)
       end
     elsif params[:klass] == 'Order'
       if params[:keywords].empty? then
@@ -161,7 +162,7 @@ class ItemsController < ApplicationController
         @orders = @current_vendor.orders.where("nr = '#{params[:keywords]}' or tag LIKE '%#{params[:keywords]}%'").page(params[:page]).per(@current_vendor.pagination)
       end
     elsif params[:klass] == 'Customer'
-      @customers = @current_company.customers.visible.where("first_name LIKE '%#{params[:keywords]}%' OR last_name LIKE '%#{params[:keywords]}%'").page(params[:page]).per(@current_vendor.pagination)
+      @customers = @current_company.customers.where("first_name LIKE '%#{params[:keywords]}%' OR last_name LIKE '%#{params[:keywords]}%'").page(params[:page]).per(@current_vendor.pagination)
     end
   end
   
@@ -217,9 +218,9 @@ class ItemsController < ApplicationController
     orderby ||= params[:order_by]
     unless params[:keywords].blank?
       # search function should display recursive items
-      @items = @current_vendor.items.by_keywords(params[:keywords]).visible.where("items.sku NOT LIKE 'DMY%'").page(params[:page]).per(@current_vendor.pagination).order(orderby)
+      @items = @current_vendor.items.by_keywords(params[:keywords]).where("items.sku NOT LIKE 'DMY%'").page(params[:page]).per(@current_vendor.pagination).order(orderby)
     else
-      @items = @current_vendor.items.visible.where("items.sku NOT LIKE 'DMY%'").where('child_id = 0 or child_id IS  NULL').page(params[:page]).per(@current_vendor.pagination).order(orderby)
+      @items = @current_vendor.items.where("items.sku NOT LIKE 'DMY%'").where('child_id = 0 or child_id IS  NULL').page(params[:page]).per(@current_vendor.pagination).order(orderby)
     end
     data = render_to_string :layout => false
     send_data(data,:filename => 'items.csv', :type => 'text/csv')
@@ -227,7 +228,7 @@ class ItemsController < ApplicationController
   
   def selection
     if params[:order_id]
-      order = @current_vendor.orders.visible.find_by_id(params[:order_id])
+      order = @current_vendor.orders.find_by_id(params[:order_id])
       @skus = "ORDER#{order.id}"
     else
       @skus = nil
@@ -247,14 +248,14 @@ class ItemsController < ApplicationController
   end
   
   def report
-    @items = @current_vendor.items.select("items.quantity,items.name,items.sku,items.price_cents,items.category_id,items.location_id,items.id,items.vendor_id,items.currency").visible.includes(:location,:category).by_keywords(params[:keywords]).page(params[:page]).per(10)
+    @items = @current_vendor.items.select("items.quantity,items.name,items.sku,items.price_cents,items.category_id,items.location_id,items.id,items.vendor_id,items.currency").includes(:location,:category).by_keywords(params[:keywords]).page(params[:page]).per(10)
     @view = SalorRetail::Application::CONFIGURATION[:reports][:style]
     @view ||= 'default'
     render "items/reports/#{@view}/page"
   end
 
   def new_action
-    item = @current_vendor.items.visible.find_by_id(params[:item_id])
+    item = @current_vendor.items.find_by_id(params[:item_id])
     action = item.create_action
     redirect_to action_path(action)
   end

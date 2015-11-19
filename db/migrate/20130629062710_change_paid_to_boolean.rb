@@ -1,6 +1,7 @@
 class ChangePaidToBoolean < ActiveRecord::Migration
   def up
-    change_column :orders, :paid, :boolean
+    remove_column :orders, :paid
+    add_column :orders, :paid, :boolean
   end
 
   def down

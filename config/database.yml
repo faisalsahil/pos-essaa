@@ -1,29 +1,160 @@
-development:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
+# default: &default
+#   adapter: jdbcpostgresql
+#   encoding: unicode
+#   pool: 4
+#   username: root
+#   password: root
+#   host: localhost
+
+# development: &development
+#   <<: *default
+#   database: sr_development
+
+# production: &production
+#   <<: *default
+#   database: sr_production
+
+# mysql_data_source: &pii
+#   adapter: mysql2
+#   hostname: localhost
+#   port: 3306
+#   socket: /tmp/mysqld.sock
+#   database: sr_development
+#   username: root
+#   password: root
+
+# mysql2psql:
+#   mysql:
+#     <<: *pii
+
+#   destination:
+#     production:
+#       <<: *production
+#       database: sr_production
+#     test:
+#       <<: *test
+#     development:
+#       <<: *development
+#       database: sr_development
+
+
+#   tables:
+#   - actions
+#   - broken_items
+#   - buttons
+#   - categories
+#   - companies
+#   - cues
+#   - discounts
+#   - discounts_order_items
+#   - drawer_transactions
+#   - drawers
+#   - emails
+#   - histories
+#   - images
+#   - inventory_report_items
+#   - inventory_reports
+#   - invoice_blurbs
+#   - invoice_notes
+#   - item_shippers
+#   - item_stocks
+#   - item_types
+#   - items
+#   - locations
+#   - loyalty_cards
+#   - node_messages
+#   - node_queues
+#   - nodes
+#   - notes
+#   - order_items
+#   - orders
+#   - payment_method_items
+#   - payment_methods
+#   - plugins
+#   - receipts
+#   - roles
+#   - roles_users
+#   - sale_types
+#   - shipment_items
+#   - shipment_items_stock_locations
+#   - shipment_types
+#   - shipments
+#   - shippers
+#   - stock_locations
+#   - stock_transactions
+#   - tax_profiles
+#   - transaction_tags
+#   - user_logins
+#   - user_meta
+#   - users
+#   - users_vendors
+#   - vendors
+
+#   # If suppress_data is true, only the schema definition will be exported/migrated, and not the data
+#   suppress_data: false
+
+#   # If suppress_ddl is true, only the data will be exported/imported, and not the schema
+#   suppress_ddl: true
+
+#   # If force_truncate is true, forces a table truncate before table loading
+#   force_truncate: false
+
+#   preserve_order: true
+
+#   remove_dump_file: true
+
+#   dump_file_directory: /tmp
+
+#   report_status: json    # false, json, xml
+
+#   # If clear_schema is true, the public schema will be recreated before conversion
+#   # The import will fail if both clear_schema and suppress_ddl are true.
+#   clear_schema: false
+default: &default
+  adapter: postgresql
   database: sr_development
   username: root
   password: root
-  pool: 5
   host: localhost
-
-test:
-  adapter: mysql2
-  encoding: utf8
   reconnect: false
-  database: sr_test
-  username: root
-  password: root
-  pool: 5
-  host: localhost
+  encoding: utf8
+
+development:
+  <<: *default
 
 production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
+  <<: *default
   database: sr_production
-  username: root
-  password: root
-  pool: 5
-  host: localhost
+
+
+
+
+# development:
+#   adapter: mysql2
+#   encoding: utf8
+#   reconnect: false
+#   database: sr_development
+#   username: root
+#   password: root
+#   pool: 5
+#   host: localhost
+
+# test:
+#   adapter: mysql2
+#   encoding: utf8
+#   reconnect: false
+#   database: sr_test
+#   username: root
+#   password: root
+#   pool: 5
+#   host: localhost
+
+# production:
+#   adapter: mysql2
+#   encoding: utf8
+#   reconnect: false
+#   database: sr_production
+#   username: root
+#   password: root
+#   pool: 5
+#   host: localhost

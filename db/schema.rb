@@ -25,10 +25,10 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.integer  "weight",     :default => 0
     t.string   "afield"
     t.float    "value",      :default => 0.0
-    t.boolean  "hidden"
     t.string   "field2"
     t.float    "value2"
     t.integer  "hidden_by"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "company_id"
     t.string   "model_type"
@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
     t.boolean  "is_shipment_item"
-    t.boolean  "hidden"
     t.integer  "hidden_by"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "company_id"
     t.integer  "user_id"
@@ -84,7 +84,6 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.datetime "updated_at",                                        :null => false
     t.integer  "vendor_id"
     t.string   "scale"
-    t.boolean  "hidden"
     t.string   "cash_drawer_path"
     t.boolean  "big_buttons"
     t.boolean  "hide_discounts"
@@ -108,6 +107,7 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.string   "pole_display_name"
     t.boolean  "require_password"
     t.string   "locale"
+    t.boolean  "hidden"
     t.integer  "hidden_by"
     t.datetime "hidden_at"
     t.integer  "company_id"
@@ -130,8 +130,8 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.integer  "position"
     t.string   "color"
     t.string   "sku"
-    t.boolean  "hidden"
     t.integer  "hidden_by"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "company_id"
     t.integer  "user_id"
@@ -168,10 +168,10 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.string   "name"
     t.integer  "vendor_id"
     t.integer  "user_id"
-    t.boolean  "hidden"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "hidden_by"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "company_id"
   end
@@ -207,9 +207,9 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.integer  "vendor_id"
     t.string   "company_name"
     t.string   "sku"
-    t.boolean  "hidden"
     t.integer  "hidden_by"
     t.string   "tax_number"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "company_id"
     t.integer  "user_id"
@@ -232,9 +232,9 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.datetime "updated_at",  :null => false
     t.float    "amount"
     t.string   "amount_type"
-    t.boolean  "hidden"
     t.string   "sku"
     t.integer  "hidden_by"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "company_id"
     t.integer  "user_id"
@@ -268,8 +268,8 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.integer  "order_id"
     t.integer  "order_item_id"
     t.integer  "vendor_id"
-    t.boolean  "hidden"
     t.integer  "hidden_by"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "company_id"
     t.integer  "user_id"
@@ -416,10 +416,10 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.integer  "destination_country_id"
     t.integer  "vendor_id"
     t.integer  "user_id"
-    t.boolean  "hidden"
     t.integer  "sale_type_id"
     t.datetime "created_at",             :null => false
     t.datetime "updated_at",             :null => false
+    t.boolean  "hidden"
     t.integer  "hidden_by"
     t.datetime "hidden_at"
     t.integer  "company_id"
@@ -500,7 +500,6 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.string   "coupon_applies"
     t.float    "quantity",                 :default => 0.0
     t.float    "quantity_sold",            :default => 0.0
-    t.boolean  "hidden"
     t.integer  "part_id"
     t.boolean  "calculate_part_price"
     t.float    "height",                   :default => 0.0
@@ -511,7 +510,6 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.float    "width",                    :default => 0.0
     t.string   "length_metric"
     t.string   "width_metric"
-    t.boolean  "is_part"
     t.boolean  "is_gs1"
     t.boolean  "price_by_qty"
     t.float    "part_quantity",            :default => 0.0
@@ -537,9 +535,11 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.text     "name_translations"
     t.integer  "hidden_by"
     t.boolean  "real_quantity_updated"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "company_id"
     t.integer  "user_id"
+    t.boolean  "is_part"
     t.string   "gs1_format",               :default => "2,3"
     t.integer  "price_cents",              :default => 0
     t.integer  "gift_card_amount_cents",   :default => 0
@@ -577,9 +577,9 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.string   "applies_to"
     t.float    "quantity_sold", :default => 0.0
     t.float    "cash_made",     :default => 0.0
-    t.boolean  "hidden"
     t.string   "sku",           :default => ""
     t.integer  "hidden_by"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "company_id"
     t.integer  "user_id"
@@ -598,8 +598,8 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.datetime "updated_at",   :null => false
     t.string   "sku"
     t.string   "customer_sku"
-    t.boolean  "hidden"
     t.integer  "vendor_id"
+    t.boolean  "hidden"
     t.integer  "hidden_by"
     t.datetime "hidden_at"
     t.integer  "company_id"
@@ -698,9 +698,9 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.boolean  "weigh_compulsory"
     t.boolean  "no_inc"
     t.boolean  "action_applied"
-    t.boolean  "hidden"
     t.integer  "vendor_id"
     t.integer  "hidden_by"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "company_id"
     t.integer  "user_id"
@@ -754,8 +754,6 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.integer  "vendor_id"
     t.integer  "user_id"
     t.integer  "location_id"
-    t.boolean  "paid"
-    t.boolean  "hidden"
     t.integer  "cash_register_id"
     t.integer  "customer_id"
     t.float    "rebate"
@@ -776,8 +774,10 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.boolean  "is_unpaid"
     t.integer  "qnr"
     t.boolean  "is_quote"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "company_id"
+    t.boolean  "paid"
     t.datetime "paid_at"
     t.float    "tax"
     t.integer  "tax_profile_id"
@@ -894,11 +894,11 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
   create_table "receipts", :force => true do |t|
     t.string   "ip"
     t.integer  "cash_register_id"
-    t.binary   "content"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.integer  "vendor_id"
     t.integer  "order_id"
+    t.binary   "content"
     t.boolean  "hidden"
     t.integer  "hidden_by"
     t.datetime "hidden_at"
@@ -928,10 +928,10 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.string   "name"
     t.integer  "vendor_id"
     t.integer  "user_id"
-    t.boolean  "hidden"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "hidden_by"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "company_id"
   end
@@ -947,9 +947,9 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.datetime "updated_at",                                :null => false
     t.boolean  "in_stock"
     t.float    "quantity"
-    t.boolean  "hidden"
     t.integer  "hidden_by"
     t.integer  "vendor_id"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "company_id"
     t.integer  "user_id"
@@ -982,9 +982,9 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.boolean  "hidden"
     t.integer  "vendor_id"
     t.integer  "hidden_by"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "company_id"
   end
@@ -1004,10 +1004,10 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.datetime "updated_at",                                :null => false
     t.string   "name"
     t.integer  "vendor_id"
-    t.boolean  "hidden"
     t.integer  "shipment_type_id"
     t.string   "sku"
     t.integer  "hidden_by"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "company_id"
     t.integer  "price_cents",                :default => 0
@@ -1033,11 +1033,11 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.text     "contact_address"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
-    t.boolean  "hidden"
     t.string   "reorder_type"
     t.string   "sku"
     t.integer  "vendor_id"
     t.integer  "hidden_by"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "company_id"
     t.string   "import_format"
@@ -1051,8 +1051,8 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.integer  "vendor_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.boolean  "hidden"
     t.integer  "hidden_by"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "company_id"
     t.integer  "user_id"
@@ -1087,17 +1087,16 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "user_id"
-    t.boolean  "hidden"
     t.string   "sku"
     t.integer  "vendor_id"
     t.string   "letter"
     t.integer  "hidden_by"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "company_id"
     t.string   "color"
   end
 
-  add_index "tax_profiles", ["hidden"], :name => "index_tax_profiles_on_hidden"
   add_index "tax_profiles", ["user_id"], :name => "index_tax_profiles_on_user_id"
 
   create_table "transaction_tags", :force => true do |t|
@@ -1105,8 +1104,8 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.integer  "vendor_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.boolean  "hidden"
     t.integer  "hidden_by"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "company_id"
     t.integer  "user_id"
@@ -1160,7 +1159,6 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.string   "language"
     t.string   "theme"
     t.boolean  "js_keyboard"
-    t.boolean  "hidden"
     t.string   "apitoken"
     t.integer  "uses_drawer_id"
     t.integer  "auth_code"
@@ -1172,6 +1170,7 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.text     "address"
     t.integer  "current_order_id"
     t.integer  "company_id"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "hidden_by"
     t.integer  "drawer_id"
@@ -1189,9 +1188,6 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.text     "description"
     t.datetime "created_at",                                                :null => false
     t.datetime "updated_at",                                                :null => false
-    t.boolean  "hidden"
-    t.binary   "receipt_logo_header"
-    t.binary   "receipt_logo_footer"
     t.boolean  "multi_currency"
     t.string   "sku"
     t.string   "token"
@@ -1200,11 +1196,14 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.string   "unused_order_numbers",              :default => "--- []\n"
     t.integer  "largest_order_number",              :default => 0
     t.integer  "hidden_by"
+    t.binary   "receipt_logo_header"
+    t.binary   "receipt_logo_footer"
     t.boolean  "use_quote_numbers",                 :default => true
     t.string   "unused_quote_numbers",              :default => "--- []\n"
     t.integer  "largest_quote_number",              :default => 0
     t.string   "time_zone"
     t.string   "hash_id"
+    t.boolean  "hidden"
     t.datetime "hidden_at"
     t.integer  "vendor_id"
     t.integer  "company_id"

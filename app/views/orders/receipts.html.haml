@@ -21,7 +21,7 @@
           %td{:align => :left}
             = label 'cash_register', CashRegister.model_name.human
           %td{:align => :right}
-            %select{:id => 'cash_register_select', :name => 'cash_register_id' }= options_from_collection_for_select(@current_vendor.cash_registers.visible, 'id', 'name', params[:cash_register_id])
+            %select{:id => 'cash_register_select', :name => 'cash_register_id' }= options_from_collection_for_select(@current_vendor.cash_registers, 'id', 'name', params[:cash_register_id])
         %tr
           %td{ :align => :right}
             = submit_tag t('orders.report.display'), :onclick => '$("#progress").show()', :id => 'display_report_day'

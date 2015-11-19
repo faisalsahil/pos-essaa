@@ -5,7 +5,7 @@ class ConvertPaymentMethodItemsToMoney < ActiveRecord::Migration
     fields.each do |field|
       add_column :payment_method_items, "#{field}_cents", :integer, :default => 0
       add_column :payment_method_items, "#{field}_currency", :string, :default => 'USD'
-      PaymentMethodItem.connection.execute("update `payment_method_items` set `#{field}_cents` = `#{field}` * 100")
+      PaymentMethodItem.connection.execute("update payment_method_items set #{field}_cents = #{field} * 100")
       remove_column :payment_method_items, field
     end
   end

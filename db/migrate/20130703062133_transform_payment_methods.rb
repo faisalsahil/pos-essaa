@@ -2,7 +2,7 @@ class TransformPaymentMethods < ActiveRecord::Migration
   def up
     
     v = Order.last.vendor if Order.last
-    v ||= Vendor.visible.first
+    v =nil#||= Vendor.where(hidden: false).first
     
     PaymentMethod.reset_column_information
     

@@ -1,6 +1,7 @@
 class AddMoreHiddenFields < ActiveRecord::Migration
   def change
-    change_column :users, :hidden, :boolean
+    remove_column :users, :hidden
+    add_column :users, :hidden, :boolean
     add_column :users, :hidden_at, :datetime
     add_column :users, :hidden_by, :integer
     remove_column :users, :user_id

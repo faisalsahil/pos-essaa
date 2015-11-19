@@ -11,7 +11,7 @@ class CustomersController < ApplicationController
   before_filter :update_devicenodes, :only => [:index]
   
   def download
-    # @customers = @current_vendor.customers.visible
+    # @customers = @current_vendor.customers
     # data = render_to_string :layout => false
     # send_data(data,:filename => 'customers.csv', :type => 'text/csv')
 
@@ -19,9 +19,9 @@ class CustomersController < ApplicationController
     params[:order_by] = "created_at DESC" if not params[:order_by] or params[:order_by].blank?
     orderby ||= params[:order_by]
     if params[:keywords].blank?
-      @customers = @current_company.customers.visible.page(params[:page]).per(@current_vendor.pagination).order('created_at DESC')
+      @customers = @current_company.customers.page(params[:page]).per(@current_vendor.pagination).order('created_at DESC')
     else
-      @customers = @current_company.customers.by_keywords(params[:keywords]).visible.page(params[:page]).per(@current_vendor.pagination).order('created_at DESC')
+      @customers = @current_company.customers.by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination).order('created_at DESC')
     end
     data = render_to_string :layout => false
     send_data(data,:filename => 'customers.csv', :type => 'text/csv')
@@ -42,9 +42,9 @@ class CustomersController < ApplicationController
   
   def index
     if params[:keywords].blank?
-      @customers = @current_company.customers.visible.page(params[:page]).per(@current_vendor.pagination).order('created_at DESC')
+      @customers = @current_company.customers.page(params[:page]).per(@current_vendor.pagination).order('created_at DESC')
     else
-      @customers = @current_company.customers.by_keywords(params[:keywords]).visible.page(params[:page]).per(@current_vendor.pagination).order('created_at DESC')
+      @customers = @current_company.customers.by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination).order('created_at DESC')
     end
   end
 
@@ -55,13 +55,13 @@ class CustomersController < ApplicationController
   end
 
   def show
-    @customer = @current_company.customers.visible.find_by_id(params[:id])
+    @customer = @current_company.customers.find_by_id(params[:id])
     @item_statistics = @customer.get_item_statistics
-    @last_orders = @customer.orders.visible.paid.limit(50).order('nr DESC')
+    @last_orders = @customer.orders.paid.limit(50).order('nr DESC')
   end
 
   def edit
-    @customer = @current_company.customers.visible.find_by_id(params[:id])
+    @customer = @current_company.customers.find_by_id(params[:id])
     if @customer.loyalty_cards.empty? then
       @customer.loyalty_cards.build
     end
@@ -83,7 +83,7 @@ class CustomersController < ApplicationController
   end
 
   def update
-    @customer = @current_company.customers.visible.find_by_id(params[:id])
+    @customer = @current_company.customers.find_by_id(params[:id])
     if @customer.update_attributes(params[:customer])
       @customer.notes.update_all :company_id => @customer.company_id
       redirect_to customers_path
@@ -93,7 +93,7 @@ class CustomersController < ApplicationController
   end
 
   def destroy
-    @customer = @current_company.customers.visible.find_by_id(params[:id])
+    @customer = @current_company.customers.find_by_id(params[:id])
     @customer.hide(@current_user)
     redirect_to customers_path
   end

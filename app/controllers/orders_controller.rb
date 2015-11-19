@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
 
    
   def new_from_proforma
-    @proforma = @current_vendor.orders.visible.find_by_id(params[:order_id])
+    @proforma = @current_vendor.orders.find_by_id(params[:order_id])
     @order = @proforma.make_from_proforma_order
     @order.user = @current_user
     @order.save
@@ -21,10 +21,10 @@ class OrdersController < ApplicationController
   end
   
   def merge_into_current_order
-    @current_order = @current_vendor.orders.visible.where(:completed_at => nil).find_by_id(@current_user.current_order_id)
+    @current_order = @current_vendor.orders.where(:completed_at => nil).find_by_id(@current_user.current_order_id)
     
     @to_merge = @current_vendor.orders.find_by_id(params[:id])
-    @to_merge.order_items.visible.each do |oi|
+    @to_merge.order_items.each do |oi|
        noi = oi.dup
        noi.order_id = @current_order.id
        noi.save
@@ -36,23 +36,23 @@ class OrdersController < ApplicationController
     params[:type] ||= 'normal'
     case params[:type]
     when 'normal'
-      @orders = @current_vendor.orders.visible.order("nr desc").where(:paid => true).by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination)
+      @orders = @current_vendor.orders.order("nr desc").where(:paid => true).by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination)
     when 'proforma'
-      @orders = @current_vendor.orders.visible.order("nr desc").where(:is_proforma => true).by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination)
+      @orders = @current_vendor.orders.order("nr desc").where(:is_proforma => true).by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination)
     when 'unpaid'
-      @orders = @current_vendor.orders.visible.order("nr desc").where(:is_unpaid => true).by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination)
+      @orders = @current_vendor.orders.order("nr desc").where(:is_unpaid => true).by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination)
     when 'quote'
-      @orders = @current_vendor.orders.visible.order("qnr desc").where(:is_quote => true).by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination)
+      @orders = @current_vendor.orders.order("qnr desc").where(:is_quote => true).by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination)
     when 'subscription'
-      @orders = @current_vendor.orders.visible.order("created_at DESC").where(:subscription => true).by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination)
+      @orders = @current_vendor.orders.order("created_at DESC").where(:subscription => true).by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination)
     else
-      @orders = @current_vendor.orders.visible.order("id desc").by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination)
+      @orders = @current_vendor.orders.order("id desc").by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination)
     end
   end
 
   def show
     redirect_to "/orders/#{ params[:id] }/print"
-    #@order = @current_vendor.orders.visible.find_by_id(params[:id])
+    #@order = @current_vendor.orders.find_by_id(params[:id])
     #@histories = @order.histories
   end
 
@@ -62,10 +62,10 @@ class OrdersController < ApplicationController
     end
     
     # get the user's current order
-    @current_order = @current_vendor.orders.visible.where(:completed_at => nil).find_by_id(@current_user.current_order_id)
+    @current_order = @current_vendor.orders.where(:completed_at => nil).find_by_id(@current_user.current_order_id)
     # Get the last completed order, period, not scoped by user.
     # This is so that the API can notify the website.
-    @last_completed_order = @current_vendor.orders.visible.where('completed_at IS NOT NULL').order('completed_at DESC').first
+    @last_completed_order = @current_vendor.orders.where('completed_at IS NOT NULL').order('completed_at DESC').first
     if @last_completed_order.nil? then
       @last_completed_order = Order.new
     end
@@ -85,12 +85,12 @@ class OrdersController < ApplicationController
       @current_user.save!
     end
  
-    @button_categories = @current_vendor.categories.visible.where(:button_category => true).order(:position)
+    @button_categories = @current_vendor.categories.where(:button_category => true).order(:position)
   end
 
 
   def edit
-    requested_order = @current_vendor.orders.visible.find_by_id(params[:id])
+    requested_order = @current_vendor.orders.find_by_id(params[:id])
     
     unless requested_order.completed_at.nil?
       # the requested order is already completed. We cannot edit that and rediect to #new.
@@ -99,7 +99,7 @@ class OrdersController < ApplicationController
       return
     end
     
-    user_which_has_requested_order = @current_vendor.users.visible.find_by_current_order_id(requested_order.id)
+    user_which_has_requested_order = @current_vendor.users.find_by_current_order_id(requested_order.id)
     
     if user_which_has_requested_order and user_which_has_requested_order != @current_user
       # another user is editing this order. We cannot edit that and redirect to #new.
@@ -125,7 +125,7 @@ class OrdersController < ApplicationController
       return
     end
     
-    user_which_has_requested_order = @current_vendor.users.visible.find_by_current_order_id(@order.id)
+    user_which_has_requested_order = @current_vendor.users.find_by_current_order_id(@order.id)
     
     if user_which_has_requested_order and user_which_has_requested_order != @current_user
       # another user is editing this order. We cannot edit that and redirect to #new.
@@ -139,13 +139,13 @@ class OrdersController < ApplicationController
     
     if @order_item
       if redraw_all_order_items == true
-        @order_items = @order.order_items.visible
+        @order_items = @order.order_items
       else
         @order_items << @order_item
       end
       
       if @order_item.behavior == 'coupon'
-        @matching_coupon_item = @order.order_items.visible.find_by_sku(@order_item.item.coupon_applies)
+        @matching_coupon_item = @order.order_items.find_by_sku(@order_item.item.coupon_applies)
         @order_items << @matching_coupon_item
       end
     else
@@ -176,14 +176,14 @@ class OrdersController < ApplicationController
     end
     @order_item.hide(@current_user)
     if @order_item.behavior == 'coupon'
-      @matching_coupon_item = @order.order_items.visible.find_by_sku(@order_item.item.coupon_applies)
+      @matching_coupon_item = @order.order_items.find_by_sku(@order_item.item.coupon_applies)
       @order_items << @matching_coupon_item
     end
     render :update_pos_display
   end
 
   def print_receipt
-    @order = @current_vendor.orders.visible.find_by_id(params[:order_id])    
+    @order = @current_vendor.orders.find_by_id(params[:order_id])    
     if @current_register.salor_printer
       contents = @order.escpos_receipt
       output = Escper::Printer.merge_texts(contents[:text], contents[:raw_insertations])
@@ -244,7 +244,6 @@ class OrdersController < ApplicationController
         render :js => "alert('InCorrectUser');" and return
       end
     end
-    
     #@order.user = @current_user
     @order.complete(params)
 
@@ -272,6 +271,7 @@ class OrdersController < ApplicationController
     # save new order on user
     @current_user.current_order_id = @order.id
     @current_user.save!
+    
   end
   
   def new_order
@@ -297,8 +297,8 @@ class OrdersController < ApplicationController
   end
   
   def customer_display
-    @order = @current_vendor.orders.visible.find_by_id(params[:id])
-    @order_items = @order.order_items.visible.order('id ASC')
+    @order = @current_vendor.orders.find_by_id(params[:id])
+    @order_items = @order.order_items.order('id ASC')
     @report = @order.report
     @ec = @current_vendor.currency # @ex is exchange_to currency
     render :layout => 'customer_display'
@@ -314,7 +314,7 @@ class OrdersController < ApplicationController
   end
   
   def print
-    @order = @current_vendor.orders.visible.find_by_id(params[:id])
+    @order = @current_vendor.orders.find_by_id(params[:id])
     @report = @order.report(params[:locale_select])
     # exchange to currency
     @ec = params[:currency]

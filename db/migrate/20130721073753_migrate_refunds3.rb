@@ -3,7 +3,7 @@ class MigrateRefunds3 < ActiveRecord::Migration
     
     # README: Do not uncomment this, it is there to migrate over from the old system
     Vendor.all.each do |v|
-      pm = v.payment_methods.visible.find_by_cash(true)
+      pm = v.payment_methods.find_by_cash(true)
       if pm.nil?
         puts "WARNING: A PaymentMethod with the 'cash' flag is needed for vendor #{ v.id } to perform this operation. Skipping."
         next

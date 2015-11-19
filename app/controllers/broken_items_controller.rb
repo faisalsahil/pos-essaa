@@ -8,11 +8,11 @@ class BrokenItemsController < ApplicationController
   before_filter :check_role
 
   def index
-    @broken_items = @current_vendor.broken_items.visible.order("created_at DESC").by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination)
+    @broken_items = @current_vendor.broken_items.order("created_at DESC").by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination)
   end
 
   def show
-    i = @current_vendor.broken_items.visible.find_by_id(params[:id])
+    i = @current_vendor.broken_items.find_by_id(params[:id])
     redirect_to edit_broken_item_path(i)
   end
 
@@ -26,7 +26,7 @@ class BrokenItemsController < ApplicationController
   end
 
   def edit
-    @item = @current_vendor.broken_items.visible.find_by_id(params[:id])
+    @item = @current_vendor.broken_items.find_by_id(params[:id])
   end
 
   def create
@@ -42,7 +42,7 @@ class BrokenItemsController < ApplicationController
   end
 
   def update
-    @item = @current_vendor.broken_items.visible.find_by_id(params[:id])
+    @item = @current_vendor.broken_items.find_by_id(params[:id])
     if @item.update_attributes(params[:broken_item])
       redirect_to broken_items_path
     else
@@ -51,7 +51,7 @@ class BrokenItemsController < ApplicationController
   end
 
   def destroy
-    @item = @current_vendor.broken_items.visible.find_by_id(params[:id])
+    @item = @current_vendor.broken_items.find_by_id(params[:id])
     @item.hide(@current_user)
     redirect_to broken_items_path
   end

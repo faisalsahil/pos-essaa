@@ -58,7 +58,7 @@
     %p= raw(Kramdown::Document.new(@report[:invoice_note][:header]).to_html) if @report[:invoice_note][:header]
     
   - if params[:delivery_note] == "1"
-    - item_count = @order.order_items.visible.size
+    - item_count = @order.order_items.size
     - item_pagination_count_one = item_count if item_pagination_count_one > item_count
     - additional_page_count = 1 + (item_count - item_pagination_count_one - 1) / item_pagination_count_other
     = render :partial => 'orders/invoices/default/item_list_delivery_note', :locals => { :item_start => 0, :item_end => item_pagination_count_one - 1 }

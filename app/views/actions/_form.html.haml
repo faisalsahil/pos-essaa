@@ -35,17 +35,17 @@
             %td=I18n.t("views.single_words.xor")
             
             %td= Category.model_name.human
-            %td= f.collection_select :category_id, @action.vendor.categories.visible, :id, :name, :include_blank => true 
+            %td= f.collection_select :category_id, @action.vendor.categories, :id, :name, :include_blank => true 
             
             %td=I18n.t("views.single_words.xor")
             
             %td= Location.model_name.human
-            %td= f.collection_select :location_id, @action.vendor.locations.visible, :id, :name, :include_blank => true 
+            %td= f.collection_select :location_id, @action.vendor.locations, :id, :name, :include_blank => true 
             
             %td=I18n.t("views.single_words.xor")
             
             %td= Vendor.model_name.human
-            %td= f.select :vendor_model, options_for_select(@current_company.vendors.visible.collect{ |v| [v.name,"Vendor:#{v.id}"] },@action.vendor_model), :include_blank => true 
+            %td= f.select :vendor_model, options_for_select(@current_company.vendors.collect{ |v| [v.name,"Vendor:#{v.id}"] },@action.vendor_model), :include_blank => true 
 
     %tr
       %td

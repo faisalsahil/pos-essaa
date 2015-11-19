@@ -9,11 +9,11 @@ class StockLocationsController < ApplicationController
 
 
   def index
-    @stock_locations = @current_vendor.stock_locations.visible.order('created_at DESC').page(params[:page]).per(@current_vendor.pagination)
+    @stock_locations = @current_vendor.stock_locations.order('created_at DESC').page(params[:page]).per(@current_vendor.pagination)
   end
 
   def show
-    @location = @current_vendor.stock_locations.visible.find_by_id(params[:id])
+    @location = @current_vendor.stock_locations.find_by_id(params[:id])
   end
 
   def new
@@ -21,7 +21,7 @@ class StockLocationsController < ApplicationController
   end
   
   def edit
-    @location = @current_vendor.stock_locations.visible.find_by_id(params[:id])
+    @location = @current_vendor.stock_locations.find_by_id(params[:id])
   end
 
   def create
@@ -37,7 +37,7 @@ class StockLocationsController < ApplicationController
   end
 
   def update
-    @location = @current_vendor.stock_locations.visible.find_by_id(params[:id])
+    @location = @current_vendor.stock_locations.find_by_id(params[:id])
     if @location.update_attributes(params[:location])
       redirect_to stock_locations_path
     else
@@ -46,7 +46,7 @@ class StockLocationsController < ApplicationController
   end
 
   def destroy
-    @location = @current_vendor.stock_locations.visible.find_by_id(params[:id])
+    @location = @current_vendor.stock_locations.find_by_id(params[:id])
     @location.hide(@current_user)
     redirect_to stock_locations_path
   end

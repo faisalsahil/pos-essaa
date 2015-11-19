@@ -13,7 +13,9 @@ class AddHiddenFieldsToAllModels < ActiveRecord::Migration
         add_column model.table_name.to_sym, :hidden, :boolean
       else
         puts "Changing :hidden column to :boolean for #{model}"
-        change_column model.table_name.to_sym, :hidden, :boolean
+        remove_column model.table_name.to_sym, :hidden
+        add_column model.table_name.to_sym, :hidden, :boolean
+
       end
       
       if not model.column_names.include? 'hidden_by' then

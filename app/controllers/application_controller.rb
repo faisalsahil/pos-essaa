@@ -130,18 +130,18 @@ class ApplicationController < ActionController::Base
       redirect_to new_session_path and return 
     end
     
-    @current_user = User.visible.find_by_id_hash(session[:user_id_hash])
+    @current_user = User.find_by_id_hash(session[:user_id_hash])
     if @current_user.nil?
       redirect_to new_session_path and return 
     end
 
     if defined?(SrSaas) == 'constant'
-      @current_company = SrSaas::Company.visible.find_by_id(@current_user.company_id)
+      @current_company = SrSaas::Company.find_by_id(@current_user.company_id)
     else
       @current_company = @current_user.company
     end
 
-    @current_vendor = @current_user.vendors.visible.find_by_id(session[:vendor_id])
+    @current_vendor = @current_user.vendors.find_by_id(session[:vendor_id])
 
     if @current_vendor.nil? then
       # Something is up...
@@ -205,10 +205,10 @@ class ApplicationController < ActionController::Base
   end
 
   def get_cash_register
-    @current_register = @current_vendor.cash_registers.visible.find_by_id(session[:cash_register_id])
+    @current_register = @current_vendor.cash_registers.find_by_id(session[:cash_register_id])
     if @current_register.blank?
       # happens only on first login into the system on a new browser/client
-      @current_register = @current_vendor.cash_registers.visible.first
+      @current_register = @current_vendor.cash_registers.first
       session[:cash_register_id] = @current_register.id
     end
   end

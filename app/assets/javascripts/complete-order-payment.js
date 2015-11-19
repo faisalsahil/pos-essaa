@@ -102,7 +102,9 @@ sr.fn.payment.getItems = function() {
       name: sr.data.resources.payment_method_object[val].name,
       cash: sr.data.resources.payment_method_object[val].cash,
       amount: amount
+
     }
+    console.log(returnObj[val] );
   });
   return returnObj;
 }

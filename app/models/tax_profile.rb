@@ -38,7 +38,7 @@ class TaxProfile < ActiveRecord::Base
     perc = perc.to_s.gsub(",", ".")
     lower = perc.to_f - 0.2
     upper = perc.to_f + 0.2
-    tps = vendor.tax_profiles.visible.where("value between #{ lower } and #{ upper }")
+    tps = vendor.tax_profiles.where("value between #{ lower } and #{ upper }")
     return tps.first
   end
   

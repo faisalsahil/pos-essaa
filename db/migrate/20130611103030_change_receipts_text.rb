@@ -1,8 +1,8 @@
 class ChangeReceiptsText < ActiveRecord::Migration
   def up
-    change_table :receipts do |t|
-      t.change :content, :binary
-    end
+    remove_column :receipts, :content
+    add_column :receipts, :content, :binary
+
   end
 
   def down

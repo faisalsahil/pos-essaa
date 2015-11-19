@@ -1,7 +1,7 @@
 class AddItemTypeIdAndActivatedToOrderItems < ActiveRecord::Migration
   def self.up
     add_column :order_items, :item_type_id, :integer
-    add_column :order_items, :activated, :boolean, :default => 0
+    add_column :order_items, :activated, :boolean, :default => false
   end
 
   def self.down

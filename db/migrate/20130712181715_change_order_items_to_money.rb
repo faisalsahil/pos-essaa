@@ -15,7 +15,7 @@ class ChangeOrderItemsToMoney < ActiveRecord::Migration
       new_field = field if new_field.nil?
       add_column :order_items, "#{new_field}_cents", :integer, :default => 0
       add_column :order_items, "#{new_field}_currency", :string, :default => 'USD'
-      OrderItem.connection.execute("update `order_items` set `#{new_field}_cents` = `#{field}` * 100")
+      OrderItem.connection.execute("update order_items set #{new_field}_cents = #{field} * 100")
       remove_column :order_items, field
     end
   end

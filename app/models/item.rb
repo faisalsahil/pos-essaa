@@ -84,9 +84,9 @@ class Item < ActiveRecord::Base
   
   def sku_unique_in_visible
     if self.new_record?
-      error = self.vendor.items.visible.where(:sku => self.sku).count > 0
+      error = self.vendor.items.where(:sku => self.sku).count > 0
     else
-      error = self.vendor.items.visible.where("sku = '#{self.sku}' AND NOT id = #{ self.id }").count > 0
+      error = self.vendor.items.where("sku = '#{self.sku}' AND NOT id = #{ self.id }").count > 0
     end
     if error == true
       errors.add(:sku, I18n.t('activerecord.errors.messages.taken'))
@@ -128,11 +128,11 @@ class Item < ActiveRecord::Base
   end
   
   def no_child_duplicate
-    child_item = self.vendor.items.visible.find_by_sku(self.child_sku)
+    child_item = self.vendor.items.find_by_sku(self.child_sku)
     return if child_item.nil?
     
     c_id = child_item.id
-    items_which_have_this_child = self.vendor.items.visible.where("sku != '#{ self.sku_was }'").where(:child_id => c_id)
+    items_which_have_this_child = self.vendor.items.where("sku != '#{ self.sku_was }'").where(:child_id => c_id)
     if items_which_have_this_child.any?
       info = items_which_have_this_child.collect {|i| [i.id, i.sku] }
       errors.add(:child_sku, "items #{ info.inspect } already have this child #{ self.child_sku }")
@@ -202,7 +202,7 @@ class Item < ActiveRecord::Base
   end
   
   def location_name=(n)
-    self.location = self.vendor.locations.visible.find_by_name(n)
+    self.location = self.vendor.locations.find_by_name(n)
   end
   
   def tax_profile_name
@@ -210,7 +210,7 @@ class Item < ActiveRecord::Base
   end
   
   def tax_profile_name=(n)
-    self.tax_profile = self.vendor.tax_profiles.visible.find_by_name(n)
+    self.tax_profile = self.vendor.tax_profiles.find_by_name(n)
   end
   # ----- convenience methods for CSV
   
@@ -274,11 +274,11 @@ class Item < ActiveRecord::Base
   end
   
   def cache_behavior
-    write_attribute :behavior, self.vendor.item_types.visible.find_by_id(self.item_type_id).behavior
+    write_attribute :behavior, self.vendor.item_types.find_by_id(self.item_type_id).behavior
   end
 
   def behavior=(b)
-    it = self.vendor.item_types.visible.find_by_behavior(b)
+    it = self.vendor.item_types.find_by_behavior(b)
     if it then
       self.item_type = it
       write_attribute :behavior, it.behavior
@@ -306,7 +306,7 @@ class Item < ActiveRecord::Base
       self.child = nil
       return
     end
-    child_item = self.vendor.items.visible.find_by_sku(string)
+    child_item = self.vendor.items.find_by_sku(string)
     if child_item then
       self.child_id = child_item.id
     end
@@ -374,7 +374,7 @@ class Item < ActiveRecord::Base
   end
   
   def tax_profile_amount=(amnt)
-    tp = self.vendor.tax_profiles.visible.find_by_value(SalorBase.string_to_float(amnt))
+    tp = self.vendor.tax_profiles.find_by_value(SalorBase.string_to_float(amnt))
     if tp then
       self.tax_profile = tp
     end
@@ -383,7 +383,7 @@ class Item < ActiveRecord::Base
   
   # ----- string setters for relations
   def category_name=(n)
-    self.category = self.vendor.categories.visible.find_by_name(n)
+    self.category = self.vendor.categories.find_by_name(n)
   end
   # ----- end string setters for relations
   
@@ -393,7 +393,7 @@ class Item < ActiveRecord::Base
     self.parts = []
     hash ||= {}
     hash.each do |h|
-      i = self.vendor.items.visible.find_by_sku(h[:sku])
+      i = self.vendor.items.find_by_sku(h[:sku])
       if i then
         i.is_part = true
         i.part_quantity = self.string_to_float(h[:part_quantity])
@@ -426,7 +426,7 @@ class Item < ActiveRecord::Base
   
   # returns the quantity of all ItemStocks, or if that feature is not used, only the Item quantity
   def quantity_with_stock
-    item_stocks = self.item_stocks.visible
+    item_stocks = self.item_stocks
     if item_stocks.any?
       return item_stocks.sum(:quantity)
     else
@@ -447,10 +447,10 @@ class Item < ActiveRecord::Base
     self.hidden_at = Time.now
     self.save!
     
-    b = self.vendor.buttons.visible.where(:sku => self.sku)
+    b = self.vendor.buttons.where(:sku => self.sku)
     b.update_all :hidden => true, :hidden_by => by_id, :hidden_at => Time.now
     
-    is = self.item_stocks.visible
+    is = self.item_stocks
     is.update_all :hidden => true, :hidden_by => by_id, :hidden_at => Time.now
     
     #TODO: if part is deleted, remove from part container
@@ -536,12 +536,12 @@ class Item < ActiveRecord::Base
   end
   
   def self.get_self_loop_ids # Item.get_self_loop_ids
-    Item.visible.where("id = child_id").collect { |i| i.id }
+    Item.where("id = child_id").collect { |i| i.id }
   end
   
   def self.get_too_long_parent_recursion_ids # Item.get_too_long_parent_recursion_ids 
     too_long_item_ids = []
-    Item.visible.each do |i|
+    Item.each do |i|
       too_long_item_ids << i.id if i.recursive_parent_count > 2
     end
     return too_long_item_ids
@@ -549,7 +549,7 @@ class Item < ActiveRecord::Base
   
   def self.get_too_long_child_recursion_ids # Item.get_too_long_child_recursion_ids
     too_long_item_ids = []
-    Item.visible.each do |i|
+    Item.each do |i|
       too_long_item_ids << i.id if i.recursive_child_count > 2
     end
     return too_long_item_ids
@@ -558,7 +558,7 @@ class Item < ActiveRecord::Base
   def self.get_child_duplicate_ids # Item.get_child_duplicate_ids
     duplicate_array = Vendor.connection.execute("SELECT child_id, count(*) FROM items WHERE hidden IS NULL AND child_id IS NOT NULL AND child_id != 0 GROUP BY child_id HAVING count(*) > 1").to_a
     
-    info = duplicate_array.collect {|d| [d[0], Item.visible.where(:child_id => d[0]).collect {|i| i.id }] }
+    info = duplicate_array.collect {|d| [d[0], Item.where(:child_id => d[0]).collect {|i| i.id }] }
     
     #puts "Duplicates: #{ info.inspect }"
     duplicate_ids = duplicate_array.collect { |x| x[0] }
@@ -582,7 +582,7 @@ class Item < ActiveRecord::Base
   def self.get_nonhidden_items_with_hidden_child_ids # Item.get_nonhidden_items_with_hidden_child_ids
     ids = []
     # get all parents
-    Item.visible.where("child_id IS NOT NULL").each do |i|
+    Item.where("child_id IS NOT NULL").each do |i|
       ids << i.id if i.child and i.child.hidden == true
     end
     return ids
@@ -590,7 +590,7 @@ class Item < ActiveRecord::Base
   
   def self.get_nonhidden_items_with_hidden_parent_ids # Item.get_nonhidden_items_with_hidden_parent_ids
     ids = []
-    Item.visible.each do |i|
+    Item.each do |i|
       ids << i.id if i.parent and i.parent.hidden == true
     end
     return ids
@@ -644,7 +644,7 @@ class Item < ActiveRecord::Base
     array.each do |a|
       item_ids = a[1]
       item_ids.each do |i|
-        any_sales = OrderItem.visible.where(:item_id => i).any?
+        any_sales = OrderItem.where(:item_id => i).any?
         any_inventory = InventoryReportItem.where(:item_id => i).any?
         deletable = any_sales == false && any_inventory == false
         deletable_ids << i if deletable
@@ -752,7 +752,7 @@ class Item < ActiveRecord::Base
   
   # This method creates stock transactiond of the size "diff" for "item". If "diff" is positive, the first ItemStock that is defined for "item" is used to add "diff". If "diff" is negative, this method will iterate over all defined ItemStocks of "item" and reduce every one until the reduced amount equals "diff". If "diff" is larger than the quantity available in all ItemStocks, it reduces the first ItemStock into negative, so that "diff" is satisfied. "model2" is just there for reference purposes, to label the StockTransactions that will be created further down.
   def self.transact_quantity_with_stock(diff, item, model2)
-    item_stocks = item.item_stocks.visible.order("location_type ASC")
+    item_stocks = item.item_stocks.order("location_type ASC")
     
     if item_stocks.blank?
       # use the simple quantity field of Item when no ItemStocks are defined.
@@ -765,7 +765,7 @@ class Item < ActiveRecord::Base
       SalorBase.log_action "[Item]", "transact_quantity_with_stock=() difference is positive #{ diff }.", :magenta
       item_stock = item_stocks.first
       if model2.class == Item
-        model2_item_stocks = model2.item_stocks.visible
+        model2_item_stocks = model2.item_stocks
         model2_item_stock = model2_item_stocks.first
       end
       StockTransaction.transact(diff, item_stock, model2_item_stock)
@@ -812,7 +812,7 @@ class Item < ActiveRecord::Base
       
       if amount_to_go > 0
         # looping through all ItemStocks hasn't satisfied our demand, so we have to force the first of the  ItemStocks into negative quantity
-        item_stock = item_stocks.visible.first
+        item_stock = item_stocks.first
         StockTransaction.transact(-amount_to_go, item_stock, model2)
         SalorBase.log_action "[Item]", "transact_quantity_with_stock=(): looping through all ItemStocks hasn't satisfied our demand, so we have to force the first of the ItemStocks into negative quantity. setting ItemStock #{ item_stock.id } to #{ -amount_to_go }.", :magenta
       end

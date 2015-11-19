@@ -1,6 +1,6 @@
 class ChangeIsBusyDefault < ActiveRecord::Migration
   def up
-    change_column_default :nodes, :is_busy, 0
+    change_column_default :nodes, :is_busy, false
   end
 
   def down

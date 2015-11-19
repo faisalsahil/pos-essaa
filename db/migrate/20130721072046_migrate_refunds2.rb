@@ -22,7 +22,7 @@ class MigrateRefunds2 < ActiveRecord::Migration
       puts "Creating refund PMI from refund DrawerTransaction ID #{ dt.id } order_id #{ order.id }, vendor_id #{ vendor.id }"
       
       
-      pm = vendor.payment_methods.visible.where(:cash => true).first
+      pm = vendor.payment_methods.where(:cash => true).first
       
       if pm.nil?
         puts "WARNING: Vendor #{ vendor.id } does not have a cash PaymentMethod. Skipping."

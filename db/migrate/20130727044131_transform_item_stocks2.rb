@@ -6,7 +6,7 @@ class TransformItemStocks2 < ActiveRecord::Migration
     
     # next, separate out stock_locations, those are polymorphic now
     if ItemStock.respond_to? :visible then
-      ItemStock.visible.where('stock_location_id IS NOT NULL AND stock_location_quantity > 0').each do |is|
+      ItemStock.where('stock_location_id IS NOT NULL AND stock_location_quantity > 0').each do |is|
         puts "Processing ItemStock #{ is.id }"
         is2 = ItemStock.new
         is2.company = is.company

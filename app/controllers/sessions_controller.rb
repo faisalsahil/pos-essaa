@@ -11,18 +11,18 @@ class SessionsController < ApplicationController
   
   def new
     @submit_path = session_path
-    @company = Company.visible.first
-    @vendor = @company.vendors.visible.first
+    @company = Company.first
+    @vendor = @company.vendors.first
     redirect_to sr_saas.new_session_path and return if defined?(SrSaas) == 'constant'
   end
 
   def create
     # Simple local login
-    company = Company.visible.first
+    company = Company.first
     user = company.login(params[:code])
 
     if user
-      vendor = user.vendors.visible.first
+      vendor = user.vendors.first
       session[:user_id_hash] = user.id_hash
       session[:company_id] = company.id
       session[:vendor_id] = vendor.id

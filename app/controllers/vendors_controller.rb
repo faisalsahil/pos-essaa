@@ -22,11 +22,11 @@ class VendorsController < ApplicationController
   end
   
   def index
-    @vendors = @current_user.vendors.visible
+    @vendors = @current_user.vendors
   end
 
   def show
-    @vendor = @current_user.vendors.visible.find_by_id(params[:id])
+    @vendor = @current_user.vendors.find_by_id(params[:id])
     session[:vendor_id] = @vendor.id
   end
 
@@ -35,7 +35,7 @@ class VendorsController < ApplicationController
   end
 
   def edit
-    @vendor = @current_user.vendors.visible.find_by_id(params[:id])
+    @vendor = @current_user.vendors.find_by_id(params[:id])
     if @vendor
       session[:vendor_id] = @vendor.id
     else
@@ -57,7 +57,7 @@ class VendorsController < ApplicationController
 
 
   def update
-    @vendor = @current_user.vendors.visible.find_by_id(params[:id])
+    @vendor = @current_user.vendors.find_by_id(params[:id])
     if @vendor.update_attributes(params[:vendor])
       redirect_to vendor_path(@vendor)
     else
@@ -66,7 +66,7 @@ class VendorsController < ApplicationController
   end
 
   def new_drawer_transaction
-    user = @current_vendor.users.visible.find_by_id(params[:user_id])
+    user = @current_vendor.users.find_by_id(params[:user_id])
     amount_cents = (SalorBase.string_to_float(params[:transaction][:amount], :locale => @region) * 100.0).round
     if params[:transaction][:trans_type] == "payout"
       amount_cents *= -1
@@ -84,7 +84,7 @@ class VendorsController < ApplicationController
   end
 
   def render_drawer_transaction_receipt
-    @dt = @current_vendor.drawer_transactions.visible.find_by_id(params[:id])
+    @dt = @current_vendor.drawer_transactions.find_by_id(params[:id])
     if @current_register.salor_printer
       text = @dt.escpos
       render :text => Escper::Asciifier.new.process(text)
@@ -98,11 +98,11 @@ class VendorsController < ApplicationController
     @from, @to = assign_from_to(params)
     @from = @from ? @from.beginning_of_day : Time.now.beginning_of_day
     @to = @to ? @to.end_of_day : @from.end_of_day
-    @users = @current_vendor.users.visible.where(:uses_drawer_id => nil)
+    @users = @current_vendor.users.where(:uses_drawer_id => nil)
     if params[:user_id].blank?
       drawer = nil
     else
-      @user = @current_vendor.users.visible.find_by_id(params[:user_id])
+      @user = @current_vendor.users.find_by_id(params[:user_id])
       drawer = @user.get_drawer
     end
     @report = @current_vendor.get_end_of_day_report(@from, @to, drawer)
@@ -113,11 +113,11 @@ class VendorsController < ApplicationController
     @from, @to = assign_from_to(params)
     @from = @from ? @from.beginning_of_day : Time.now.beginning_of_day
     @to = @to ? @to.end_of_day : @from.end_of_day
-    @user = @current_vendor.users.visible.find_by_id(params[:user_id])
+    @user = @current_vendor.users.find_by_id(params[:user_id])
     if params[:user_id].blank?
       drawer = nil
     else
-      @user = @current_vendor.users.visible.find_by_id(params[:user_id])
+      @user = @current_vendor.users.find_by_id(params[:user_id])
       drawer = @user.get_drawer
     end
     if @current_register.salor_printer
@@ -234,7 +234,7 @@ class VendorsController < ApplicationController
       # set variables for the js.erb view
       @order = @order_item.order
       if redraw_all_pos_items == true
-        @order_items = @order.order_items.visible
+        @order_items = @order.order_items
       else
         @order_items = [@order_item]
       end
@@ -252,7 +252,7 @@ class VendorsController < ApplicationController
       
       if ['rebate', 'tax_profile_id', 'toggle_buy_order', 'toggle_is_proforma'].include?(params[:field])
         # those order attributes will be passed on to all OrderItems, so we have to update them all in the view.
-        @order_items = @order.order_items.visible
+        @order_items = @order.order_items
       else
         # do not update any order_items
         @order_items = []
@@ -272,7 +272,7 @@ class VendorsController < ApplicationController
   
   def sales_statistics
     @from, @to = assign_from_to(params)
-    @categories = @current_vendor.categories.visible
+    @categories = @current_vendor.categories
     @category_id = params[:category_id].to_i
     @reports = @current_vendor.get_sales_statistics(@from, @to, @category_id)
 

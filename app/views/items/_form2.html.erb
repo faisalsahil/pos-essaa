@@ -121,17 +121,17 @@
       
       <tr>
         <td>  <%= f.label I18n.t("activerecord.models.tax_profile.one") %> </td>
-        <td> <%= f.collection_select :tax_profile_id, @item.vendor.tax_profiles.visible, :id, :name, :include_blank => true %> </td>
+        <td> <%= f.collection_select :tax_profile_id, @item.vendor.tax_profiles, :id, :name, :include_blank => true %> </td>
       </tr>
       
       <tr>
         <td> <%= f.label I18n.t("activerecord.models.category.one") %> </td>
-        <td> <%= f.collection_select :category_id, @item.vendor.categories.visible, :id, :name, :include_blank => true %> </td>
+        <td> <%= f.collection_select :category_id, @item.vendor.categories, :id, :name, :include_blank => true %> </td>
       </tr>
       
       <tr>
         <td> <%= f.label I18n.t("activerecord.models.item_type.one") %> </td>
-        <td>  <%= f.collection_select :item_type_id, @current_vendor.item_types.visible, :id, :name %> </td>
+        <td>  <%= f.collection_select :item_type_id, @current_vendor.item_types, :id, :name %> </td>
       </tr>
       
 
@@ -171,9 +171,9 @@
           </td>
           <td>
             <div>
-              <% topmost_parent = @current_vendor.items.visible.find_by_sku(@item.recursive_parent_sku_chain.last) %>
+              <% topmost_parent = @current_vendor.items.find_by_sku(@item.recursive_parent_sku_chain.last) %>
               <% topmost_parent.recursive_child_sku_chain.each do |sku| %>
-                <% i = @current_vendor.items.visible.find_by_sku(sku) %>
+                <% i = @current_vendor.items.find_by_sku(sku) %>
                 <p><%= link_to(i.name + " (" + i.sku + ")", edit_item_path(i)) %></p>
               <% end %>
             </div>
@@ -217,7 +217,7 @@
     
     <tr>
       <td> <%= f.label I18n.t("activerecord.models.location.one") %> </td>
-      <td> <%= f.collection_select :location_id, @item.vendor.locations.visible, :id, :name, :include_blank => true %> </td>
+      <td> <%= f.collection_select :location_id, @item.vendor.locations, :id, :name, :include_blank => true %> </td>
     </tr>
     
     <tr>
@@ -237,7 +237,7 @@
     
     <tr>
       <td> <%= f.label t("activerecord.attributes.the_shipper") %> </td>
-      <td> <%= f.select :shipper_id, @item.vendor.shippers.visible.collect {|t| [t.name,t.id]}, :include_blank => true %> </td>
+      <td> <%= f.select :shipper_id, @item.vendor.shippers.collect {|t| [t.name,t.id]}, :include_blank => true %> </td>
     </tr>
     
     <tr>
@@ -481,7 +481,7 @@
               <tr>
               <td colspan="6"> <h3> <%= I18n.t("activerecord.models.action.other") %></h3> <hr />  </td>
             </tr>
-            <% @item.actions.visible.each do |action| %> 
+            <% @item.actions.each do |action| %> 
               <tr >
                 <td width="40%"> <%= link_to action.name, edit_action_path(action) %> </td>
                 <td>

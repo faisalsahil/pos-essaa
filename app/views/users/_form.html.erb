@@ -38,7 +38,7 @@
               <div class="freefield"><%= f.label t("activerecord.attributes.email") %><br />
               <%= f.email_field :email, :class => 'keyboardable' %></div>
               <div class="freefield"><%= f.label User.human_attribute_name :uses_drawer_id %><br />
-              <%= f.collection_select :uses_drawer_id, @current_vendor.users.visible.where("username != '#{@user.username}'"), :drawer_id, :username, :include_blank => true %>
+              <%= f.collection_select :uses_drawer_id, @current_vendor.users.where("username != '#{@user.username}'"), :drawer_id, :username, :include_blank => true %>
               
               </div>
             </td>
@@ -108,7 +108,7 @@
               </script>
             </div>
             <br />
-              <% for role in @current_vendor.roles.visible.order('name asc').all  %>
+              <% for role in @current_vendor.roles.order('name asc').all  %>
                 <div class="role-check" name="<%= role.name.titleize%>">
                   <%= check_box_tag "user[role_ids][]", role.id, @user.role_ids.include?(role.id)  %>
                   <%= I18n.t(role.name) %>

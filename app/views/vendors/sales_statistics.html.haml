@@ -45,17 +45,18 @@
       %th SKU
       %th= t ".quantity"
       %th= t ".sum"
+      /=raise @reports[:order_item_quantities_by_category].inspect 
     - total_cents = 0
     - @reports[:order_item_quantities_by_category].each do |arr|
-      - total_cents += arr[4]
+      - total_cents += arr["sum"].to_i
       %tr
         %td
-          - unless arr[0].nil?
-            = @current_vendor.categories.find_by_id(arr[0]).name
-        %td= @current_vendor.items.find_by_id(arr[1]).name
-        %td= arr[2]
-        %td= number_with_precision arr[3]
-        %td= humanized_money_with_symbol Money.new(arr[4], @current_vendor.currency)
+          - unless arr["category_id"].nil?
+            = @current_vendor.categories.find_by_id(arr["category_id"]).name
+        %td= @current_vendor.items.find_by_id(arr["item_id"]).name 
+        %td= arr["sku"]
+        %td= number_with_precision arr["quantity"]
+        %td= humanized_money_with_symbol Money.new(arr["sum"], @current_vendor.currency)
     %tr
       %td
       %td

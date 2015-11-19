@@ -8,7 +8,7 @@ class TaxProfilesController < ApplicationController
    before_filter :check_role
    
   def index
-    @tax_profiles = @current_vendor.tax_profiles.visible.page(params[:page]).per(25)
+    @tax_profiles = @current_vendor.tax_profiles.page(params[:page]).per(25)
   end
 
   def show

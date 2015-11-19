@@ -48,9 +48,9 @@ $("#search_results").html('<table id="results_table" width="100%"></table>');
   
     var sku = $('<td></td>');
     sku.addClass('sku');
-    sku.html("<%= customer.loyalty_cards.visible.first.sku if customer.loyalty_cards.visible.any? %>");
+    sku.html("<%= customer.loyalty_cards.first.sku if customer.loyalty_cards.any? %>");
   
-    var btn = $('<div class="image-button"><img src="/images/icons/<%= icon(:add,32) %>" onclick="sr.fn.pos_core.addItem(\'<%= customer.loyalty_cards.visible.first.sku if customer.loyalty_cards.visible.first %>\',\'\');" /></div>');
+    var btn = $('<div class="image-button"><img src="/images/icons/<%= icon(:add,32) %>" onclick="sr.fn.pos_core.addItem(\'<%= customer.loyalty_cards.first.sku if customer.loyalty_cards.first %>\',\'\');" /></div>');
     btn.addClass('btn');
     row.append(cname);
     row.append(sku);

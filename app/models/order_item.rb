@@ -116,7 +116,7 @@ class OrderItem < ActiveRecord::Base
   
   
   def tax_profile_id=(id)
-    tp = self.vendor.tax_profiles.visible.find_by_id(id)
+    tp = self.vendor.tax_profiles.find_by_id(id)
     if tp.nil?
       msg = "Could not find TaxProfile with id #{ id } for self's vendor."
       log_action msg
@@ -266,7 +266,7 @@ class OrderItem < ActiveRecord::Base
   
   def modify_price_for_parts
     if self.calculate_part_price
-      self.price = self.item.parts.visible.collect{ |p| p.base_price * p.part_quantity }.sum
+      self.price = self.item.parts.collect{ |p| p.base_price * p.part_quantity }.sum
     end
   end
   
@@ -319,7 +319,7 @@ class OrderItem < ActiveRecord::Base
       item = self.item
       
       # coitem is the OrderItem to which the coupon acts upon
-      coitem = self.order.order_items.visible.find_by_sku(item.coupon_applies)
+      coitem = self.order.order_items.find_by_sku(item.coupon_applies)
       log_action "apply_coupon: coitem was not found" and return if coitem.nil?
 
       unless coitem.coupon_amount.zero? then
@@ -382,16 +382,16 @@ class OrderItem < ActiveRecord::Base
   
   def apply_discount
     # Vendor
-    discount = self.vendor.discounts.visible.where("start_date < '#{ Time.now }' AND end_date > '#{ Time.now }'").where(:applies_to => "Vendor").first
+    discount = self.vendor.discounts.where("start_date < '#{ Time.now }' AND end_date > '#{ Time.now }'").where(:applies_to => "Vendor").first
     
     # Category
-    discount ||= self.vendor.discounts.visible.where("start_date < '#{ Time.now }' AND end_date > '#{ Time.now }'").where(:applies_to => "Category", :category_id => self.category ).first
+    discount ||= self.vendor.discounts.where("start_date < '#{ Time.now }' AND end_date > '#{ Time.now }'").where(:applies_to => "Category", :category_id => self.category ).first
     
     # Location
-    discount ||= self.vendor.discounts.visible.where("start_date < '#{ Time.now }' AND end_date > '#{ Time.now }'").where(:applies_to => "Location", :location_id => self.location ).first
+    discount ||= self.vendor.discounts.where("start_date < '#{ Time.now }' AND end_date > '#{ Time.now }'").where(:applies_to => "Location", :location_id => self.location ).first
     
     # Item
-    discount ||= self.vendor.discounts.visible.where("start_date < '#{ Time.now }' AND end_date > '#{ Time.now }'").where(:applies_to => "Item", :item_sku => self.sku ).first
+    discount ||= self.vendor.discounts.where("start_date < '#{ Time.now }' AND end_date > '#{ Time.now }'").where(:applies_to => "Item", :item_sku => self.sku ).first
     
     if discount
       log_action "Applying discount"
@@ -425,7 +425,7 @@ class OrderItem < ActiveRecord::Base
     if self.behavior == 'coupon'
       item = self.item
       raise "could not find Item for OrderItem #{ self.id }" if item.nil?
-      coitem = self.order.order_items.visible.find_by_sku(item.coupon_applies)
+      coitem = self.order.order_items.find_by_sku(item.coupon_applies)
       log_action "WARNING: Could not find a visible OrderItem #{ item.coupon_applies.inspect }. It probably was deleted from the POS screen before this coupon was deleted." if coitem.nil?
       coitem.coupon_amount = Money.new(0, self.currency)
       coitem.calculate_totals

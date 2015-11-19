@@ -1,7 +1,9 @@
 class ChangeToBinaryFields < ActiveRecord::Migration
   def up
-    change_column :vendors, :receipt_logo_header, :binary
-    change_column :vendors, :receipt_logo_footer, :binary
+    remove_column :vendors, :receipt_logo_header
+    remove_column :vendors, :receipt_logo_footer
+    add_column :vendors, :receipt_logo_header, :binary
+    add_column :vendors, :receipt_logo_footer, :binary
   end
 
   def down

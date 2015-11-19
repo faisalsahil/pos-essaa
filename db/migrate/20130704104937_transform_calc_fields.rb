@@ -42,7 +42,7 @@ class TransformCalcFields < ActiveRecord::Migration
     Vendor.connection.execute("UPDATE order_items SET subtotal = 0 WHERE refunded = TRUE")
     
     puts "assign OrderItem to Drawer according to Order"
-    Vendor.connection.execute("UPDATE order_items,orders SET order_items.drawer_id = orders.drawer_id WHERE orders.id = order_items.order_id")
+    Vendor.connection.execute("UPDATE order_items SET drawer_id = orders.drawer_id from orders WHERE orders.id = order_items.order_id")
   end
 
   def down

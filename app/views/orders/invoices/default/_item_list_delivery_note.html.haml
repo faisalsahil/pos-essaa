@@ -6,7 +6,7 @@
     %th= Item.human_attribute_name :weight
     %th= Item.human_attribute_name :customs_code
     %th= Item.human_attribute_name :origin_country
-  - @order.order_items.visible[item_start..item_end].each do |oi|
+  - @order.order_items[item_start..item_end].each do |oi|
     %tr
       %td= oi.sku
       %td= oi.item.name

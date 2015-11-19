@@ -9,11 +9,11 @@ class CategoriesController < ApplicationController
   before_filter :check_role
   
   def index
-    @categories = @current_vendor.categories.visible.page(params[:page]).per(@current_vendor.pagination).order('created_at DESC')
+    @categories = @current_vendor.categories.page(params[:page]).per(@current_vendor.pagination).order('created_at DESC')
   end
 
   def show
-    @category = @current_vendor.categories.visible.find_by_id(params[:id])
+    @category = @current_vendor.categories.find_by_id(params[:id])
   end
 
   def new
@@ -21,7 +21,7 @@ class CategoriesController < ApplicationController
   end
 
   def edit
-    @category = @current_vendor.categories.visible.find_by_id(params[:id])
+    @category = @current_vendor.categories.find_by_id(params[:id])
   end
 
   def create
@@ -36,7 +36,7 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    @category = @current_vendor.categories.visible.find_by_id(params[:id])
+    @category = @current_vendor.categories.find_by_id(params[:id])
     if @category.update_attributes(params[:category])
       redirect_to categories_path
     else
@@ -55,7 +55,7 @@ class CategoriesController < ApplicationController
 #   end
 
   def destroy
-    @category = @current_vendor.categories.visible.find_by_id(params[:id])
+    @category = @current_vendor.categories.find_by_id(params[:id])
     @category.hide(@current_user)
     redirect_to categories_path
   end

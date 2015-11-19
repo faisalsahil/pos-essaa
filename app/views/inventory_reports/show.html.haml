@@ -26,7 +26,7 @@
     - report_purchase_price_total = Money.new(0, @current_vendor.currency)
     - report_price_total = Money.new(0, @current_vendor.currency)
 
-    - @tax_profiles = @current_vendor.tax_profiles.visible
+    - @tax_profiles = @current_vendor.tax_profiles
     - @tax_profiles.each do |tp|
       - next if @items.where(:tax_profile_id => tp.id ).blank?
       - tp_purchase_price_total = Money.new(0, @current_vendor.currency)
@@ -40,7 +40,7 @@
         - category_purchase_price_total = Money.new(0, @current_vendor.currency)
         - category_price_total = Money.new(0, @current_vendor.currency)
         
-        - cat = @current_vendor.categories.visible.find_by_id(cid)
+        - cat = @current_vendor.categories.find_by_id(cid)
         
         %h4= cat ? cat.name : t('items.inventory_report.no_category')
         %table{ :class => 'striped-table2 has-total' }

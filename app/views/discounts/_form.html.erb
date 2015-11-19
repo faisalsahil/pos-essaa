@@ -30,11 +30,11 @@
   </div>
   <div id='category' class="field" style='display: none;'>
     <%= f.label t("activerecord.models.category.one") %><br />
-    <%= f.collection_select :category_id, @discount.vendor.categories.visible, :id, :name, :include_blank => true %>
+    <%= f.collection_select :category_id, @discount.vendor.categories, :id, :name, :include_blank => true %>
   </div>
   <div id='location' class="field" style='display: none;'>
     <%= f.label t("activerecord.models.location.one") %><br />
-    <%= f.collection_select :location_id, @discount.vendor.locations.visible, :id, :name, :include_blank => true %>
+    <%= f.collection_select :location_id, @discount.vendor.locations, :id, :name, :include_blank => true %>
   </div>
   <div id='item' class="field" style='display: none;'>
     <%= f.label t("activerecord.attributes.item_sku") %><br />

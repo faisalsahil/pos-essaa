@@ -18,7 +18,7 @@ class FileUpload
     @shipper = shipper
     @vendor = @shipper.vendor
     @company = @shipper.company
-    @item_type = @vendor.item_types.visible.where(:behavior => "normal").first
+    @item_type = @vendor.item_types.where(:behavior => "normal").first
     
     @i = 0
     @updated_items = 0
@@ -84,18 +84,18 @@ class FileUpload
       packaging_unit_carton = packaging_unit_carton.to_f / packaging_unit_pack.to_f
 
       if columns[36]
-        tax_profile = @vendor.tax_profiles.visible.find_by_value(columns[36].to_f / 100.0)
+        tax_profile = @vendor.tax_profiles.find_by_value(columns[36].to_f / 100.0)
       elsif columns[15] == columns[16]
         # since some wholesalers don't offer the tax field, guess depending on the prices
-        tax_profile = @vendor.tax_profiles.visible.find_by_value(0)
+        tax_profile = @vendor.tax_profiles.find_by_value(0)
       else
         # default
-        tax_profile = @vendor.tax_profiles.visible.find_by_default(true)
+        tax_profile = @vendor.tax_profiles.find_by_default(true)
         raise "At least on TaxProfile has to have the default flag enabled" unless tax_profile
       end
       tax_profile_id = tax_profile.id
 
-      category = @vendor.categories.visible.find_by_name(columns[6].strip)
+      category = @vendor.categories.find_by_name(columns[6].strip)
       catname = columns[6].strip
       if category.nil?
         category = Category.new
@@ -126,9 +126,9 @@ class FileUpload
         :created_by => -102
       }
       sku_carton = columns[8].strip.gsub(/[^0-9a-zA-Z]/,'')
-      carton_item = @vendor.items.visible.where( :name => longname + " Karton" ).first if carton_item.blank?
-      carton_item = @vendor.items.visible.where( :name => name + " Karton" ).first if carton_item.blank?
-      carton_item = @vendor.items.visible.where( :sku => sku_carton ).first if carton_item.blank? and not sku_carton.blank? # second chance to find by sku in case name has changed
+      carton_item = @vendor.items.where( :name => longname + " Karton" ).first if carton_item.blank?
+      carton_item = @vendor.items.where( :name => name + " Karton" ).first if carton_item.blank?
+      carton_item = @vendor.items.where( :sku => sku_carton ).first if carton_item.blank? and not sku_carton.blank? # second chance to find by sku in case name has changed
       if carton_item
         attributes.merge! :sku => sku_carton unless sku_carton.blank?
         carton_item.attributes = attributes
@@ -179,9 +179,9 @@ class FileUpload
         :created_by => -102
       }
       sku_pack = columns[9].strip.gsub(/[^0-9a-zA-Z]/,'')
-      pack_item = @vendor.items.visible.where( :name => longname + " Packung" ).first
-      pack_item = @vendor.items.visible.where( :name => name + " Packung").first if pack_item.blank?
-      pack_item = @vendor.items.visible.where( :sku => sku_pack ).first if pack_item.blank? and not sku_pack.blank? # second chance to find by sku in case name has changed
+      pack_item = @vendor.items.where( :name => longname + " Packung" ).first
+      pack_item = @vendor.items.where( :name => name + " Packung").first if pack_item.blank?
+      pack_item = @vendor.items.where( :sku => sku_pack ).first if pack_item.blank? and not sku_pack.blank? # second chance to find by sku in case name has changed
       if pack_item
         attributes.merge! :sku => sku_pack unless sku_pack.blank? # SKUs can update!
         pack_item.attributes = attributes
@@ -242,9 +242,9 @@ class FileUpload
         :created_by => -102
       }
       sku_piece = columns[19].strip.gsub(/[^0-9a-zA-Z]/,'') if columns[19]
-      piece_item = @vendor.items.visible.where( :name => longname + " Stk." ).first
-      piece_item = @vendor.items.visible.where( :name => name + " Stk.").first if piece_item.blank?
-      piece_item = @vendor.items.visible.where( :sku => sku_piece ).first if piece_item.blank? and not sku_piece.blank?
+      piece_item = @vendor.items.where( :name => longname + " Stk." ).first
+      piece_item = @vendor.items.where( :name => name + " Stk.").first if piece_item.blank?
+      piece_item = @vendor.items.where( :sku => sku_piece ).first if piece_item.blank? and not sku_piece.blank?
       if piece_item
         attributes.merge! :sku => sku_piece unless sku_piece.blank?
         piece_item.attributes = attributes
@@ -342,17 +342,17 @@ class FileUpload
       packaging_unit_carton = packaging_unit_carton.to_f / packaging_unit_pack.to_f
 
       if columns[36]
-        tax_profile = @vendor.tax_profiles.visible.find_by_value(columns[36].to_f / 100)
+        tax_profile = @vendor.tax_profiles.find_by_value(columns[36].to_f / 100)
       elsif columns[15] == columns[16]
         # since some wholesalers don't offer the tax field, guess depending on the prices
-        tax_profile = @vendor.tax_profiles.visible.find_by_value(0)
+        tax_profile = @vendor.tax_profiles.find_by_value(0)
       else
         # default
-        tax_profile = @vendor.tax_profiles.visible.find_by_value(20)
+        tax_profile = @vendor.tax_profiles.find_by_value(20)
       end
       tax_profile_id = tax_profile.id
 
-      category = @vendor.categories.visible.find_by_name(columns[6].strip)
+      category = @vendor.categories.find_by_name(columns[6].strip)
       catname = columns[6].strip
       catname = columns[6].strip
       if category.nil?
@@ -386,8 +386,8 @@ class FileUpload
         :created_by => -102
       }
       sku_carton = columns[8].strip.gsub(/[^0-9a-zA-Z]/,'') # EAN_GB
-      carton_item = @vendor.items.visible.where( :name => name + " Karton" ).first
-      carton_item = @vendor.items.visible.where( :sku => sku_carton ).first if carton_item.blank? and not sku_carton.blank? and not sku_carton.to_i.zero? # second chance to find something in case name has changed
+      carton_item = @vendor.items.where( :name => name + " Karton" ).first
+      carton_item = @vendor.items.where( :sku => sku_carton ).first if carton_item.blank? and not sku_carton.blank? and not sku_carton.to_i.zero? # second chance to find something in case name has changed
       if carton_item
         attributes.merge! :sku => sku_carton unless sku_carton.blank? || sku_carton.to_i.zero? # protect against bad overwrites
         carton_item.attributes = attributes
@@ -438,8 +438,8 @@ class FileUpload
         :created_by => -102
       }
       sku_pack = columns[9].strip.gsub(/[^0-9a-zA-Z]/,'') # EAN_PA
-      pack_item = @vendor.items.visible.where( :name => name + " Packung" ).first
-      pack_item = @vendor.items.visible.where( :sku => sku_pack ).first if pack_item.blank? and not sku_pack.blank? and not sku_pack.to_i.zero? # second chance to find something in case name has changed
+      pack_item = @vendor.items.where( :name => name + " Packung" ).first
+      pack_item = @vendor.items.where( :sku => sku_pack ).first if pack_item.blank? and not sku_pack.blank? and not sku_pack.to_i.zero? # second chance to find something in case name has changed
       if pack_item
         attributes.merge! :sku => sku_pack unless sku_pack.blank? || sku_pack.to_i.zero? # protect against bad overwrites
         pack_item.attributes = attributes
@@ -503,8 +503,8 @@ class FileUpload
         :created_by => -102
       }
       sku_piece = columns[19].strip.gsub(/[^0-9a-zA-Z]/,'') if columns[19] # EAN_STK
-      piece_item = @vendor.items.visible.where( :name => name + " Stk." ).first
-      piece_item = @vendor.items.visible.where( :sku => sku_piece ).first if piece_item.blank? and not sku_piece.blank? and not sku_piece.to_i.zero? # second chance to find something in case name has changed
+      piece_item = @vendor.items.where( :name => name + " Stk." ).first
+      piece_item = @vendor.items.where( :sku => sku_piece ).first if piece_item.blank? and not sku_piece.blank? and not sku_piece.to_i.zero? # second chance to find something in case name has changed
       if piece_item
         attributes.merge! :sku => sku_piece unless sku_piece.blank? || sku_piece.to_i.zero? # protect against bad overwrites
         piece_item.attributes = attributes
@@ -585,7 +585,7 @@ class FileUpload
       sales_metric = 'STK'
 
       tax = SalorBase.string_to_float(columns[4])
-      tax_profile = @vendor.tax_profiles.visible.find_by_value tax
+      tax_profile = @vendor.tax_profiles.find_by_value tax
       tax_profile = TaxProfile.create(:name => "#{tax} %", :value => tax) unless tax_profile
       tax_profile_id = tax_profile.id
 
@@ -637,14 +637,14 @@ class FileUpload
       rec.delete(:class)
       
       if kls == Item then
-        tp = @vendor.tax_profiles.visible.find_by_value(rec[:tax_profile_amount])
+        tp = @vendor.tax_profiles.find_by_value(rec[:tax_profile_amount])
         if tp.nil?
           # Managing TaxProfiles is the user's responsibility alone. The software won't create that automatically.
           @messages << "No TaxProfile with #{ rec[:tax_profile_amount] }% found. You have to create it manually."
           next
         end
         
-        cat = @vendor.categories.visible.find_by_name(rec[:category_name])
+        cat = @vendor.categories.find_by_name(rec[:category_name])
         rec.delete(:category_name)
         if rec[:location_name] then
           loc = Location.find_or_create_by_name(rec[:location_name]) if trusted
@@ -670,7 +670,7 @@ class FileUpload
         item = @vendore.buttons.find_or_create_by_sku(rec)
         item.attributes = rec
       elsif kls == Category then
-        item = @vendor.categories.visible.find_or_create_by_sku(rec[:sku])
+        item = @vendor.categories.find_or_create_by_sku(rec[:sku])
         item.attributes = rec
         @created_categories += 1 if item.new_record?
       elsif kls == LoyaltyCard and trusted then

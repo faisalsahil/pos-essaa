@@ -8,11 +8,11 @@ class PluginsController < ApplicationController
   before_filter :check_role
 
   def index
-    @plugins = @current_vendor.plugins.visible.page(params[:page]).per(@current_vendor.pagination).order('created_at DESC')
+    @plugins = @current_vendor.plugins.page(params[:page]).per(@current_vendor.pagination).order('created_at DESC')
   end
 
   def show
-    @plugin = @current_vendor.plugins.visible.find_by_id(params[:id])
+    @plugin = @current_vendor.plugins.find_by_id(params[:id])
     redirect_to edit_plugin_path(@plugin)
   end
 
@@ -23,7 +23,7 @@ class PluginsController < ApplicationController
   end
 
   def edit
-    @plugin = @current_vendor.plugins.visible.find_by_id(params[:id])
+    @plugin = @current_vendor.plugins.find_by_id(params[:id])
   end
 
   def create
@@ -43,7 +43,7 @@ class PluginsController < ApplicationController
   end
 
   def update
-    @plugin = @current_vendor.plugins.visible.find_by_id(params[:id])
+    @plugin = @current_vendor.plugins.find_by_id(params[:id])
     if @plugin.update_attributes(params[:plugin])
       #@plugin.unzip # I disabled this because it was overriding my development changes in the uploads dir
       redirect_to plugins_path
@@ -53,7 +53,7 @@ class PluginsController < ApplicationController
   end
 
   def destroy
-    @plugin = @current_vendor.plugins.visible.find_by_id(params[:id])
+    @plugin = @current_vendor.plugins.find_by_id(params[:id])
     @plugin.hide(@current_user)
     redirect_to plugins_path
   end

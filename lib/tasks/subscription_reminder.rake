@@ -1,6 +1,6 @@
 namespace :salor do
   task :subscription_reminder => [:environment] do
-    Vendor.visible.each do |v|
+    Vendorproperty.each do |v|
       puts "\n\nRunning subscription reminder for vendor #{ v.name }. Please wait ..."
       recurrable_orders = v.recurrable_subscription_orders
       #recurrable_orders = Order.where(:subscription => true); # for testing
@@ -15,7 +15,7 @@ namespace :salor do
             body += "\n<br />#{ o.customer.full_name }, #{ o.customer.company_name }"
           end
           body += "\n<ul>\n"
-          o.order_items.visible.each do |oi|
+          o.order_itemsproperty.each do |oi|
             body += "\n<li>#{ oi.sku }, #{ oi.item.name }, #{ oi.total_cents / 100.0 } #{ oi.currency }</li>"
           end
           body += "</ul>\n"

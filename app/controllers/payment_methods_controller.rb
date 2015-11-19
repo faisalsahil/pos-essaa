@@ -9,11 +9,11 @@ class PaymentMethodsController < ApplicationController
   before_filter :check_role
 
   def index
-    @payment_methods = @current_vendor.payment_methods.visible.page(params[:page]).per(@current_vendor.pagination).order('name ASC')
+    @payment_methods = @current_vendor.payment_methods.page(params[:page]).per(@current_vendor.pagination).order('name ASC')
   end
 
   def show
-    @payment_method = @current_vendor.payment_methods.visible.find_by_id(params[:id])
+    @payment_method = @current_vendor.payment_methods.find_by_id(params[:id])
     redirect_to edit_payment_method_path(@payment_method)
   end
 
@@ -23,7 +23,7 @@ class PaymentMethodsController < ApplicationController
   end
 
   def edit
-    @payment_method = @current_vendor.payment_methods.visible.find_by_id(params[:id])
+    @payment_method = @current_vendor.payment_methods.find_by_id(params[:id])
   end
 
   def create
@@ -38,7 +38,7 @@ class PaymentMethodsController < ApplicationController
   end
 
   def update
-    @payment_method = @current_vendor.payment_methods.visible.find_by_id(params[:id])
+    @payment_method = @current_vendor.payment_methods.find_by_id(params[:id])
     if @payment_method.update_attributes(params[:payment_method])
       redirect_to payment_methods_path
     else
@@ -47,7 +47,7 @@ class PaymentMethodsController < ApplicationController
   end
 
   def destroy
-    @payment_method = @current_vendor.payment_methods.visible.find_by_id(params[:id])
+    @payment_method = @current_vendor.payment_methods.find_by_id(params[:id])
     @payment_method.hide(@current_user)
     redirect_to payment_methods_path
   end

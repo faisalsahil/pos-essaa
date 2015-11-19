@@ -1,6 +1,7 @@
 class ChangeIspart < ActiveRecord::Migration
   def up
-    change_column :items, :is_part, :boolean
+    remove_column :items, :is_part
+    add_column :items, :is_part, :boolean
   end
 
   def down

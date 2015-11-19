@@ -1,6 +1,6 @@
 = raw content_box_top(@location.name)
 
-- @item_stocks = @location.item_stocks.visible.page(params[:page]).per(@current_vendor.pagination)
+- @item_stocks = @location.item_stocks.page(params[:page]).per(@current_vendor.pagination)
 
 %div.pagination
   = paginate @item_stocks

@@ -55,10 +55,10 @@ class ShipmentItem < ActiveRecord::Base
       # get the location model from locationstring which is in the format "Modelname:ID"
       locationclass = locationstring.split(':')[0].constantize
       locationid = locationstring.split(':')[1]
-      location = locationclass.visible.where(:vendor_id => self.vendor_id, :company_id => self.company_id).find_by_id(locationid)
+      location = locationclass.where(:vendor_id => self.vendor_id, :company_id => self.company_id).find_by_id(locationid)
     end
       
-    item = self.vendor.items.visible.find_by_sku(self.sku)
+    item = self.vendor.items.find_by_sku(self.sku)
     
     if item
       log_action "move_into_stock: An Item with sku #{ self.sku } already exists. Using this and adding quantity to it."
@@ -67,7 +67,7 @@ class ShipmentItem < ActiveRecord::Base
       if location
         log_action "move_into_stock: A Location #{ locationstring } has been specified"
         
-        item_stock = location.item_stocks.visible.find_by_item_id(item.id)
+        item_stock = location.item_stocks.find_by_item_id(item.id)
         if item_stock
           log_action "move_into_stock: An ItemStock #{ item_stock.id } for location #{ location.class } ID #{ location.id } has been found. Transacting to it"
           StockTransaction.transact(q, item_stock, self)
@@ -97,7 +97,7 @@ class ShipmentItem < ActiveRecord::Base
       
     else
       log_action "move_into_stock: No Item with sku #{ self.sku } exists yet. Creating one from ShipmentItem."
-      normal_item_type = self.vendor.item_types.visible.find_by_behavior('normal')
+      normal_item_type = self.vendor.item_types.find_by_behavior('normal')
       if normal_item_type.nil?
         raise "Need an ItemType with behavior normal for this action"
       end

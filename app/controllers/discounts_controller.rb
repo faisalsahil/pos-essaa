@@ -10,11 +10,11 @@ class DiscountsController < ApplicationController
 
   
   def index
-    @discounts = @current_vendor.discounts.visible.order("created_at DESC").page(params[:page]).per(@current_vendor.pagination)
+    @discounts = @current_vendor.discounts.order("created_at DESC").page(params[:page]).per(@current_vendor.pagination)
   end
 
   def show
-    @discount = @current_vendor.discounts.visible.find_by_id(params[:id])
+    @discount = @current_vendor.discounts.find_by_id(params[:id])
     redirect_to edit_discount_path(@discount)
   end
 
@@ -23,7 +23,7 @@ class DiscountsController < ApplicationController
   end
 
   def edit
-    @discount = @current_vendor.discounts.visible.find_by_id(params[:id])
+    @discount = @current_vendor.discounts.find_by_id(params[:id])
   end
 
   def create
@@ -38,7 +38,7 @@ class DiscountsController < ApplicationController
   end
 
   def update
-    @discount = @current_vendor.discounts.visible.find_by_id(params[:id])
+    @discount = @current_vendor.discounts.find_by_id(params[:id])
     if @discount.update_attributes(params[:discount])
       redirect_to discounts_path
     else
@@ -47,7 +47,7 @@ class DiscountsController < ApplicationController
   end
 
   def destroy
-    @discount = @current_vendor.discounts.visible.find_by_id(params[:id])
+    @discount = @current_vendor.discounts.find_by_id(params[:id])
     @discount.hide(@current_user)
     redirect_to discounts_path
   end

@@ -98,7 +98,7 @@ class Order < ActiveRecord::Base
     
     o[:order_items] = []
 
-    self.order_items.visible.each do |oi|
+    self.order_items.each do |oi|
       toi = {}
       [:id, :total_cents].each {|a| toi[a] = oi.send(a)}
       toi[:currency_info] = cgrabber.call([:decimal_mark,:id,:iso_code,:name,:symbol],oi.total.currency)
@@ -114,22 +114,22 @@ class Order < ActiveRecord::Base
   end
   
   def amount_paid
-    Money.new(self.payment_method_items.visible.sum(:amount_cents), self.currency)
+    Money.new(self.payment_method_items.sum(:amount_cents), self.currency)
   end
   
   def nonrefunded_item_count
-    self.order_items.visible.where(:refunded => nil).count
+    self.order_items.where(:refunded => nil).count
   end
 
   def loyalty_card
     if self.customer
-      return self.customer.loyalty_cards.visible.first
+      return self.customer.loyalty_cards.first
     end
   end
   
   def toggle_buy_order=(x)
     self.buy_order = !self.buy_order
-    self.order_items.visible.each do |oi|
+    self.order_items.each do |oi|
       oi.toggle_buyback=(x)
     end
     self.calculate_totals
@@ -138,11 +138,11 @@ class Order < ActiveRecord::Base
   def toggle_is_proforma=(x)
     self.is_proforma = !self.is_proforma
     if self.is_proforma
-      zero_tax_profile = self.vendor.tax_profiles.visible.find_by_value(0)
+      zero_tax_profile = self.vendor.tax_profiles.find_by_value(0)
       if zero_tax_profile.nil?
         raise "A proforma invoice needs a TaxProfile with value 0. You have to create one before you can proceed."
       end
-      self.order_items.visible.each do |oi|
+      self.order_items.each do |oi|
         oi.tax_profile = zero_tax_profile
         oi.tax = zero_tax_profile.value
         oi.calculate_totals
@@ -172,7 +172,7 @@ class Order < ActiveRecord::Base
       end
       write_attribute :tax_profile_id, nil
     else
-      tax_profile = self.vendor.tax_profiles.visible.find_by_id(id)
+      tax_profile = self.vendor.tax_profiles.find_by_id(id)
       self.order_items.each do |oi|
         oi.tax_profile = tax_profile
         oi.tax = tax_profile.value
@@ -183,7 +183,7 @@ class Order < ActiveRecord::Base
   end
   
   def rebate=(r)
-    self.order_items.visible.each do |oi|
+    self.order_items.each do |oi|
       oi.rebate = r
       oi.save # since we are not in the OrderItem model, we have to call save, otherwise oi.calculate_totals will not see the unsaved rebate. this is just how Ruby (or Rails) behaves.
       oi.calculate_totals
@@ -205,7 +205,7 @@ class Order < ActiveRecord::Base
     end
     
     # get existing regular item
-    oi = self.order_items.visible.where(:no_inc => nil, :sku => params[:sku]).first
+    oi = self.order_items.where(:no_inc => nil, :sku => params[:sku]).first
     if oi then
       if oi.is_normal?
         log_action "Item is normal, and present, just increment"
@@ -268,8 +268,8 @@ class Order < ActiveRecord::Base
   
   
   def create_dynamic_gift_card_item
-    auto_giftcard_item = self.vendor.items.visible.find_by_sku("G000000000000")
-    zero_tax_profile = self.vendor.tax_profiles.visible.where(:value => 0).first
+    auto_giftcard_item = self.vendor.items.find_by_sku("G000000000000")
+    zero_tax_profile = self.vendor.tax_profiles.where(:value => 0).first
 
     if zero_tax_profile.nil?
       log_action "No Zero TaxProfile has been found"
@@ -286,7 +286,7 @@ class Order < ActiveRecord::Base
     i.category = auto_giftcard_item.category
     i.name = "Auto Giftcard #{timecode}"
     i.must_change_price = true
-    i.item_type = self.vendor.item_types.visible.find_by_behavior('gift_card')
+    i.item_type = self.vendor.item_types.find_by_behavior('gift_card')
     if not i.save then
       raise "order.create_dynamic_gift_card_item: #{ i.errors.messages }"
     end
@@ -295,7 +295,7 @@ class Order < ActiveRecord::Base
   
   # called by complete
   def update_giftcard_remaining_amounts
-    gcs = self.order_items.visible.where(:behavior => 'gift_card', :activated => true)
+    gcs = self.order_items.where(:behavior => 'gift_card', :activated => true)
     gcs.each do |gc|
       i = gc.item
       i.gift_card_amount += gc.price # gc.price is always negative, so this is actually a subtraction
@@ -306,7 +306,7 @@ class Order < ActiveRecord::Base
   
   # called by complete
   def activate_giftcard_items
-    gcs = self.order_items.visible.where(:behavior => 'gift_card', :activated => nil)
+    gcs = self.order_items.where(:behavior => 'gift_card', :activated => nil)
     gcs.each do |gc|
       item = gc.item
       item.activated = true
@@ -316,14 +316,14 @@ class Order < ActiveRecord::Base
   end
 
   def get_item_by_sku(sku)
-    item = self.vendor.items.visible.find_by_sku(sku)
+    item = self.vendor.items.find_by_sku(sku)
     return item if item # a sku was entered
 
     m = self.vendor.gs1_regexp.match(sku)
-    item = self.vendor.items.visible.where(:is_gs1 => true).find_by_sku(m[1]) if m
+    item = self.vendor.items.where(:is_gs1 => true).find_by_sku(m[1]) if m
     return item if item # a GS1 barcode was entered
 
-    lcard = self.company.loyalty_cards.visible.find_by_sku(sku)
+    lcard = self.company.loyalty_cards.find_by_sku(sku)
     return lcard if lcard # a loyalty card was entered
     
     # if nothing existing has been found, create a new item
@@ -332,7 +332,7 @@ class Order < ActiveRecord::Base
     i.company = self.company
     i.item_type = self.vendor.item_types.find_by_behavior('normal')
     i.behavior = i.item_type.behavior
-    i.tax_profile = self.vendor.tax_profiles.visible.where(:default => true).first
+    i.tax_profile = self.vendor.tax_profiles.where(:default => true).first
     i.currency = self.vendor.currency
     i.created_by = -100 # magic number for created by POS screen
     i.name = sku
@@ -345,7 +345,7 @@ class Order < ActiveRecord::Base
       if sku[0] == '-' then
         #it's a negative price item, so set buyback
         i.buy_price_cents = self.string_to_float(pm[1], :locale => self.vendor.region) * 100
-        i.tax_profile = self.vendor.tax_profiles.visible.where(:value => 0).first
+        i.tax_profile = self.vendor.tax_profiles.where(:value => 0).first
       end
     else
       # $MESSAGES[:prompts] << I18n.t("views.notice.item_not_existing")
@@ -373,7 +373,7 @@ class Order < ActiveRecord::Base
     final.proforma_order = self
     final.save!
     
-    self.order_items.visible.each do |oi|
+    self.order_items.each do |oi|
       noi = oi.dup
       noi.order = final
       # reset the tax profile, since all OrderItems of a proforma invoice have zero taxes. the final invoice however needs the actual taxes.
@@ -383,13 +383,13 @@ class Order < ActiveRecord::Base
       raise "Could not save OrderItem: #{ noi.errors.messages }" if result != true
     end
     
-    zero_tax_profile = self.vendor.tax_profiles.visible.find_by_value(0)
+    zero_tax_profile = self.vendor.tax_profiles.find_by_value(0)
     if zero_tax_profile.nil?
       raise "Need a TaxProfile with value of 0"
     end
     
     item = self.get_item_by_sku("DMYACONTO")
-    aconto_item_type = self.vendor.item_types.visible.find_by_behavior('aconto')
+    aconto_item_type = self.vendor.item_types.find_by_behavior('aconto')
     item.item_type = aconto_item_type
     item.name = I18n.t("receipts.a_conto")
     item.tax_profile = zero_tax_profile
@@ -411,8 +411,8 @@ class Order < ActiveRecord::Base
   def calculate_totals
     log_action "Calculating Totals"
     
-    _oi_total = self.order_items.visible.sum(:total_cents)
-    _oi_tax_amount = self.order_items.visible.sum(:tax_amount_cents)
+    _oi_total = self.order_items.sum(:total_cents)
+    _oi_tax_amount = self.order_items.sum(:tax_amount_cents)
     
     log_action "Total is: #{_oi_total} and tax is #{_oi_tax_amount}"
    
@@ -447,7 +447,7 @@ class Order < ActiveRecord::Base
     self.create_drawer_transaction
     self.update_associations
     self.set_unique_numbers
-    self.report_errors_to_technician
+    # self.report_errors_to_technician
     
     self.save!
   end
@@ -461,15 +461,15 @@ class Order < ActiveRecord::Base
   end
   
   def update_associations
-    if self.payment_method_items.visible.where(:unpaid => true).any?
+    if self.payment_method_items.where(:unpaid => true).any?
       self.is_unpaid = true
     end
     
-    if self.payment_method_items.visible.where(:quote => true).any?
+    if self.payment_method_items.where(:quote => true).any?
       self.is_quote = true
     end
     
-    if self.payment_method_items.visible.where(:unpaid => nil, :quote => nil).sum(:amount_cents) >= self.total_cents
+    if self.payment_method_items.where(:unpaid => nil, :quote => nil).sum(:amount_cents) >= self.total_cents
       self.paid = true
       self.paid_at = Time.now
     end
@@ -504,7 +504,7 @@ class Order < ActiveRecord::Base
   end
   
   def update_item_quantities
-    self.order_items.visible.each do |oi|
+    self.order_items.each do |oi|
       items = []
       items << oi.item
       items << oi.item.parts
@@ -522,7 +522,7 @@ class Order < ActiveRecord::Base
   
   def create_payment_method_items(params)
     params[:payment_method_items].each do |k,v|
-      pm = self.vendor.payment_methods.visible.find_by_id(v[:id])
+      pm = self.vendor.payment_methods.find_by_id(v[:id])
       
       pmi = PaymentMethodItem.new
       pmi.payment_method = pm
@@ -557,11 +557,12 @@ class Order < ActiveRecord::Base
     
     self.save!
     
-    payment_cash = Money.new(self.payment_method_items.visible.where(:cash => true).sum(:amount_cents), self.currency)
-    payment_total = Money.new(self.payment_method_items.visible.sum(:amount_cents), self.currency)
+    # payment_cash = Money.new(self.payment_method_items.where(:cash => true).sum(:amount_cents), self.currency)
+    payment_cash = Money.new(self.payment_method_items.sum(:amount_cents), self.currency)
+    payment_total = Money.new(self.payment_method_items.sum(:amount_cents), self.currency)
     payment_noncash = (payment_total - payment_cash)
     change = - (payment_total - self.total) # change must be negative!
-    change_payment_method = self.vendor.payment_methods.visible.find_by_change(true)
+    change_payment_method = self.vendor.payment_methods.find_by_change(true)
 
     
     if self.is_proforma.nil? and self.is_unpaid.nil? and self.is_quote.nil?
@@ -592,6 +593,9 @@ class Order < ActiveRecord::Base
     end
     
     self.cash = payment_cash
+    puts '-'*90
+    puts self.cash.inspect
+    puts '-'*90
     self.noncash = payment_noncash
     self.change = change
     self.save!
@@ -623,7 +627,7 @@ class Order < ActiveRecord::Base
     
     sum_taxes = Hash.new
 
-    self.vendor.tax_profiles.visible.each do |t|
+    self.vendor.tax_profiles.each do |t|
       sum_taxes[t.id] = {
         :total => 0,
         :letter => t.letter,
@@ -641,7 +645,7 @@ class Order < ActiveRecord::Base
     percent_format = "%s %-19.19s %6.1f%% %3u   %6.2f\n"
     tax_format = "   %s: %2i%% %7.2f %7.2f %8.2f\n"
 
-    self.order_items.visible.each do |oi|
+    self.order_items.each do |oi|
       it = oi.item
       name = it.get_translated_name(locale)
       taxletter = oi.tax_profile.letter
@@ -797,7 +801,7 @@ class Order < ActiveRecord::Base
 
     # --- payment method items ---
     paymentmethods = Hash.new
-    self.payment_method_items.visible.where('amount_cents != 0').each do |pmi|
+    self.payment_method_items.where('amount_cents != 0').each do |pmi|
       
       # old databases are somewhat inconsistent, so we need to catch nils
       pmi_amount = pmi.amount.blank? ? Money.new(0, self.vendor.currency) : pmi.amount
@@ -813,12 +817,12 @@ class Order < ActiveRecord::Base
     
     # --- taxes ---
     list_of_taxes = ''
-    used_tax_amounts = self.order_items.visible.select("DISTINCT tax")
+    used_tax_amounts = self.order_items.select("DISTINCT tax")
     used_tax_amounts.each do |r|
       tax_in_percent = r.tax # this is the tax in percent, stored on OrderItem
       tax_profile = self.vendor.tax_profiles.find_by_value(tax_in_percent)
-      tax_amount = Money.new(self.order_items.visible.where(:tax => tax_in_percent).sum(:tax_amount_cents), self.currency)
-      total = Money.new(self.order_items.visible.where(:tax => tax_in_percent).sum(:total_cents), self.currency)
+      tax_amount = Money.new(self.order_items.where(:tax => tax_in_percent).sum(:tax_amount_cents), self.currency)
+      total = Money.new(self.order_items.where(:tax => tax_in_percent).sum(:total_cents), self.currency)
       next if total.zero?
       list_of_taxes += tax_format % [
         tax_profile.letter,
@@ -836,8 +840,8 @@ class Order < ActiveRecord::Base
     end
     
     # --- invoice blurbs ---
-    invoice_blurb_header = self.vendor.invoice_blurbs.visible.where(:lang => locale, :is_header => true).last
-    invoice_blurb_footer = self.vendor.invoice_blurbs.visible.where(:lang => locale).where('is_header IS NOT TRUE').last
+    invoice_blurb_header = self.vendor.invoice_blurbs.where(:lang => locale, :is_header => true).last
+    invoice_blurb_footer = self.vendor.invoice_blurbs.where(:lang => locale).where('is_header IS NOT TRUE').last
     invoice_blurb_header_receipt = invoice_blurb_header.body_receipt if invoice_blurb_header
     invoice_blurb_header_invoice = invoice_blurb_header.body if invoice_blurb_header
     invoice_blurb_footer_receipt = invoice_blurb_footer.body_receipt if invoice_blurb_footer
@@ -850,7 +854,7 @@ class Order < ActiveRecord::Base
     
     
     # --- invoice notes ---
-    invoice_note = self.vendor.invoice_notes.visible.where(
+    invoice_note = self.vendor.invoice_notes.where(
       :origin_country_id => self.origin_country_id, 
       :destination_country_id => self.destination_country_id, 
       :sale_type_id => self.sale_type_id
@@ -1069,6 +1073,7 @@ class Order < ActiveRecord::Base
     
   def report_errors_to_technician
     errors = self.check
+
     if errors.any? and self.vendor.enable_technician_emails == true and not self.vendor.technician_email.blank?
       subject = "Errors in Order #{ self.id }"
       body = errors.to_s
@@ -1089,7 +1094,7 @@ class Order < ActiveRecord::Base
   def check
     tests = []
     
-    self.order_items.visible.each do |oi|
+    self.order_items.each do |oi|
       result = oi.check
       tests << result unless result == []
     end
@@ -1097,7 +1102,7 @@ class Order < ActiveRecord::Base
     # checks for totals
     
     # ---
-    should = self.order_items.visible.sum(:total_cents)
+    should = self.order_items.sum(:total_cents)
     actual = self.total_cents
     pass = should == actual
     msg = "total should be the sum of OrderItem totals"
@@ -1105,7 +1110,7 @@ class Order < ActiveRecord::Base
     tests << {:model=>"Order", :id=>self.id, :t=>type, :m=>msg, :s=>should, :a=>actual} if pass == false
     
     # ---
-    should = self.order_items.visible.sum(:tax_amount_cents)
+    should = self.order_items.sum(:tax_amount_cents)
     actual = self.tax_amount_cents
     pass = should == actual
     msg = "tax_amount should be the sum of OrderItem tax_amounts"
@@ -1327,7 +1332,7 @@ class Order < ActiveRecord::Base
     self.hidden_by = by.id
     self.hidden_at = Time.now
     self.save
-    self.order_items.visible.update_all :hidden => true, :hidden_at => Time.now, :hidden_by => by.id
+    self.order_items.update_all :hidden => true, :hidden_at => Time.now, :hidden_by => by.id
   end
   
   # for better debugging in the console
@@ -1352,13 +1357,13 @@ class Order < ActiveRecord::Base
       :origin => self.origin_country,
       :destination => self.destination_country,
       :is_proforma => self.is_proforma,
-      :order_items_length => self.order_items.visible.size,
+      :order_items_length => self.order_items.size,
       :subscription => self.subscription,
       :nr => self.nr
     }
     if self.customer then
       attrs[:customer] = self.customer.json_attrs
-      attrs[:loyalty_card] = self.customer.loyalty_cards.visible.last.json_attrs if self.customer.loyalty_cards.visible.last
+      attrs[:loyalty_card] = self.customer.loyalty_cards.last.json_attrs if self.customer.loyalty_cards.last
     end
     attrs.to_json
   end
@@ -1430,7 +1435,7 @@ class Order < ActiveRecord::Base
   end
   
   def create_recurring_order
-    unpaid_pm = self.vendor.payment_methods.visible.find_by_unpaid(true)
+    unpaid_pm = self.vendor.payment_methods.find_by_unpaid(true)
     
     o = Order.new
     # we copy over attributes manually. better be explicit.
@@ -1451,7 +1456,7 @@ class Order < ActiveRecord::Base
       raise "Could not save Order because #{ o.errors.messages }"
     end
     
-    self.order_items.visible.each do |oi|
+    self.order_items.each do |oi|
       noi = OrderItem.new
       noi.company = oi.company
       noi.vendor = oi.vendor

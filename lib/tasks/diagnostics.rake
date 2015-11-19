@@ -1,7 +1,7 @@
 namespace :salor do
   task :diagnostics => [:environment] do
     body = ''
-    Vendor.visible.each do |v|
+    Vendorproperty.each do |v|
       puts "\n\nRunning diagnostics for vendor #{ v.name }. Please wait for the result ..."
       d = v.run_diagnostics
       puts "\n=================== DIAGNOSTICS RESULT BEGIN ================="

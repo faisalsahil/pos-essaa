@@ -9,16 +9,16 @@ class ActionsController < ApplicationController
 
   def index
     if params[:keywords].blank?
-      @actions = @current_vendor.actions.visible.page(params[:page]).per(@current_vendor.pagination).order('created_at DESC')
+      @actions = @current_vendor.actions.page(params[:page]).per(@current_vendor.pagination).order('created_at DESC')
     else
-      items = @current_vendor.items.visible.by_keywords(params[:keywords])
+      items = @current_vendor.items.by_keywords(params[:keywords])
       @actions = []
-      items.each { |i| @actions += i.actions.visible }
+      items.each { |i| @actions += i.actions }
     end
   end
 
   def show
-    @action = @current_vendor.actions.visible.find_by_id(params[:id])
+    @action = @current_vendor.actions.find_by_id(params[:id])
     redirect_to edit_action_path(@action)
   end
 
@@ -28,7 +28,7 @@ class ActionsController < ApplicationController
   end
 
   def edit
-    @action = @current_vendor.actions.visible.find_by_id(params[:id])
+    @action = @current_vendor.actions.find_by_id(params[:id])
   end
 
   def create
@@ -45,7 +45,7 @@ class ActionsController < ApplicationController
   end
 
   def update
-    @action = @current_vendor.actions.visible.find_by_id(params[:id])
+    @action = @current_vendor.actions.find_by_id(params[:id])
     @action.created_by = @current_user.id if @action.created_by.nil?
     if @action.update_attributes(params[:act])
       redirect_to actions_path
@@ -55,7 +55,7 @@ class ActionsController < ApplicationController
   end
 
   def destroy
-    @action = @current_vendor.actions.visible.find_by_id(params[:id])
+    @action = @current_vendor.actions.find_by_id(params[:id])
     @action.hide(@current_user)
     redirect_to actions_path
   end

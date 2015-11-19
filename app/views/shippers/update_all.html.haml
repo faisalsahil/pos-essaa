@@ -16,7 +16,7 @@
       %td created_items
       %td
         - u.created_item_ids.each do |id|
-          - item = @current_vendor.items.visible.find_by_id(id)
+          - item = @current_vendor.items.find_by_id(id)
           = link_to("#{ item.name }, #{ item.sku }", item_path(item.id))
     %tr
       %td Messages:

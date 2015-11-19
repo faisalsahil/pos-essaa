@@ -9,11 +9,11 @@ class ShippersController < ApplicationController
   before_filter :check_role
 
   def index
-    @shippers = @current_vendor.shippers.visible.order("name asc").by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination)
+    @shippers = @current_vendor.shippers.order("name asc").by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination)
   end
 
   def show
-    @shipper = @current_vendor.shippers.visible.find_by_id(params[:id])
+    @shipper = @current_vendor.shippers.find_by_id(params[:id])
   end
 
   def new
@@ -21,7 +21,7 @@ class ShippersController < ApplicationController
   end
 
   def edit
-    @shipper = @current_vendor.shippers.visible.find_by_id(params[:id])
+    @shipper = @current_vendor.shippers.find_by_id(params[:id])
   end
 
   def create
@@ -37,7 +37,7 @@ class ShippersController < ApplicationController
   end
 
   def update
-    @shipper = @current_vendor.shippers.visible.find_by_id(params[:id])
+    @shipper = @current_vendor.shippers.find_by_id(params[:id])
 
     if @shipper.update_attributes(params[:shipper])
       redirect_to shippers_path
@@ -47,7 +47,7 @@ class ShippersController < ApplicationController
   end
   
   def update_all
-    @shippers = @current_vendor.shippers.visible.where("csv_url IS NOT NULL AND csv_url != ''")
+    @shippers = @current_vendor.shippers.where("csv_url IS NOT NULL AND csv_url != ''")
     @uploaders = []
     @shippers.each do |s|
       SalorBase.log_action("ShippersController", "Calling fetch_and_import_csv for Shipper #{ s.name }")
@@ -57,7 +57,7 @@ class ShippersController < ApplicationController
 
   
   def upload
-    @shipper = @current_vendor.shippers.visible.find_by_id(params[:shipper_id])
+    @shipper = @current_vendor.shippers.find_by_id(params[:shipper_id])
     if params[:file]
       @uploader = @shipper.import_csv(params[:file].read)
       @uploaders = [@uploader]
@@ -70,7 +70,7 @@ class ShippersController < ApplicationController
   end
 
   def destroy
-    @shipper = @current_vendor.shippers.visible.find_by_id(params[:id])
+    @shipper = @current_vendor.shippers.find_by_id(params[:id])
     @shipper.hide(@current_user)
     redirect_to shippers_path
   end

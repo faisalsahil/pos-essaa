@@ -45,10 +45,10 @@ class Shipment < ActiveRecord::Base
   
   def receiver_shipper_list
     ret = []
-    self.vendor.shippers.visible.order(:name).each do |shipper|
+    self.vendor.shippers.order(:name).each do |shipper|
       ret << {:name => shipper.name, :value => 'Shipper:' + shipper.id.to_s}
     end
-    self.company.vendors.visible.all.each do |vendor|
+    self.company.vendors.all.each do |vendor|
       ret << {:name => vendor.name, :value => 'Vendor:' + vendor.id.to_s}
     end
     return ret
@@ -140,7 +140,7 @@ class Shipment < ActiveRecord::Base
   end
 
   def move_all_items_into_stock
-    self.shipment_items.visible.each do |si|
+    self.shipment_items.each do |si|
       if si.in_stock_quantity == si.quantity || si.tax_profile_id.nil?
         log_action I18n.t("system.errors.shipment_item_already_in_stock", :sku => si.sku)
         next
@@ -170,15 +170,15 @@ class Shipment < ActiveRecord::Base
   end
   
   def calculate_totals
-    self.total_cents = self.shipment_items.visible.sum(:total_cents)
-    self.purchase_price_total_cents = self.shipment_items.visible.sum(:purchase_price_total_cents)
+    self.total_cents = self.shipment_items.sum(:total_cents)
+    self.purchase_price_total_cents = self.shipment_items.sum(:purchase_price_total_cents)
     self.save
   end
   
   def add_shipment_item(params)
     return nil if params[:sku].blank?
     # get existing regular item
-    si = self.shipment_items.visible.where(:sku => params[:sku]).first
+    si = self.shipment_items.where(:sku => params[:sku]).first
     if si then
       log_action "Item is normal, and present, just increment"
       si.quantity += 1 
@@ -201,7 +201,7 @@ class Shipment < ActiveRecord::Base
     si.currency = self.vendor.currency
     
     # try to get default data from existing Items
-    item = self.vendor.items.visible.find_by_sku(params[:sku])
+    item = self.vendor.items.find_by_sku(params[:sku])
     if item
       si.price_cents = item.price_cents
       si.purchase_price_cents = item.purchase_price_cents

@@ -1,9 +1,9 @@
 namespace :salor do
   task :shippers_import => [:environment] do
     body = ''
-    Vendor.visible.each do |v|
+    Vendorproperty.each do |v|
       puts "\n\nRunning shipper import for vendor #{ v.name }. Please wait ..."
-      v.shippers.visible.each do |s|
+      v.shippersproperty.each do |s|
         next if s.csv_url.blank?
         begin
           uploader = s.fetch_and_import_csv

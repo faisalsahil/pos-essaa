@@ -34,7 +34,7 @@
      <td>
         <div class="field">
           <%= f.label t("activerecord.attributes.the_shipper") %><br />
-          <%= f.collection_select :shipper_id, @item.vendor.shippers.visible, :id, :name, :include_blank => true %>
+          <%= f.collection_select :shipper_id, @item.vendor.shippers, :id, :name, :include_blank => true %>
         </div>
         <div class="field">
           <%= f.label t("activerecord.attributes.is_shipment_item") %><br />

@@ -49,7 +49,7 @@
       %th= Item.human_attribute_name(:tax_profile_id)
       %th= ShipmentItem.human_attribute_name(:quantity)
       %th= t('.purchase_price_sum')
-    - @shipment.shipment_items.visible.reverse.each do |si|
+    - @shipment.shipment_items.reverse.each do |si|
       %tr
         %td= si.name
         %td= si.sku
@@ -71,9 +71,9 @@
       %th= ShipmentItem.human_attribute_name(:quantity)
       %th
       %th
-    - @shipment.shipment_items.visible.reverse.each do |si|
-      - item = @shipment.vendor.items.visible.find_by_sku(si.sku)
-      - item_stocks = item.item_stocks.visible if item
+    - @shipment.shipment_items.reverse.each do |si|
+      - item = @shipment.vendor.items.find_by_sku(si.sku)
+      - item_stocks = item.item_stocks if item
       - item_stocks ||= []
       %tr
         %td= si.name

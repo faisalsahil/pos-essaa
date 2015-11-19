@@ -12,7 +12,7 @@ class ButtonsController < ApplicationController
   end
 
   def show
-    @button = @current_vendor.buttons.visible.find_by_id(params[:id])
+    @button = @current_vendor.buttons.find_by_id(params[:id])
     redirect_to button_path(@button)
   end
 
@@ -21,7 +21,7 @@ class ButtonsController < ApplicationController
   end
 
   def edit
-    @button = @current_vendor.buttons.visible.find_by_id(params[:id])
+    @button = @current_vendor.buttons.find_by_id(params[:id])
   end
 
   def create
@@ -36,7 +36,7 @@ class ButtonsController < ApplicationController
   end
 
   def update
-    @button = @current_vendor.buttons.visible.find_by_id(params[:id])
+    @button = @current_vendor.buttons.find_by_id(params[:id])
     if @button.update_attributes params[:button]
       redirect_to buttons_path
     else
@@ -45,13 +45,13 @@ class ButtonsController < ApplicationController
   end
 
   def destroy
-    @button = @current_vendor.buttons.visible.find_by_id(params[:id])
+    @button = @current_vendor.buttons.find_by_id(params[:id])
     @button.hide(@current_user)
     redirect_to buttons_path
   end
 
   def position
-    @buttons = @current_vendor.buttons.visible.where("id IN (#{params[:button].join(',')})")
+    @buttons = @current_vendor.buttons.where("id IN (#{params[:button].join(',')})")
     Button.sort(@buttons, params[:button])
     render :nothing => true
   end
@@ -59,6 +59,6 @@ class ButtonsController < ApplicationController
   private
   
   def get_button_categories
-    @button_categories = @current_vendor.categories.visible.where(:button_category => true).order(:position)
+    @button_categories = @current_vendor.categories.where(:button_category => true).order(:position)
   end
 end

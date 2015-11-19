@@ -15,13 +15,13 @@
     %th= t("activerecord.attributes.rebate")
     %th= t("orders.report.net")
     %th= t("orders.report.gross")
-  = render :partial => "line_item", :collection => @order.order_items.visible
+  = render :partial => "line_item", :collection => @order.order_items
   
   %tr
     %td.right{ :colspan => 5 }= I18n.t("activerecord.attributes.total")
     %td.right= humanized_money_with_symbol @order.total
   
-  - @order.payment_method_items.visible.each do |pmi|
+  - @order.payment_method_items.each do |pmi|
     %tr.no-stripe
       %td.right{ :colspan => 5 }= pmi.payment_method.name
       %td.right= humanized_money_with_symbol pmi.amount

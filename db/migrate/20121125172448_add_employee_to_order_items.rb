@@ -5,6 +5,6 @@ class AddEmployeeToOrderItems < ActiveRecord::Migration
     rescue
       puts $!.inspect
     end
-    OrderItem.connection.execute("update order_items as oi set oi.employee_id = (select employee_id from orders where id = oi.order_id)")
+    OrderItem.connection.execute("update order_items set employee_id = (select employee_id from orders where id = order_items.order_id)")
   end
 end

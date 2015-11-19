@@ -121,7 +121,7 @@ sr.fn.complete.process = function(print,change_user_id) {
         sr.fn.salor_bin.maybeObserveDrawer(0);
       }
       sr.data.complete.sending_order = false;
-      sr.fn.salor_bin.updateCustomerDisplay(order_id, false, true);
+      // sr.fn.salor_bin.updateCustomerDisplay(order_id, false, true);
     },
     error: function(jqXHR, textStatus, errorThrown) {
       sr.data.messages.prompts.push("Error during request: orders complete");
