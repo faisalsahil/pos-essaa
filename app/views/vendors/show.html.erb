@@ -35,7 +35,7 @@
         </div>
         <% end %>
         <% if @current_user.can(:index_locations) %>
-        <div class="widget master" onmousedown="window.location = '<%= locations_path %>';">
+        <!-- <div class="widget master" onmousedown="window.location = '<%= locations_path %>';">
           <div align="center">
             <a href="<%= locations_path %>">
               <%= salor_icon(:locations,{},64) %>
@@ -43,10 +43,10 @@
               <%= t("menu.locations") %>
             </a>
           </div>
-        </div>
+        </div> -->
         <% end %>
         <% if @current_user.can(:index_locations) %>
-        <div class="widget master" onmousedown="window.location = '<%= stock_locations_path %>';">
+        <!-- <div class="widget master" onmousedown="window.location = '<%= stock_locations_path %>';">
           <div align="center">
             <a href="<%= stock_locations_path %>">
               <%= salor_icon(:stock_locations,{},64) %>
@@ -54,7 +54,7 @@
               <%= t("menu.stock_locations") %>
             </a>
           </div>
-        </div>
+        </div> -->
         <% end %>
         <% if @current_user.can(:index_items) %>
         <div class="widget master" onmousedown="window.location = '<%= items_path %>';">
@@ -66,7 +66,7 @@
             </a>
           </div>
         </div>
-        <div class="widget master" onmousedown="window.location = '<%= broken_items_path %>';">
+        <!-- <div class="widget master" onmousedown="window.location = '<%= broken_items_path %>';">
           <div align="center">
             <a href="<%= broken_items_path %>">
               <%= salor_icon(:broken,{},64) %>
@@ -74,7 +74,7 @@
               <%= t("menu.broken_items") %>
             </a>
           </div>
-        </div>
+        </div> -->
         <% end %>
       <% if @current_user.can(:index_cash_registers) %>
         <div class="widget master" onmousedown="window.location = '<%= cash_registers_path %>';">
@@ -98,7 +98,7 @@
         </div>
         <% end %>
         <% if @current_user.can(:index_shipments) %>
-         <div class="widget master" onmousedown="window.location = '<%= shipments_path %>';">
+         <!-- <div class="widget master" onmousedown="window.location = '<%= shipments_path %>';">
           <div align="center">
             <a href="<%= shipments_path %>">
               <%= salor_icon(:shipment,{},64) %>
@@ -115,10 +115,10 @@
               <%= t("menu.shipment_types") %>
             </a>
           </div>
-        </div>
+        </div> -->
         <% end %>
         <% if @current_user.can(:index_shippers) %>
-         <div class="widget master" onmousedown="window.location = '<%= shippers_path %>';">
+         <!-- <div class="widget master" onmousedown="window.location = '<%= shippers_path %>';">
           <div align="center">
             <a href="<%= shippers_path %>">
               <%= salor_icon(:shipper,{},64) %>
@@ -126,7 +126,7 @@
               <%= t("menu.shippers") %>
             </a>
           </div>
-        </div>
+        </div> -->
         <% end %>
         <% if @current_user.can(:index_orders) %>
         <div class="widget master" onmousedown="window.location = '<%= orders_path %>';">
@@ -150,7 +150,7 @@
         </div>
         <% end %>
         <% if @current_user.can(:index_customers) %>
-         <div class="widget master" onmousedown="window.location = '/customers';">
+         <!-- <div class="widget master" onmousedown="window.location = '/customers';">
           <div align="center">
             <a href="/customers">
             <%= salor_icon(:customer,{},64) %>
@@ -158,10 +158,10 @@
               <%= t("menu.customers") %>
             </a>
           </div>
-        </div>
+        </div> -->
         <% end %>
         <% if @current_user.can(:index_transaction_tags) %>
-        <div class="widget master" onmousedown="window.location = '<%= transaction_tags_path %>';">
+        <!-- <div class="widget master" onmousedown="window.location = '<%= transaction_tags_path %>';">
           <div align="center">
             <a href="<%= transaction_tags_path %>">
               <%= salor_icon(:tags,{},64) %>
@@ -169,10 +169,10 @@
               <%= t("menu.transaction_tags") %>
             </a>
           </div>
-        </div>
+        </div> -->
         <% end %>
         <% if @current_user.can(:show_actions) %>
-        <div class="widget master" onmousedown="window.location = '<%= actions_path %>';">
+        <!-- <div class="widget master" onmousedown="window.location = '<%= actions_path %>';">
           <div align="center">
             <a href="<%= actions_path %>">
               <%= salor_icon(:action,{},64) %>
@@ -180,10 +180,10 @@
               <%= t("menu.actions") %>
             </a>
           </div>
-        </div>
+        </div> -->
         <% end %>
         <% if @current_user.can(:show_plugins) %>
-        <div class="widget master" onmousedown="window.location = '<%= plugins_path %>';">
+        <!-- <div class="widget master" onmousedown="window.location = '<%= plugins_path %>';">
           <div align="center">
             <a href="<%= plugins_path %>">
               <%= salor_icon(:plugin,{},64) %>
@@ -191,7 +191,7 @@
               <%= t("menu.plugins") %>
             </a>
           </div>
-        </div>
+        </div> -->
         <% end %>
         <% if @current_user.can(:show_payment_methods) %>
         <div class="widget master" onmousedown="window.location = '<%= payment_methods_path %>';">
@@ -216,7 +216,7 @@
         </div>
         <% end %>
         <% if @current_user.can(:show_sale_types) %>
-        <div class="widget master" onmousedown="window.location = '<%= sale_types_path %>';">
+        <!-- <div class="widget master" onmousedown="window.location = '<%= sale_types_path %>';">
           <div align="center">
             <a href="<%= sale_types_path %>">
               <%= salor_icon(:sale_type,{},64) %>
@@ -224,10 +224,10 @@
               <%= t('activerecord.models.sale_type.other') %>
             </a>
           </div>
-        </div>
+        </div> -->
         <% end %>
         <% if @current_user.can(:show_invoice_notes) %>
-        <div class="widget master" onmousedown="window.location = '<%= invoice_notes_path %>';">
+        <!-- <div class="widget master" onmousedown="window.location = '<%= invoice_notes_path %>';">
           <div align="center">
             <a href="<%= invoice_notes_path %>">
               <%= salor_icon(:invoice_note,{},64) %>
@@ -235,7 +235,7 @@
               <%= t('activerecord.models.invoice_note.other') %>
             </a>
           </div>
-        </div>
+        </div> -->
         <% end %>
         <% if @current_user.can(:show_buttons) %>
         <div class="widget master" onmousedown="window.location = '<%= buttons_path %>';">
@@ -249,7 +249,7 @@
         </div>
         <% end %>
         <% if @current_user.can(:show_invoice_blurbs) %>
-        <div class="widget master" onmousedown="window.location = '<%= invoice_blurbs_path %>';">
+        <!-- <div class="widget master" onmousedown="window.location = '<%= invoice_blurbs_path %>';">
           <div align="center">
             <a href="<%= invoice_blurbs_path %>">
               <%= salor_icon(:invoice_blurb,{},64) %>
@@ -257,7 +257,7 @@
               <%= t("menu.invoice_blurbs") %>
             </a>
           </div>
-        </div>
+        </div> -->
         <% end %>
         <% if @current_user.can(:show_reports) %>
         <div class="widget master" onmousedown="window.location = '/reports';">

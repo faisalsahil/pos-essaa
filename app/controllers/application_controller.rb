@@ -129,6 +129,9 @@ class ApplicationController < ActionController::Base
     if session[:user_id_hash].blank?
       redirect_to new_session_path and return 
     end
+    puts '-'*120
+    puts session[:user_id_hash].inspect
+    puts '-'*120
     
     @current_user = User.find_by_id_hash(session[:user_id_hash])
     if @current_user.nil?

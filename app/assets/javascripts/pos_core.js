@@ -3,7 +3,7 @@ sr.data.pos_core.highlight_attrs = ['sku', 'price', 'total'];
 sr.fn.pos_core.addItem = function(sku, additional_params) {
   if (sku == "") return
   sku = sku.replace(/[^-0-9a-zA-Z,\.]/g,'');
-  get('/orders/add_item_ajax?order_id=' + sr.data.pos_core.order.id + '&sku=' + sku + additional_params);
+  get('/orders/add_item_ajax?order_id=' + sr.data.pos_core.order.id + '&sku=' + sku+ '&quantity=' + additional_params);
   $('#main_sku_field').val('');
 }
 
@@ -85,6 +85,7 @@ sr.fn.pos_core.drawOrderItemRow = function(item, mode) {
     switch(attr) {
       case 'name':
         col.html(item.name + '<br/>' + item.sku);
+        col.html(item.name + '<br/>' + item.quantity);
         break;
       case 'quantity':
         var string = "";
@@ -134,9 +135,11 @@ sr.fn.pos_core.drawOrderItemRow = function(item, mode) {
       case 'price_reductions':
         if (item.behavior == 'normal' ) {
           var contents = [];
-          contents[0] = sr.fn.math.toCurrency(item.discount_amount);
-          contents[1] = sr.fn.math.toCurrency(item.rebate_amount);
-          contents[2] = sr.fn.math.toCurrency(item.coupon_amount);
+          contents[0] = item.quantity;
+
+          // contents[0] = sr.fn.math.toCurrency(item.discount_amount);
+          // contents[1] = sr.fn.math.toCurrency(item.rebate_amount);
+          // contents[2] = sr.fn.math.toCurrency(item.coupon_amount);
           col.html(contents.join("<br />"));
         }
         break;

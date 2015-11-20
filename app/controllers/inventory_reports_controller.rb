@@ -35,8 +35,11 @@ class InventoryReportsController < ApplicationController
   
   def update_real_quantity
     @item = @current_vendor.items.find_by_sku(params[:sku])
-    @item.real_quantity = @item.real_quantity.to_f + params[:real_quantity].gsub(",",".").to_f
-    @item.real_quantity ||= 0 # protect against errenous JS requests with missing 'real_quantity' param
+    # @item.real_quantity = @item.real_quantity.to_f + params[:real_quantity].gsub(",",".").to_f
+    # @item.real_quantity ||= 0 # protect against errenous JS requests with missing 'real_quantity' param
+    # @item.real_quantity_updated = true
+    @item.quantity = @item.quantity.to_f + params[:real_quantity].gsub(",",".").to_f
+    @item.quantity ||= 0 # protect against errenous JS requests with missing 'real_quantity' param
     @item.real_quantity_updated = true
     result = @item.save
     if result != true

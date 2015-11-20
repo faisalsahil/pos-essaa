@@ -30,7 +30,7 @@ sr.fn.inventory = {
       $('#inventory_sku').val('');
       $('#inventory_item_name').html(data.name);
       $('#inventory_item_sku').html(data.sku);
-      $('#inventory_item_current_quantity').html(data.real_quantity);
+      $('#inventory_item_current_quantity').html(data.quantity);
       $('#inventory_quantity').focus();
     } else {
       $('#inventory_item_name').html("---");
