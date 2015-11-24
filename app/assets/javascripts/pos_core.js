@@ -85,7 +85,6 @@ sr.fn.pos_core.drawOrderItemRow = function(item, mode) {
     switch(attr) {
       case 'name':
         col.html(item.name + '<br/>' + item.sku);
-        col.html(item.name + '<br/>' + item.quantity);
         break;
       case 'quantity':
         var string = "";

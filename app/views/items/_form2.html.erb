@@ -15,7 +15,7 @@
 </script>
 
 <% unless @item.new_record? %>
-  <table class="tools">
+ <!--  <table class="tools">
     <tr>
       <td >
           <div class="tool-icon" style="width: 100px;">
@@ -45,30 +45,14 @@
       </td>
       <%= @current_plugin_manager.do_hook("after_edit_item_tools") %>
     </tr>
-  </table>
+  </table> -->
 <% end %>
 
 <!-- Begin Form -->
 <div class="right">
   <%= form_for(@item) do |f| %>
     <table width="90%" align="center">
-      <tr>
-        <td colspan="2" align="right"> 
-          <div class="actions">
-            <%= f.submit t('helpers.submit.save')%>
-          </div>
-          <% if @item.errors.any? %>
-            <div id="error_explanation">
-              <h2><%= I18n.t("activerecord.errors.template.header.other", :count => @item.errors.count,:model => t("activerecord.models.item.one"))%></h2>
-              <ul>
-              <% @item.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-              <% end %>
-              </ul>
-            </div>
-          <% end %>
-        </td>
-      </tr>
+      
       
     <!--   Begin Form Fields -->
       
@@ -77,7 +61,7 @@
         <td> <%= f.text_field :name, :class => "keyboardable", :style => "width: 80%;" %> </td>
       </tr>
       
-      <tr>
+     <!--  <tr>
         <td> 
           <%= select_tag :locale_select, options_for_select(SalorRetail::Application::LANGUAGES.to_a.collect{ |a| a.reverse }), :onchange => "sr.fn.items.itemsAddNameTranslation($(this).val());" %>
         </td>
@@ -94,7 +78,7 @@
           
           </div>
         </td>
-      </tr>
+      </tr> -->
       
       <tr>
         <td> <%= f.label I18n.t("activerecord.attributes.sku") %> </td>
@@ -114,17 +98,17 @@
 
       
       <tr>
-        <td> <%= f.label I18n.t("activerecord.attributes.buyback_price") %> </td>
-        <td> <%= f.text_field :buyback_price, :class => 'keyboardable-int delimit-number'%> </td>
+        <td> <%= f.label I18n.t("activerecord.attributes.quantity") %> </td>
+        <td> <%= f.text_field :quantity%> </td>
       </tr>
       
       
-      <tr>
-        <td>  <%= f.label I18n.t("activerecord.models.tax_profile.one") %> </td>
-        <td> <%= f.collection_select :tax_profile_id, @item.vendor.tax_profiles, :id, :name, :include_blank => true %> </td>
-      </tr>
+      <!-- <tr>
+        <td>  <% f.label I18n.t("activerecord.models.tax_profile.one") %> </td>
+        <td> <% f.collection_select :tax_profile_id, @item.vendor.tax_profiles, :id, :name, :include_blank => true,:selected => @item.vendor.tax_profiles[2] %> </td>
+      </tr>  -->
       
-      <tr>
+      <!-- <tr>
         <td> <%= f.label I18n.t("activerecord.models.category.one") %> </td>
         <td> <%= f.collection_select :category_id, @item.vendor.categories, :id, :name, :include_blank => true %> </td>
       </tr>
@@ -132,11 +116,11 @@
       <tr>
         <td> <%= f.label I18n.t("activerecord.models.item_type.one") %> </td>
         <td>  <%= f.collection_select :item_type_id, @current_vendor.item_types, :id, :name %> </td>
-      </tr>
+      </tr> -->
       
 
       
-      <% if not @item.sku.blank?  %>
+<!--       <% if not @item.sku.blank?  %>
         <tr>
           <td>&nbsp;</td>
           <td>
@@ -163,9 +147,9 @@
             </table>
           </td>
         </tr>
-      <% end %>
+      <% end %> -->
       
-      <% if @item.parent or @item.child %>
+<!--       <% if @item.parent or @item.child %>
         <tr>
           <td>
           </td>
@@ -180,17 +164,17 @@
           </td>
         </tr>
       <% end %>
-    
+     -->
     <!-- ################### -->
     
-    <tr>
+    <!-- <tr>
       <td colspan="2">  
         <hr />
         <h2><%= t("menu.stock_management") %></h2>
       </td>
-    </tr>
+    </tr> -->
     
-    <tr>
+   <!--  <tr>
       <td> <%= f.label t("activerecord.attributes.ignore_qty") %> </td>
       <td> <%= f.check_box :ignore_qty %></td>
     </tr>
@@ -208,9 +192,9 @@
     <tr>
       <td> <%= f.label t("activerecord.attributes.child_sku") %> </td>
       <td> <%= f.text_field :child_sku, :class => "keyboardable" %> </td>
-    </tr>
+    </tr> -->
     
-    <tr>
+   <!--  <tr>
       <td> <%= f.label t("activerecord.attributes.packaging_unit") %> </td>
       <td> <%= f.text_field :packaging_unit, :class => "keyboardable-int delimit-number" %> </td>
     </tr>
@@ -222,13 +206,13 @@
     
     <tr>
       <td colspan="2"> <%= render :partial => "multi_location_form", :locals => {:item => @item, :form => f}%> </td>
-    </tr>
+    </tr> -->
     
     
     
     
     <!-- ################### -->
-    <tr>
+    <!-- <tr>
       <td colspan="2">  
         <hr />
         <h2><%= t("activerecord.models.shipper.other") %></h2>
@@ -254,13 +238,13 @@
       <td colspan="2">
         <%= render :partial => "multi_shipper_form", :locals => { :item => @item, :form => f }%>
       </td>
-    </tr>
+    </tr> -->
 
     
     
     
     <tr>
-      <td colspan="2">
+    <!--   <td colspan="2">
         <hr />
         <h2><%= t("views.single_words.coupons") %> & <%= t("views.single_words.gift_cards") %></h2>
       </td>
@@ -279,14 +263,14 @@
     <tr>
       <td> <%= f.label t("activerecord.attributes.gift_card_amount") %> </td>
       <td> <%= f.text_field :gift_card_amount, :class => 'keyboardable' %> </td>
-    </tr>
+    </tr> -->
     
     
     
     
 
     
-    <tr>
+    <!-- <tr>
       <td colspan="2">  
         <hr />
         <h2><%= t("menu.additional") %></h2>
@@ -315,9 +299,9 @@
         <%= f.text_field :length,:class => "keyboardable-int wide-left-kbd delimit-number", :size => 7 %> 
         <%= f.select :length_metric, AppConfig.length_metrics.split(',').collect {|metric| [metric,metric]} %>
       </td>
-    </tr>
+    </tr> -->
     
-    <tr>
+    <!-- <tr>
       <td> <%= f.label t("activerecord.attributes.width") %> </td>
       <td> 
         <%= f.text_field :width,:class => "keyboardable-int wide-left-kbd delimit-number", :size => 7 %> 
@@ -353,11 +337,11 @@
     <tr>
       <td> <%= f.label I18n.t("activerecord.attributes.expires_on") %> </td>
       <td> <%= f.date_select :expires_on, :order => [:day,:month,:year] %> </td>
-    </tr>
+    </tr> -->
     
 
     
-    <tr>
+    <!-- <tr>
       <td colspan="2">  
         <hr />
         <h2><%= t("views.advanced_field").split(' ').first %></h2>
@@ -392,7 +376,7 @@
     <tr>
       <td> <%= f.label :gs1_format %>  </td>
       <td> <%= f.text_field :gs1_format %> </td>
-    </tr>
+    </tr> -->
     
     
     
@@ -400,7 +384,7 @@
     
     
     
-    <tr>
+    <!-- <tr>
       <td colspan="2"> 
         <hr />
         <h2><%= t("views.forms.parts") %></h2>
@@ -461,13 +445,13 @@
           <% end %>
         </div>
       </td>
-    </tr>
+    </tr> -->
     
 
     
 
     
-    <tr>
+    <!-- <tr>
       <td colspan="2"> 
         <hr />
         <h2><%= t("activerecord.models.action.other") + ' & ' + t("activerecord.models.discount.other") %></h2>
@@ -505,10 +489,26 @@
           <% end %>
         </table>
       </td>
-    </tr>
+    </tr> -->
     
 
-    
+    <tr>
+        <td colspan="2" align="right"> 
+          <div class="actions">
+            <%= f.submit t('helpers.submit.save')%>
+          </div>
+          <% if @item.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= I18n.t("activerecord.errors.template.header.other", :count => @item.errors.count,:model => t("activerecord.models.item.one"))%></h2>
+              <ul>
+              <% @item.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+        </td>
+      </tr>
 
     
     

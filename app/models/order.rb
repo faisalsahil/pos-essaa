@@ -239,11 +239,12 @@ class Order < ActiveRecord::Base
       new_i = create_dynamic_gift_card_item
       i = new_i
     end
-    
+    puts params[:quantity].inspect
     # finally create the order item
     oi = OrderItem.new
     oi.order = self
     oi.drawer = self.drawer
+    oi.location_id=params[:quantity]
     oi.user = self.user
     oi.set_attrs_from_item(i)
     if params[:sku].include?('.') or params[:sku].include?(',')

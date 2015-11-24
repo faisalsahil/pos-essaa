@@ -23,7 +23,7 @@ $("#search_results").html('<table id="results_table" width="100%"></table>');
   
     var btn = $('<td><div class="image-button"><img src="/images/icons/<%= icon(:add,32) %>" /></div></td>');
     btn.click(function () {
-      sr.fn.pos_core.addItem('<%= item.sku %>','<%= item.quantity %>');
+      sr.fn.pos_core.addItem('<%= item.sku %>','<%= item.quantity.to_i %>');
     });
     btn.mouseup(function () {
       $(this).removeClass('active-icon');
