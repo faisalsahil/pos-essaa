@@ -14,12 +14,12 @@
 
 .tools
   .tool-icon= link_to salor_icon(:report, {}, 32, t("menu.report_day")), '/vendors/report_day'
-  .tool-icon= link_to salor_icon(:order, {}, 32, t("activerecord.models.order.other")), '/orders?type=normal'
-  .tool-icon= link_to salor_icon(:proforma_order, {}, 32, t("activerecord.models.order.proforma_orders")), '/orders?type=proforma'
-  .tool-icon= link_to salor_icon(:unpaid_order, {}, 32, t("activerecord.models.order.unpaid_orders")), '/orders?type=unpaid'
-  .tool-icon= link_to salor_icon(:quote, {}, 32, t("activerecord.models.order.quotes")), '/orders?type=quote'
-  .tool-icon= link_to salor_icon(:subscription_order, {}, 32, t("activerecord.models.order.subscriptions")), '/orders?type=subscription'
-  .tool-icon= link_to salor_icon(:thermal_printer, {}, 32, t("menu.receipts")), '/orders/receipts'
+  / .tool-icon= link_to salor_icon(:order, {}, 32, t("activerecord.models.order.other")), '/orders?type=normal'
+  / .tool-icon= link_to salor_icon(:proforma_order, {}, 32, t("activerecord.models.order.proforma_orders")), '/orders?type=proforma'
+  / .tool-icon= link_to salor_icon(:unpaid_order, {}, 32, t("activerecord.models.order.unpaid_orders")), '/orders?type=unpaid'
+  / .tool-icon= link_to salor_icon(:quote, {}, 32, t("activerecord.models.order.quotes")), '/orders?type=quote'
+  / .tool-icon= link_to salor_icon(:subscription_order, {}, 32, t("activerecord.models.order.subscriptions")), '/orders?type=subscription'
+  / .tool-icon= link_to salor_icon(:thermal_printer, {}, 32, t("menu.receipts")), '/orders/receipts'
 
 
 - if params[:type] == 'subscription'

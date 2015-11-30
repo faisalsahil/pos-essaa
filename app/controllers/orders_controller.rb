@@ -56,6 +56,11 @@ class OrdersController < ApplicationController
     #@histories = @order.histories
   end
 
+  def getItem
+    stock = OrderItem.find(params[:id]).item.quantity
+    return render :json=> stock
+  end
+
   def new
     unless params[:keywords].blank?
       redirect_to "/items?keywords=#{ params[:keywords] }"
@@ -79,7 +84,6 @@ class OrdersController < ApplicationController
       @current_order.cash_register = @current_register
       @current_order.drawer = @current_user.get_drawer
       @current_order.save!
-      
       # remember this for the current user
       @current_user.current_order_id = @current_order.id
       @current_user.save!
@@ -174,12 +178,16 @@ class OrdersController < ApplicationController
       render :update_pos_display
       return
     end
-    @order_item.hide(@current_user)
+    # @order_item.hide(@current_user)
+    @order_item.delete
+    # @order.delete
     if @order_item.behavior == 'coupon'
       @matching_coupon_item = @order.order_items.find_by_sku(@order_item.item.coupon_applies)
       @order_items << @matching_coupon_item
     end
+    @order.calculate_totals
     render :update_pos_display
+    # redirect_to new_order_path
   end
 
   def print_receipt

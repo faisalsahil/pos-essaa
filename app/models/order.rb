@@ -244,7 +244,7 @@ class Order < ActiveRecord::Base
     oi = OrderItem.new
     oi.order = self
     oi.drawer = self.drawer
-    oi.location_id=params[:quantity]
+    oi.refunded_by=params[:quantity].to_i
     oi.user = self.user
     oi.set_attrs_from_item(i)
     if params[:sku].include?('.') or params[:sku].include?(',')

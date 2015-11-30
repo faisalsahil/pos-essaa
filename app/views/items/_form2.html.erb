@@ -19,15 +19,15 @@
     <tr>
       <td >
           <div class="tool-icon" style="width: 100px;">
-            <%= link_to salor_icon(:broken, {},32), new_broken_item_path(:sku => @item.sku, :name => @item.name, :base_price => @item.base_price) %><br />
-            <span class="icon-caption"> <%= I18n.t("menu.new_broken_item") %></span>
+            <%#= link_to salor_icon(:broken, {},32), new_broken_item_path(:sku => @item.sku, :name => @item.name, :base_price => @item.base_price) %><br />
+            <span class="icon-caption"> <%#= I18n.t("menu.new_broken_item") %></span>
           </div>
       </td>
       <% unless @item.new_record? %>
         <td>
           <div class="tool-icon" style="width: 100px;">
-            <%= link_to salor_icon(:action, {},32), item_new_action_path(@item) %><br />
-            <span class="icon-caption"><%= I18n.t("menu.new_action") %></span>
+            <%#= link_to salor_icon(:action, {},32), item_new_action_path(@item) %><br />
+            <span class="icon-caption"><%#= I18n.t("menu.new_action") %></span>
           </div>
         </td>
       <% end %>
@@ -103,20 +103,20 @@
       </tr>
       
       
-      <!-- <tr>
-        <td>  <% f.label I18n.t("activerecord.models.tax_profile.one") %> </td>
-        <td> <% f.collection_select :tax_profile_id, @item.vendor.tax_profiles, :id, :name, :include_blank => true,:selected => @item.vendor.tax_profiles[2] %> </td>
-      </tr>  -->
+      <tr>
+        <td>  <%= f.label I18n.t("activerecord.models.tax_profile.one") %> </td>
+        <td> <%= f.collection_select :tax_profile_id, @item.vendor.tax_profiles, :id, :name, :include_blank => false%> </td>
+      </tr>
       
       <!-- <tr>
         <td> <%= f.label I18n.t("activerecord.models.category.one") %> </td>
         <td> <%= f.collection_select :category_id, @item.vendor.categories, :id, :name, :include_blank => true %> </td>
       </tr>
-      
+      -->
       <tr>
         <td> <%= f.label I18n.t("activerecord.models.item_type.one") %> </td>
         <td>  <%= f.collection_select :item_type_id, @current_vendor.item_types, :id, :name %> </td>
-      </tr> -->
+      </tr> 
       
 
       

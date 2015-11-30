@@ -62,7 +62,7 @@ sr.fn.pos_core.drawOrderItemRow = function(item, mode) {
   if (sr.data.session.cash_register.hide_discounts == true) {
     var attrs = ['name', 'quantity', 'price', 'total'];
   } else {
-    var attrs = ['name', 'quantity', 'price', 'rebate', 'price_reductions', 'total', 'tax'];
+    var attrs = ['name', 'quantity', 'price', 'price_reductions', 'total'];
   }
   
   var row_id = 'order_item_' + item.id;
@@ -134,8 +134,14 @@ sr.fn.pos_core.drawOrderItemRow = function(item, mode) {
       case 'price_reductions':
         if (item.behavior == 'normal' ) {
           var contents = [];
-          contents[0] = item.quantity;
-
+          $.ajax({
+              url: "/orders/getItem?id="+item.id,
+              type: "get",
+              datatype: "json",
+              async: false
+            }).success(function(data) {
+              contents[0] = data;
+            });
           // contents[0] = sr.fn.math.toCurrency(item.discount_amount);
           // contents[1] = sr.fn.math.toCurrency(item.rebate_amount);
           // contents[2] = sr.fn.math.toCurrency(item.coupon_amount);
@@ -304,6 +310,7 @@ sr.fn.pos_core.makeItemMenu = function(col, row) {
             get('/orders/delete_order_item?id=' + item.id, filename);
             menu.remove();
             //setScrollerState();
+
             sr.fn.focus.set($('#main_sku_field'));
         });
         menu.append(dicon);

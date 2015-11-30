@@ -179,7 +179,11 @@ SalorRetail::Application.routes.draw do
   resources :users
   resources :actions
   resources :plugins
-  resources :orders
+  resources :orders do
+    collection do 
+      get :getItem
+    end
+  end
   resources :items do
     get :new_action
   end

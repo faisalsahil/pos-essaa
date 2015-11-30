@@ -114,6 +114,7 @@ class Role < ActiveRecord::Base
       :any_tax_profiles,
       :destroy_items,
       :new_items,
+      :edit_items,
       :edit_vendors,
       :new_vendors,
       :index_vendors,

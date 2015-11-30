@@ -42,7 +42,7 @@ class Item < ActiveRecord::Base
   
   accepts_nested_attributes_for :item_stocks, :allow_destroy => true #, :reject_if => lambda {|a| (a[:stock_location_quantity].to_f +  a[:location_quantity].to_f == 0.00) }
 
-  validates_presence_of :sku, :vendor_id, :company_id#, :tax_profile_id, :currency
+  validates_presence_of :sku, :vendor_id, :company_id, :tax_profile_id#, :currency
   
   validate :sku_unique_in_visible, :if => :sku_is_not_weird
   validate :not_selfloop
