@@ -113,7 +113,7 @@ sr.fn.inplace_edit.bindEnter = function(elem) {
   });
 }
 
-sr.fn.inplace_edit.make = function(elem) {
+sr.fn.inplace_edit.make = function(elem,base_id) {
   if (elem.hasClass('editmedone')) {
     return;    
   }
@@ -181,7 +181,18 @@ sr.fn.inplace_edit.make = function(elem) {
             $('.ui-keyboard-preview').select();
           },
           accepted: function() {
-            sr.fn.inplace_edit.submit(elem, input.val());
+            if(elem.hasClass('quant'))
+            {
+              var q = $('.' + base_id + '-price_reductions').html();
+              if (input.val() <= q)
+              {
+                sr.fn.inplace_edit.submit(elem, input.val());
+              }
+              else
+              { alert("Not enough stock available.");}
+            }
+            else
+            { sr.fn.inplace_edit.submit(elem, input.val());}
           }
         });
         input.getkeyboard().reveal();

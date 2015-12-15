@@ -45,3 +45,4 @@
 //= require jquery.modcoder.excolor
 //= require jquery.keyboard
 //= require jquery.checkbox
+//= require jsclock-0.8

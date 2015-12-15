@@ -87,6 +87,7 @@ sr.fn.pos_core.drawOrderItemRow = function(item, mode) {
         col.html(item.name + '<br/>' + item.sku);
         break;
       case 'quantity':
+        col.addClass("quant");
         var string = "";
         if (Math.round(item.quantity) == item.quantity) {
           // integer
@@ -192,7 +193,7 @@ sr.fn.pos_core.drawOrderItemRow = function(item, mode) {
         break;
         
       case 'quantity':
-        sr.fn.inplace_edit.make(col);
+        sr.fn.inplace_edit.make(col,base_id);
         col.addClass('editme pointer no-select');
         if (sr.data.session.cash_register.show_plus_minus) {
           var up = $("<div></div>").addClass('table-cell');
@@ -201,12 +202,18 @@ sr.fn.pos_core.drawOrderItemRow = function(item, mode) {
           row.append(up);
           up.on('mousedown', function () {
             var v = sr.fn.math.toDelimited(sr.fn.math.toFloat($('.' + base_id + '-quantity').html()) + 1);
-            var string = '/vendors/edit_field_on_child?id=' +
-            item.id +'&klass=OrderItem' +
-            '&field=quantity'+
-            '&value=' + v;
-            get(string, filename);
-            sr.fn.focus.set($('#main_sku_field'));
+            var q = sr.fn.math.toDelimited(sr.fn.math.toFloat($('.' + base_id + '-price_reductions').html()));
+            if(v <= q)
+            {
+              var string = '/vendors/edit_field_on_child?id=' +
+              item.id +'&klass=OrderItem' +
+              '&field=quantity'+
+              '&value=' + v;
+              get(string, filename);
+              sr.fn.focus.set($('#main_sku_field'));
+            }else{
+              alert("Not enough stock available.");
+            }
           });
         }
         row.append(col);
@@ -217,14 +224,18 @@ sr.fn.pos_core.drawOrderItemRow = function(item, mode) {
           row.append(down);
           down.on('mousedown', function () {
             var html = $('.' + base_id + '-quantity').html();
+            
             //console.log(html, sr.fn.math.toFloat(html), sr.fn.math.toDelimited(html));
             var v = sr.fn.math.toDelimited(sr.fn.math.toFloat($('.' + base_id + '-quantity').html()) - 1);
-            var string = '/vendors/edit_field_on_child?id=' +
-            item.id +'&klass=OrderItem' +
-            '&field=quantity'+
-            '&value=' + v;
-            get(string, filename);
-            sr.fn.focus.set($('#main_sku_field'));
+            if(v > 0 )
+            {
+              var string = '/vendors/edit_field_on_child?id=' +
+              item.id +'&klass=OrderItem' +
+              '&field=quantity'+
+              '&value=' + v;
+              get(string, filename);
+              sr.fn.focus.set($('#main_sku_field'));
+            }
           });
         }
         break;
@@ -248,7 +259,7 @@ sr.fn.pos_core.drawOrderItemRow = function(item, mode) {
         (sr.data.session.user.role_cache.indexOf('manager') != -1) ||
         (item.must_change_price == true)
          ) {
-        sr.fn.inplace_edit.make(col);
+        sr.fn.inplace_edit.make(col,0);
         col.addClass('editme pointer no-select');
         }
     }
@@ -385,7 +396,7 @@ sr.fn.pos_core.showOrderOptions = function() {
     col.attr('klass','LoyaltyCard');
     col.attr('field','points');
     col.addClass('editme');
-    sr.fn.inplace_edit.make(col);
+    sr.fn.inplace_edit.make(col,0);
     row.append(col);
     row.append('<span class="">'+i18n.activerecord.attributes.lc_points+'</span>');
     var col = $('<span id="pos-order-points" class="order-points">' + sr.data.pos_core.order.lc_points + '</span>');
@@ -393,7 +404,7 @@ sr.fn.pos_core.showOrderOptions = function() {
     col.attr('klass','Order');
     col.attr('field','lc_points');
     col.addClass('editme');
-    sr.fn.inplace_edit.make(col);
+    sr.fn.inplace_edit.make(col,0);
     row.append(col);
     elem.append(row);
   }
