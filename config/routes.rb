@@ -94,7 +94,6 @@ SalorRetail::Application.routes.draw do
 
   
   
-  
   match "items/search" => "items#search"
   match "items/report" => "items#report"
   match "items/export_broken_items" => "items#export_broken_items"
@@ -153,11 +152,16 @@ SalorRetail::Application.routes.draw do
   
   
   match 'transaction_tags/:id/logo' => 'transaction_tags#logo'
-  
-  
+   
   
   match 'nodes/receive' => 'nodes#receive'
 
+  resources :purchase_items do
+    resources :list_items  
+  end  
+  resources :list_items
+  resources :reminders
+  
   resources :inventory_reports
   resources :invoice_blurbs
   resources :payment_methods

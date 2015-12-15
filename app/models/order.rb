@@ -428,13 +428,13 @@ class Order < ActiveRecord::Base
   def complete(params={})
     raise "cannot complete a paid order" if self.paid
     
-    h = History.new
-    h.url = "Order::complete"
-    h.params = $PARAMS.to_json
-    h.model = self
-    h.action_taken = "CompleteOrder"
-    h.changes_made = "Beginning complete order"
-    h.save
+    # h = History.new
+    # h.url = "Order::complete"
+    # h.params = $PARAMS.to_json
+    # h.model = self
+    # h.action_taken = "CompleteOrder"
+    # h.changes_made = "Beginning complete order"
+    # h.save
 
     self.completed_at = Time.now
     # the user is re-assigned in OrdersController#complete
@@ -522,84 +522,84 @@ class Order < ActiveRecord::Base
   end
   
   def create_payment_method_items(params)
-    params[:payment_method_items].each do |k,v|
-      pm = self.vendor.payment_methods.find_by_id(v[:id])
+    # params[:payment_method_items].each do |k,v|
+      # pm = self.vendor.payment_methods.find_by_id(v[:id])
       
-      pmi = PaymentMethodItem.new
-      pmi.payment_method = pm
-      pmi.vendor = self.vendor
-      pmi.company = self.company
-      pmi.order = self
-      pmi.user = self.user
-      pmi.drawer = self.drawer
-      pmi.cash_register = self.cash_register
-      pmi.paid_at = self.paid_at
-      pmi.paid = self.paid
-      pmi.completed_at = self.completed_at
-      pmi.is_proforma = self.is_proforma
-      pmi.is_quote = self.is_quote
-      pmi.is_unpaid = self.is_unpaid
-      pmi.amount = Money.new(SalorBase.string_to_float(v[:amount], :locale => self.vendor.region) * 100.0, self.currency)
-      pmi.cash = pm.cash
-      pmi.quote = pm.quote
-      pmi.unpaid = pm.unpaid
-      pmi.currency = self.currency
-      result = pmi.save
-      if result != true
-        raise "Could not save PaymentMethodItem because #{ pmi.errors.messages }"
-      end
+      # pmi = PaymentMethodItem.new
+      # pmi.payment_method = pm
+      # pmi.vendor = self.vendor
+      # pmi.company = self.company
+      # pmi.order = self
+      # pmi.user = self.user
+      # pmi.drawer = self.drawer
+      # pmi.cash_register = self.cash_register
+      # pmi.paid_at = self.paid_at
+      # pmi.paid = self.paid
+      # pmi.completed_at = self.completed_at
+      # pmi.is_proforma = self.is_proforma
+      # pmi.is_quote = self.is_quote
+      # pmi.is_unpaid = self.is_unpaid
+      # pmi.amount = Money.new(SalorBase.string_to_float(v[:amount], :locale => self.vendor.region) * 100.0, self.currency)
+      # pmi.cash = pm.cash
+      # pmi.quote = pm.quote
+      # pmi.unpaid = pm.unpaid
+      # pmi.currency = self.currency
+      # result = pmi.save
+      # if result != true
+      #   raise "Could not save PaymentMethodItem because #{ pmi.errors.messages }"
+      # end
       
-      self.payment_method_items << pmi
+      # self.payment_method_items << pmi
       
       # this is now done in update_associations
       #       self.is_quote = true if pm.quote == true
       #       self.is_unpaid = true if pm.unpaid == true
-    end
+    # end
     
-    self.save!
+    # self.save!
     
-    # payment_cash = Money.new(self.payment_method_items.where(:cash => true).sum(:amount_cents), self.currency)
-    payment_cash = Money.new(self.payment_method_items.sum(:amount_cents), self.currency)
-    payment_total = Money.new(self.payment_method_items.sum(:amount_cents), self.currency)
-    payment_noncash = (payment_total - payment_cash)
-    change = - (payment_total - self.total) # change must be negative!
-    change_payment_method = self.vendor.payment_methods.find_by_change(true)
+    # # payment_cash = Money.new(self.payment_method_items.where(:cash => true).sum(:amount_cents), self.currency)
+    # payment_cash = Money.new(self.payment_method_items.sum(:amount_cents), self.currency)
+    # payment_total = Money.new(self.payment_method_items.sum(:amount_cents), self.currency)
+    # payment_noncash = (payment_total - payment_cash)
+    # change = - (payment_total - self.total) # change must be negative!
+    # change_payment_method = self.vendor.payment_methods.find_by_change(true)
 
     
-    if self.is_proforma.nil? and self.is_unpaid.nil? and self.is_quote.nil?
-      # create a change payment method item
-      pmi = PaymentMethodItem.new
-      pmi.payment_method = change_payment_method
-      pmi.vendor = self.vendor
-      pmi.company = self.company
-      pmi.order = self
-      pmi.user = self.user
-      pmi.drawer = self.drawer
-      pmi.cash_register = self.cash_register
-      pmi.paid_at = self.paid_at
-      pmi.paid = self.paid
-      pmi.completed_at = self.completed_at
-      pmi.is_proforma = nil
-      pmi.is_quote = nil
-      pmi.is_unpaid = nil
-      pmi.amount = change
-      pmi.change = true
-      result = pmi.save!
-      if result != true
-        raise "Could not save change PaymentMethodItem because #{ pmi.errors.messages }"
-      end
-      self.payment_method_items << pmi
-    else
-      change = 0
-    end
+    # if self.is_proforma.nil? and self.is_unpaid.nil? and self.is_quote.nil?
+    #   # create a change payment method item
+    #   pmi = PaymentMethodItem.new
+    #   pmi.payment_method = change_payment_method
+    #   pmi.vendor = self.vendor
+    #   pmi.company = self.company
+    #   pmi.order = self
+    #   pmi.user = self.user
+    #   pmi.drawer = self.drawer
+    #   pmi.cash_register = self.cash_register
+    #   pmi.paid_at = self.paid_at
+    #   pmi.paid = self.paid
+    #   pmi.completed_at = self.completed_at
+    #   pmi.is_proforma = nil
+    #   pmi.is_quote = nil
+    #   pmi.is_unpaid = nil
+    #   pmi.amount = change
+    #   pmi.change = true
+    #   result = pmi.save!
+    #   if result != true
+    #     raise "Could not save change PaymentMethodItem because #{ pmi.errors.messages }"
+    #   end
+    #   self.payment_method_items << pmi
+    # else
+    #   change = 0
+    # end
     
-    self.cash = payment_cash
-    puts '-'*90
-    puts self.cash.inspect
-    puts '-'*90
-    self.noncash = payment_noncash
-    self.change = change
-    self.save!
+    # self.cash = payment_cash
+    # puts '-'*90
+    # puts self.cash.inspect
+    # puts '-'*90
+    # self.noncash = payment_noncash
+    # self.change = change
+    # self.save!
   end
   
   def to_list_of_items_raw(array)
@@ -1487,21 +1487,21 @@ class Order < ActiveRecord::Base
     o.reload # needed since we do not call .calculate_totals on self
     o.calculate_totals
     
-    pmi = PaymentMethodItem.new
-    pmi.company = self.company
-    pmi.vendor = self.vendor
-    pmi.user = self.user
-    pmi.drawer = self.drawer
-    pmi.payment_method = unpaid_pm
-    pmi.unpaid = true
-    pmi.order = o
-    pmi.cash_register = self.cash_register
-    pmi.amount = o.total
-    pmi.currency = o.currency
-    result = pmi.save
-    if result != true
-      raise "Could not save PaymentMethodItem because #{ pmi.errors.messages }"
-    end
+    # pmi = PaymentMethodItem.new
+    # pmi.company = self.company
+    # pmi.vendor = self.vendor
+    # pmi.user = self.user
+    # pmi.drawer = self.drawer
+    # pmi.payment_method = unpaid_pm
+    # pmi.unpaid = true
+    # pmi.order = o
+    # pmi.cash_register = self.cash_register
+    # pmi.amount = o.total
+    # pmi.currency = o.currency
+    # result = pmi.save
+    # if result != true
+    #   raise "Could not save PaymentMethodItem because #{ pmi.errors.messages }"
+    # end
         
     o.reload # needed since we do not call .complete on self
     o.complete

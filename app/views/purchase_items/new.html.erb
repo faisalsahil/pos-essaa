@@ -1,0 +1,21 @@
+<!-- Begin Form -->
+<div class="right" style="margin-left: 20%;margin-top: 6%;">
+  <%= form_for(@purchase_item) do |f| %>
+    <table width="90%" align="center">
+      <tr>
+        <td> <%= f.label I18n.t("activerecord.attributes.name") %> </td>
+        <td> <%= f.text_field :name, :style => "width: 30%;" %> </td>
+      </tr>
+
+      <tr>
+        <td colspan="2" align="left"> 
+          <div class="actions">
+            <%= f.submit t('helpers.submit.save'), style: "margin-left: 15%;width: 22%;"%>
+          </div>
+        </td>
+      </tr>
+    </table>
+  <% end %>
+</div>
+
+

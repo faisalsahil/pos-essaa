@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141227173637) do
+ActiveRecord::Schema.define(:version => 20151215070845) do
 
   create_table "actions", :force => true do |t|
     t.string   "name"
@@ -566,6 +566,14 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
   add_index "items", ["tax_profile_id"], :name => "index_items_on_tax_profile_id"
   add_index "items", ["vendor_id"], :name => "index_items_on_vendor_id"
 
+  create_table "list_items", :force => true do |t|
+    t.string   "name"
+    t.integer  "quantity"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.integer  "purchase_item_id"
+  end
+
   create_table "locations", :force => true do |t|
     t.string   "name"
     t.float    "x"
@@ -891,6 +899,12 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
   add_index "plugins", ["hidden_by"], :name => "index_plugins_on_hidden_by"
   add_index "plugins", ["vendor_id"], :name => "index_plugins_on_vendor_id"
 
+  create_table "purchase_items", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "name"
+  end
+
   create_table "receipts", :force => true do |t|
     t.string   "ip"
     t.integer  "cash_register_id"
@@ -905,6 +919,11 @@ ActiveRecord::Schema.define(:version => 20141227173637) do
     t.integer  "company_id"
     t.integer  "user_id"
     t.integer  "drawer_id"
+  end
+
+  create_table "reminders", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "roles", :force => true do |t|

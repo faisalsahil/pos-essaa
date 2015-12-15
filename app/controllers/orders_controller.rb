@@ -241,7 +241,7 @@ class OrdersController < ApplicationController
     if params[:change_user_id] and params[:change_user_id] != @current_user.id then
       tmp_user = @current_vendor.users.find_by_id(params[:change_user_id])
       if tmp_user
-        History.record("swapping user #{@current_user.id} with #{tmp_user.id}",@order)
+        # History.record("swapping user #{@current_user.id} with #{tmp_user.id}",@order)
 
         @order.user = tmp_user
         @order.save!
@@ -256,7 +256,7 @@ class OrdersController < ApplicationController
     @order.complete(params)
 
     if @order.is_proforma == true then
-      History.record("Order is proforma, completing", @order)
+      # History.record("Order is proforma, completing", @order)
       render :js => " window.location = '/orders/#{@order.id}/print'; " and return
     end
     
@@ -344,16 +344,16 @@ class OrdersController < ApplicationController
   end
   
   def log
-    h = History.new
-    h.vendor = @current_vendor
-    h.company = @current_company
-    h.url = "/orders/log"
-    h.params = params.to_json
-    h.model_id = params[:order_id]
-    h.model_type = 'Order'
-    h.action_taken = params[:log_action]
-    h.changes_made = params[:called_from]
-    h.save!
+    # h = History.new
+    # h.vendor = @current_vendor
+    # h.company = @current_company
+    # h.url = "/orders/log"
+    # h.params = params.to_json
+    # h.model_id = params[:order_id]
+    # h.model_type = 'Order'
+    # h.action_taken = params[:log_action]
+    # h.changes_made = params[:called_from]
+    # h.save!
     render :nothing => true
   end
 end

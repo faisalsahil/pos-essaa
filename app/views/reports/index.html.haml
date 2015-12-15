@@ -1,7 +1,7 @@
 = raw content_box_top(t("menu.reports"))
 
-
-
+/ <img height="40" src="/images/icons/a4print.svg" onclick="sr.fn.salor_bin.showPrintDialog()">
+%img{:height => "40", :onclick => "sr.fn.salor_bin.showPrintDialog()", :src => "/images/icons/a4print.svg"}/
 .tools
   = form_tag '/reports', :class => 'no-print', :method => :get do
     = label('from', t('views.single_words.from'))
