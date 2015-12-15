@@ -13,6 +13,31 @@
     sr.fn.pos_core.updateOrder(sr.data.pos_core.order);
     sr.fn.pos_core.updateOrderItems(sr.data.pos_core.order_items);
   });
+
+
+  $(document).ready(function(){
+    thisTime = new Date()
+    hours = thisTime.getHours()
+    minutes = thisTime.getMinutes()
+    seconds = thisTime.getSeconds()
+    if (hours>=12)
+    {
+      hours-=12
+    }
+    
+    if(hours < 10)
+      hours = '0'+hours;
+
+    if(minutes < 10)
+      minutes = '0'+minutes;  
+
+    if(seconds < 10)
+      seconds = '0'+seconds;
+
+    $('#clock-div').jsclock(hours+':'+ minutes+':'+seconds);
+  
+  });
+
 </script>
 
 <%= render :partial => "menu", :locals => {:order => @current_order} %>
@@ -25,3 +50,6 @@
 <%= render :partial => "shared/search" %>
 <%= render :partial => "complete_order" %>
 <%= render :partial => "last_orders" %>
+
+<div id="clock-div" style="font-size: 100px;">
+</div>
