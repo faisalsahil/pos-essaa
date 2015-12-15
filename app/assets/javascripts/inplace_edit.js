@@ -184,7 +184,9 @@ sr.fn.inplace_edit.make = function(elem,base_id) {
             if(elem.hasClass('quant'))
             {
               var q = $('.' + base_id + '-price_reductions').html();
-              if (input.val() <= q)
+              var q1 = parseInt(q);
+              var val = parseInt(input.val());
+              if (val <= q1)
               {
                 sr.fn.inplace_edit.submit(elem, input.val());
               }

@@ -203,7 +203,9 @@ sr.fn.pos_core.drawOrderItemRow = function(item, mode) {
           up.on('mousedown', function () {
             var v = sr.fn.math.toDelimited(sr.fn.math.toFloat($('.' + base_id + '-quantity').html()) + 1);
             var q = sr.fn.math.toDelimited(sr.fn.math.toFloat($('.' + base_id + '-price_reductions').html()));
-            if(v <= q)
+            var v1 = parseInt(v);
+            var q1 = parseInt(q);
+            if(v1 <= q1)
             {
               var string = '/vendors/edit_field_on_child?id=' +
               item.id +'&klass=OrderItem' +
@@ -227,7 +229,8 @@ sr.fn.pos_core.drawOrderItemRow = function(item, mode) {
             
             //console.log(html, sr.fn.math.toFloat(html), sr.fn.math.toDelimited(html));
             var v = sr.fn.math.toDelimited(sr.fn.math.toFloat($('.' + base_id + '-quantity').html()) - 1);
-            if(v > 0 )
+            var v1 = parseInt(v);
+            if(v1 > 0 )
             {
               var string = '/vendors/edit_field_on_child?id=' +
               item.id +'&klass=OrderItem' +
