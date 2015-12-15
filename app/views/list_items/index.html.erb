@@ -1,0 +1,106 @@
+
+<%= stylesheet_link_tag 'invoice_default' %>
+<%= stylesheet_link_tag 'invoice_default_print', :media => 'print' %>
+
+
+<div class='no-print'>
+  <%= link_to "Add List", new_purchase_item_list_item_path(@purchase_item), class: "pull-right", style: "background-color: #ed8b00;    margin-left: 93%;" %>
+  <table class="items_index">
+    <tr>
+      <% cols = [:name,:quantity] %>
+      <% custom_columns = [] %>
+      <% custom_columns = @current_plugin_manager.apply_filter('item_list_columns',custom_columns) %>
+      <% cols += custom_columns + ['',''] %>
+      <% cols.each do |key| %>
+        <% if not key.is_a? Hash and key.blank? %>
+          <th></th>
+        <% else %>
+          <% if not key.is_a? Hash then %>
+            <th class="<%=  'left' if key==:name  %> pointer" onclick="window.location = '?order_by=<%=  key  %>&page=<%=  params[:page]  %>';">
+              <%= I18n.t("activerecord.attributes.#{ key }") %>
+            </th>
+          <% else %>
+            <th class="<%=  'left' if key==:name  %> pointer" onclick="window.location = '?order_by=<%=  key  %>&page=<%=  params[:page]  %>';">
+              <%= key[@current_user.language.to_sym] %>
+            </th>
+          <% end %>
+        <% end %>
+      <% end %>
+    </tr>
+    <% @list_items && @list_items.each do |item| %>
+      <tr class="even">
+        <%#= render :partial => 'item_row', :locals => { :item => item, :depth => 0, :custom_columns => custom_columns, :current_plugin_manager => @current_plugin_manager } %>
+        <td class="left">
+          <%= item.name %>
+        </td>
+        <td>
+          <%= item.quantity %>
+        </td>
+        <td>
+          <% if @current_user.can(:edit_items) %>
+            <%= link_to salor_icon(:edit,{},32), edit_purchase_item_list_item_path(@purchase_item.id,item) %>
+          <% end %>
+        </td>
+        <td>
+          <% if @current_user.can(:destroy_items) %>
+            <%= link_to(salor_icon(:delete,{},32), item, :confirm => 'Are you sure?', :method => :delete) %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+
+  <tr>
+    <td align="<%= :center %>" colspan="2">
+      <%= salor_icon(:a4print, {:onclick => 'sr.fn.salor_bin.showPrintDialog()'}, 40, t('menu.print_dialog')) %>
+    </td>
+  </tr>
+
+</div>
+
+<div class="paper-invoice">
+  <h2>Purchase List <%= Date.today%>
+    <%#= #{ t '.title' }: #{ l @from, :format => :just_day } - #{ l @to, :format => :just_day }<br />#{ @current_vendor.name }<br />#{ @user.name_with_username if @user }  %>
+  </h2>
+  <table class="striped-table2">
+    <tr>
+      <th>
+        <%= "Sr.No" %>
+      </th>
+      <th>
+        <%= "Name" %>
+      </th>
+      <th>
+        <%= "Quantity" %>
+      </th>
+      <th>
+        <%= "Remarks" %>
+      </th>
+    </tr>
+    
+    <% @list_items.each_with_index do |arr,index| %>
+      <tr>
+        <td style="width:20px;">
+          <%= index.to_i+1  %>
+        </td>
+        <td>
+          <%= arr.name  %>
+        </td>
+        <td>
+          <%= arr.quantity %>
+        </td>
+        <td></td>
+      </tr>
+    <% end %>
+    <!-- <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr> -->
+  </table>
+  <p>
+    <%= l DateTime.now %>
+  </p>
+</div>
+

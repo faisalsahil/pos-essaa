@@ -1,0 +1,22 @@
+<div class="right">
+  <%= form_for(@list_item) do |f| %>
+    <table width="90%" align="center">
+      <tr>
+        <td> <%= f.label I18n.t("activerecord.attributes.name") %> </td>
+        <td> <%= f.text_field :name, :class => "keyboardable", :style => "width: 80%;" %> </td>
+      </tr>
+      <tr>
+        <td> <%= f.label I18n.t("activerecord.attributes.name") %> </td>
+        <td> <%= f.text_field :quantity, :style => "width: 80%;" %> </td>
+      </tr>
+
+      <tr>
+        <td colspan="2" align="right"> 
+          <div class="actions">
+            <%= f.submit t('helpers.submit.save')%>
+          </div>
+        </td>
+      </tr>
+    </table>
+  <% end %>
+</div>

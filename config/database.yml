@@ -113,8 +113,8 @@
 default: &default
   adapter: postgresql
   database: sr_development
-  username: root
-  password: root
+  username: postgres
+  password: postgres
   host: localhost
   reconnect: false
   encoding: utf8

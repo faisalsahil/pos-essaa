@@ -11,7 +11,7 @@
   - elsif not item.buy_price.zero?
     == #{ humanized_money_with_symbol item.price } (#{ humanized_money_with_symbol item.buy_price })
   - else
-    = humanized_money_with_symbol item.price
+    = item.price
   
 %td= item.sku
 %td

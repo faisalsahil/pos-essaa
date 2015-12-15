@@ -19,7 +19,7 @@ sr.fn.pos_core.updateOrder = function(order) {
     $(button).addClass('pos-configuration');
     $('#pos_order_total').removeClass("pos-highlight");
   }
-  $('#pos_order_total').html(sr.fn.math.toCurrency(order.total));
+  $('#pos_order_total').html("Rs:"+order.total);
   $('.complete-order-total').html(sr.fn.math.toCurrency(order.total));
   $('.order-rebate_type').html(order.rebate_type);
   $('.order-rebate').attr('model_id',order.id);
@@ -100,7 +100,7 @@ sr.fn.pos_core.drawOrderItemRow = function(item, mode) {
       case 'price':
         switch(item.behavior) {
           case 'normal':
-            col.html(sr.fn.math.toCurrency(item.price));
+            col.html("Rs "+item.price);
             if (item.price == 0) {
               col.css("background-color", "red");
             }
@@ -150,7 +150,7 @@ sr.fn.pos_core.drawOrderItemRow = function(item, mode) {
         break;
       case 'total':
         if (item.behavior != 'coupon') {
-          col.html(sr.fn.math.toCurrency(item.total));
+          col.html(item.total);
         }
         break;
       case 'tax':

@@ -263,7 +263,7 @@ class VendorsController < ApplicationController
       log_action "Rendering nothing"
       render :nothing => true
     end
-    History.record("edit_field_on_child", @inst)
+    # History.record("edit_field_on_child", @inst)
   end
 
   def history

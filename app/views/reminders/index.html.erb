@@ -1,0 +1,45 @@
+ <table class="items_index">
+    <tr>
+      <% cols = [:name,:quantity] %>
+      <% custom_columns = [] %>
+      <% custom_columns = @current_plugin_manager.apply_filter('item_list_columns',custom_columns) %>
+      <% cols += custom_columns + ['',''] %>
+      <% cols.each do |key| %>
+        <% if not key.is_a? Hash and key.blank? %>
+          <th></th>
+        <% else %>
+          <% if not key.is_a? Hash then %>
+            <th class="<%=  'left' if key==:name  %> pointer" onclick="window.location = '?order_by=<%=  key  %>&page=<%=  params[:page]  %>';">
+              <%= I18n.t("activerecord.attributes.#{ key }") %>
+            </th>
+          <% else %>
+            <th class="<%=  'left' if key==:name  %> pointer" onclick="window.location = '?order_by=<%=  key  %>&page=<%=  params[:page]  %>';">
+              <%= key[@current_user.language.to_sym] %>
+            </th>
+          <% end %>
+        <% end %>
+      <% end %>
+    </tr>
+    <% @items && @items.each do |item| %>
+      <tr class="even">
+        <%#= render :partial => 'item_row', :locals => { :item => item, :depth => 0, :custom_columns => custom_columns, :current_plugin_manager => @current_plugin_manager } %>
+        <td class="left">
+          <%= item.name %>
+        </td>
+        <td id="pos-table-left-column-items" class="pos-table-left-column-items">
+          <div class="editmedone editme pointer no-select">
+            <%= item.quantity %>
+          </div>
+        </td>
+        <td>
+          <% if @current_user.can(:edit_items) %>
+            <%= form_for item,:url=>reminder_path(item),:method=>:put do |f| %>
+              <%= f.text_field :quantity %>
+              <%= f.submit t('helpers.submit.save')%>
+            <% end %>  
+            <%#= link_to salor_icon(:edit,{},32), "#" %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>

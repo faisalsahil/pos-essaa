@@ -1,0 +1,12 @@
+%td.left
+  - if depth > 0
+    = raw "&nbsp;" * 2 * depth
+    = "↳" if depth > 1
+  = link_to item.name, purchase_item_list_items_path(item)
+
+%td
+  - if @current_user.can(:edit_items)
+    = link_to salor_icon(:edit,{},32), edit_purchase_item_path(item)
+%td
+  - if @current_user.can(:destroy_items)
+    = link_to(salor_icon(:delete,{},32), item, :confirm => 'Are you sure?', :method => :delete)
