@@ -25,6 +25,6 @@
 %td
   - if @current_user.can(:edit_items)
     = link_to salor_icon(:edit,{},32), edit_item_path(item)
-%td
-  - if @current_user.can(:destroy_items)
-    = link_to(salor_icon(:delete,{},32), item, :confirm => 'Are you sure?', :method => :delete)
+/ %td
+/   - if @current_user.can(:destroy_items)
+/     = link_to(salor_icon(:delete,{},32), item, :confirm => 'Are you sure?', :method => :delete)

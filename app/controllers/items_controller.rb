@@ -131,6 +131,7 @@ class ItemsController < ApplicationController
 
   def destroy
     @item = @current_vendor.items.find_by_id(params[:id])
+    # @item.hide(@current_user.id)
     @item.delete
     redirect_to items_path
   end
