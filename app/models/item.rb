@@ -756,7 +756,7 @@ class Item < ActiveRecord::Base
     
     if item_stocks.blank?
       # use the simple quantity field of Item when no ItemStocks are defined.
-      StockTransaction.transact(diff, item, model2)
+      # StockTransaction.transact(diff, item, model2)
       return
     end
       
@@ -768,7 +768,7 @@ class Item < ActiveRecord::Base
         model2_item_stocks = model2.item_stocks
         model2_item_stock = model2_item_stocks.first
       end
-      StockTransaction.transact(diff, item_stock, model2_item_stock)
+      # StockTransaction.transact(diff, item_stock, model2_item_stock)
 
 
     elsif diff < 0
@@ -799,21 +799,21 @@ class Item < ActiveRecord::Base
           
         elsif available_quantity - amount_to_go >= 0
           SalorBase.log_action "[Item]", "transact_quantity_with_stock=(): this ItemStock #{ is.id } has enough quantity to cover our demand. Creating StockTransaction with diff #{ -amount_to_go }", :magenta
-          StockTransaction.transact(-amount_to_go, is, model2)
+          # StockTransaction.transact(-amount_to_go, is, model2)
           amount_to_go = 0
           
         elsif available_quantity - amount_to_go < 0
           SalorBase.log_action "[Item]", "transact_quantity_with_stock=(): this ItemStock #{ is.id } does not have enough quantity to cover our demand. subtracting everything (#{ is.quantity }).", :magenta
           # this ItemStock does not have enough quantity to cover our demand. We still take what we can get, don't take more than available, and rememeber how much we have taken.
           amount_to_go -= is.quantity
-          StockTransaction.transact(-is.quantity, is, model2)
+          # StockTransaction.transact(-is.quantity, is, model2)
         end
       end
       
       if amount_to_go > 0
         # looping through all ItemStocks hasn't satisfied our demand, so we have to force the first of the  ItemStocks into negative quantity
         item_stock = item_stocks.first
-        StockTransaction.transact(-amount_to_go, item_stock, model2)
+        # StockTransaction.transact(-amount_to_go, item_stock, model2)
         SalorBase.log_action "[Item]", "transact_quantity_with_stock=(): looping through all ItemStocks hasn't satisfied our demand, so we have to force the first of the ItemStocks into negative quantity. setting ItemStock #{ item_stock.id } to #{ -amount_to_go }.", :magenta
       end
 

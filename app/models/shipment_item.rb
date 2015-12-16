@@ -70,7 +70,7 @@ class ShipmentItem < ActiveRecord::Base
         item_stock = location.item_stocks.find_by_item_id(item.id)
         if item_stock
           log_action "move_into_stock: An ItemStock #{ item_stock.id } for location #{ location.class } ID #{ location.id } has been found. Transacting to it"
-          StockTransaction.transact(q, item_stock, self)
+          # StockTransaction.transact(q, item_stock, self)
 
         else
           # this method creates an ItemStock if not yet present. see item.rb
@@ -86,12 +86,12 @@ class ShipmentItem < ActiveRecord::Base
             raise "Could not safe ItemStock because #{ is.errors.messages}"
           end
           
-          StockTransaction.transact(q, is, self)
+          # StockTransaction.transact(q, is, self)
         end
         
       else
         log_action "move_into_stock: No location has been specified. Transacting to Item instead."
-        StockTransaction.transact(q, item, self)
+        # StockTransaction.transact(q, item, self)
       end
         
       
@@ -117,7 +117,7 @@ class ShipmentItem < ActiveRecord::Base
       end
       
       log_action "move_into_stock: Transacting to newly created Item."
-      StockTransaction.transact(q, i, self)
+      # StockTransaction.transact(q, i, self)
       
     end
     

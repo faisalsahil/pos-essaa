@@ -103,7 +103,7 @@ class Order < ActiveRecord::Base
       [:id, :total_cents].each {|a| toi[a] = oi.send(a)}
       toi[:currency_info] = cgrabber.call([:decimal_mark,:id,:iso_code,:name,:symbol],oi.total.currency)
       toi[:item] = cgrabber.call([:price_cents,:quantity,:name,:id,:category_id,:sku,:location_id,:description,:gift_card_amount_cents,:item_type_id, :created_at,:currency, :activated, :active,:hidden],oi.item)
-      toi[:item][:category] = cgrabber.call([:name,:id], oi.item.category)
+      # toi[:item][:category] = cgrabber.call([:name,:id], oi.item.category)
       o[:order_items].push(toi)
     end
     return o

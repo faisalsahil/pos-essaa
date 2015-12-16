@@ -13,32 +13,32 @@ class StockTransaction < ActiveRecord::Base
   def self.transact(diff, model1, model2)
     SalorBase.log_action "ItemStock", "[transact()] Creating new StockTransaction. model1 is #{ model1.class.to_s } #{ model1.id }, model2 is #{ model2.class.to_s } #{ model2.id }", :cyan
     
-    st = StockTransaction.new
-    st.company = model1.company
-    st.vendor = model1.vendor
-    st.quantity = diff
-    st.to = model1
-    st.from = model2
-    st.to_quantity = model1.quantity # this is the quantity before the modification below, for documentation purposes.
+    # st = StockTransaction.new
+    # st.company = model1.company
+    # st.vendor = model1.vendor
+    # st.quantity = diff
+    # st.to = model1
+    # st.from = model2
+    # st.to_quantity = model1.quantity # this is the quantity before the modification below, for documentation purposes.
     
-    case model2.class.to_s
-    when 'ItemStock'
-      st.from_quantity = model2.quantity
-    when 'Item'
-      st.from_quantity = model2.quantity
-    when 'ShipmentItem'
-      st.from_quantity = model2.quantity.to_f - model2.in_stock_quantity.to_f
-    end
+    # case model2.class.to_s
+    # when 'ItemStock'
+    #   st.from_quantity = model2.quantity
+    # when 'Item'
+    #   st.from_quantity = model2.quantity
+    # when 'ShipmentItem'
+    #   st.from_quantity = model2.quantity.to_f - model2.in_stock_quantity.to_f
+    # end
     
     SalorBase.log_action "ItemStock", "[transact()] model1 (#{ model1.class.to_s } ID #{ model1.id }). Adding #{ diff } to it", :cyan
     
     model1.quantity += diff
-    result = model1.save
+    # result = model1.save
     
-    if result != true
-      raise "Could not save #{ model1.class.to_s } #{ model1.id } because #{ model1.errors.messages }"
-    end
+    # if result != true
+    #   raise "Could not save #{ model1.class.to_s } #{ model1.id } because #{ model1.errors.messages }"
+    # end
 
-    st.save
+    # st.save
   end
 end

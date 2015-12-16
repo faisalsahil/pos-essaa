@@ -54,18 +54,18 @@ class PaymentMethodItem < ActiveRecord::Base
       drawer = self.drawer
       
       # create drawer transaction
-      dt = DrawerTransaction.new
-      dt.company = self.company
-      dt.vendor = self.vendor
-      dt.drawer = drawer
-      dt.user = self.user
-      dt.amount = self.amount
-      dt.complete_order = true
-      dt.drawer_amount = self.drawer.amount
-      dt.cash_register = self.cash_register
-      dt.save!
+      # dt = DrawerTransaction.new
+      # dt.company = self.company
+      # dt.vendor = self.vendor
+      # dt.drawer = drawer
+      # dt.user = self.user
+      # dt.amount = self.amount
+      # dt.complete_order = true
+      # dt.drawer_amount = self.drawer.amount
+      # dt.cash_register = self.cash_register
+      # dt.save!
       
-      # add to drawer amount
+      # # add to drawer amount
       drawer.amount += self.amount
       drawer.save!
     end
