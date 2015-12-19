@@ -475,6 +475,8 @@ class Order < ActiveRecord::Base
       self.paid_at = Time.now
     end
     
+    self.paid = true
+    self.paid_at = Time.now
     self.save!
     
     self.order_items.update_all({
@@ -488,14 +490,14 @@ class Order < ActiveRecord::Base
       :drawer_id => self.drawer_id
     })
     
-    self.payment_method_items.update_all({
-      :completed_at => self.completed_at,
-      :paid_at => self.paid_at,
-      :paid => self.paid,
-      :is_unpaid => self.is_unpaid,
-      :is_quote => self.is_quote,
-      :is_proforma => self.is_proforma
-    })
+    # self.payment_method_items.update_all({
+    #   :completed_at => self.completed_at,
+    #   :paid_at => self.paid_at,
+    #   :paid => self.paid,
+    #   :is_unpaid => self.is_unpaid,
+    #   :is_quote => self.is_quote,
+    #   :is_proforma => self.is_proforma
+    # })
   end
   
   def create_drawer_transaction
@@ -517,6 +519,9 @@ class Order < ActiveRecord::Base
           Item.transact_quantity(-oi.quantity, i, self)
         end
         i.save!
+        item = Item.find(i.id)
+        item.quantity -= oi.quantity.to_i
+        item.save!
       end
     end
   end
