@@ -53,7 +53,7 @@
 
 <div id="clock-div" style="font-size: 100px;">
 </div>
-<div style="font-size: 30px;">
+<div>
   <% @date = Time.now %>
-  <%= @date.strftime("%B #{@date.day.ordinalize}, %Y") %>
+  <span style="font-size:100px;"><%= @date.strftime("#{@date.day}, #{@date.month}, %Y")%></span>
 </div>
