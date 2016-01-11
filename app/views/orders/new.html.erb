@@ -55,5 +55,5 @@
 </div>
 <div>
   <% @date = Time.now %>
-  <span style="font-size:100px;"><%= @date.strftime("#{@date.day}, #{@date.month}, %Y")%></span>
+  <span style="font-size:100px;"><%= @date.strftime("#{@date.day}-#{@date.month}-%Y")%></span>
 </div>
