@@ -26,28 +26,6 @@
         %tr
           %td= v[:name]
           %td.total=  v[:amount].exchange_to(@ec)
-
-
-  %br
-  %br
-  %table.striped-table2.small
-    %tr
-      %th
-      %th
-      %th.right= t('printr.order_receipt.net')
-      %th.right= t('printr.order_receipt.tax')
-      %th.right= t('printr.order_receipt.gross')
-    - @report[:list_of_taxes_raw].each do |tax|
-      - tax = format_tax(tax)
-      %tr
-        - tax.each do |k,v|
-          %td.total= v
-          
-  %p= raw(Kramdown::Document.new(@report[:invoice_note][:footer]).to_html) if @report[:invoice_note][:footer]
-
 %div.invoice_blurb_footer= raw Kramdown::Document.new(@report[:invoice_blurbs][:invoice][:footer]).to_html
-
-%p= @report[:customer][:tax_number] if @report[:customer]
-
 .center
   /logo here

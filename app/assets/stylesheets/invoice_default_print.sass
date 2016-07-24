@@ -1,10 +1,11 @@
 div.paper-invoice
   border: 1px solid white
   position: relative
-  height: 310mm
-  
+  height: 100mm
+  width:  70mm 
   div.header-page-one
-    :height 120mm
+    margin-top: 50px
+    :height 20mm
 
   img.salorlogo
     margin: 5em
@@ -28,7 +29,7 @@ div.paper-invoice
     :font-size 5mm
     
   div.invoice_blurb_footer
-    :font-size 80%
+    :font-size 8px
     :position absolute
     :bottom 10mm
     
@@ -65,6 +66,10 @@ div.paper-invoice
       background-color: #D0D0D0
     tr:nth-child(even) 
       backgrond-color: #F0F0F0
+      font-size: 8px
+    tr:nth-child(odd) 
+      backgrond-color: #F0F0F0
+      font-size: 8px  
     tr.total
       border-top: 2px solid black
       background-color: #D0D0D0
@@ -77,17 +82,17 @@ div.paper-invoice
       font-weight: bold
       
   table.striped-table2.small
-    width: 35%
+    width: 25%
 
 table.item-report-entry tr:first-child
   background-color: #D0D0D0
   padding: 10px
-  font-size: 125%
+  font-size: 8px
 table.item-report-entry label
   padding: 3px
   text-transform: uppercase
   font-weight: bolder
 table.item-report-entry .small-text
-  font-size: 10px
+  font-size: 1px
 table.item-report-entry a,table.item-report-entry a:visited
   color: black
