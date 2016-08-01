@@ -1,8 +1,8 @@
 %div#invoice-header
   - @date = Time.now
-  %span.invoice-header-span1= "#{@date.day}" + '-' + "#{@date.month}" + '-' + "#{@date.year}"
+  %span.invoice-header-span1{:style=> 'font-size: 14px'}= "#{@date.day}" + '-' + "#{@date.month}" + '-' + "#{@date.year}"
   / %span{:style => "margin-left: 34%;"}= "Invoice"
-  %span.invoice-header-span2= "NaseemPharma"
+  %span.invoice-header-span2{:style=> 'font-size: 20px'}= "NaseemPharma"
 %table.striped-table2
   %tr
     %th{ :style => 'width: 8px'}= t("activerecord.attributes.letter")

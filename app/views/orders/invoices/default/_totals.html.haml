@@ -26,6 +26,6 @@
         %tr
           %td= v[:name]
           %td.total=  v[:amount].exchange_to(@ec)
-%div.invoice_blurb_footer= raw Kramdown::Document.new(@report[:invoice_blurbs][:invoice][:footer]).to_html
+/ %div.invoice_blurb_footer= raw Kramdown::Document.new(@report[:invoice_blurbs][:invoice][:footer]).to_html
 .center
   /logo here
