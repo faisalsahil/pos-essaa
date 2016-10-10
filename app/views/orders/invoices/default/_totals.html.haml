@@ -11,21 +11,3 @@
         %td.total=  @order.amount_paid.exchange_to(@ec)
       - else
         %td.total=  @report[:total].exchange_to(@ec)
-
-  %br
-  %br
-  %br
-  %table.striped-table2.small
-    - if @order.is_unpaid then
-      - @order.payment_method_items.each do |pm|
-        %tr
-          %td.editable-payment-method.pointer{ :model_id => pm.id, :amount => pm.amount}= pm.payment_method.name
-          %td.total=  pm.amount.exchange_to(@ec)
-    - else
-      - @report[:paymentmethods].each do |k,v|
-        %tr
-          %td= v[:name]
-          %td.total=  v[:amount].exchange_to(@ec)
-%div.invoice_blurb_footer= raw Kramdown::Document.new(@report[:invoice_blurbs][:invoice][:footer]).to_html
-.center
-  /logo here
