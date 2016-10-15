@@ -635,3 +635,966 @@
 ##[[0;93;49mSessionsController] [0;32;49mNo locale is set, trying to detect from browser[0;39;49m
 ##[[0;93;49mSessionsController] [0;32;49mLocale is now set to: en[0;39;49m
 ##[[0;93;49mSessionsController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mSessionsController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mSessionsController] [0;32;49mNo locale is set, trying to detect from browser[0;39;49m
+##[[0;93;49mSessionsController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mSessionsController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mSessionsController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mSessionsController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mSessionsController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mSessionsController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mItemsController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mItemsController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrder] [0;32;49mOrderItem not found on order, or existing OrderItem is set to no_inc. Will not increment.[0;39;49m
+##[[0;93;49mOrder] [0;32;49mno_inc is: true[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mModifying price for actions[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mmodify_price_for_actions[0;39;49m
+##[[0;93;49mAction] [0;91;49mrun called for add_to_order[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mModifying price for gs1[0;39;49m
+##[[0;93;49mOrder] [0;32;49mCalculating Totals[0;39;49m
+##[[0;93;49mOrder] [0;32;49mTotal is: 0 and tax is 0[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrder] [0;32;49mCalculating Totals[0;39;49m
+##[[0;93;49mOrder] [0;32;49mTotal is: 0 and tax is 0[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mItemsController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mItemsController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrder] [0;32;49mOrderItem not found on order, or existing OrderItem is set to no_inc. Will not increment.[0;39;49m
+##[[0;93;49mOrder] [0;32;49mno_inc is: nil[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mModifying price for actions[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mmodify_price_for_actions[0;39;49m
+##[[0;93;49mAction] [0;91;49mrun called for add_to_order[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mModifying price for gs1[0;39;49m
+##[[0;93;49mOrder] [0;32;49mCalculating Totals[0;39;49m
+##[[0;93;49mOrder] [0;32;49mTotal is: 3300 and tax is 0[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrder] [0;32;49mCalculating Totals[0;39;49m
+##[[0;93;49mOrder] [0;32;49mTotal is: 0 and tax is 0[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mItemsController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mItemsController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrder] [0;32;49mOrderItem not found on order, or existing OrderItem is set to no_inc. Will not increment.[0;39;49m
+##[[0;93;49mOrder] [0;32;49mno_inc is: nil[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mModifying price for actions[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mmodify_price_for_actions[0;39;49m
+##[[0;93;49mAction] [0;91;49mrun called for add_to_order[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mModifying price for gs1[0;39;49m
+##[[0;93;49mOrder] [0;32;49mCalculating Totals[0;39;49m
+##[[0;93;49mOrder] [0;32;49mTotal is: 3850 and tax is 350[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49m[RECURSION]] [0;94;49m [SKU34] Called with diff = -1.0[0;39;49m
+##[[0;93;49m[RECURSION]] [0;94;49m[SKU34] No recursion. Making a stock transaction with diff=-1.0 directly.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mItemsController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mItemsController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrder] [0;32;49mOrderItem not found on order, or existing OrderItem is set to no_inc. Will not increment.[0;39;49m
+##[[0;93;49mOrder] [0;32;49mno_inc is: nil[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mModifying price for actions[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mmodify_price_for_actions[0;39;49m
+##[[0;93;49mAction] [0;91;49mrun called for add_to_order[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mModifying price for gs1[0;39;49m
+##[[0;93;49mOrder] [0;32;49mCalculating Totals[0;39;49m
+##[[0;93;49mOrder] [0;32;49mTotal is: 3850 and tax is 350[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mItemsController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mItemsController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mItemsController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mItemsController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mItemsController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mItemsController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mItemsController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mItemsController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrder] [0;32;49mOrderItem not found on order, or existing OrderItem is set to no_inc. Will not increment.[0;39;49m
+##[[0;93;49mOrder] [0;32;49mno_inc is: nil[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mModifying price for actions[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mmodify_price_for_actions[0;39;49m
+##[[0;93;49mAction] [0;91;49mrun called for add_to_order[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mModifying price for gs1[0;39;49m
+##[[0;93;49mOrder] [0;32;49mCalculating Totals[0;39;49m
+##[[0;93;49mOrder] [0;32;49mTotal is: 3970 and tax is 370[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrder] [0;32;49mCalculating Totals[0;39;49m
+##[[0;93;49mOrder] [0;32;49mTotal is: 120 and tax is 20[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrder] [0;32;49mCalculating Totals[0;39;49m
+##[[0;93;49mOrder] [0;32;49mTotal is: 0 and tax is 0[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mItemsController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mItemsController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrder] [0;32;49mOrderItem not found on order, or existing OrderItem is set to no_inc. Will not increment.[0;39;49m
+##[[0;93;49mOrder] [0;32;49mno_inc is: nil[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mModifying price for actions[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mmodify_price_for_actions[0;39;49m
+##[[0;93;49mAction] [0;91;49mrun called for add_to_order[0;39;49m
+##[[0;93;49mAction] [0;32;49mAction.apply_action B5G6 for Category ADD action_id:6[0;39;49m
+##[[0;93;49mAction] [0;32;49m[Discount after threshold]: called[0;39;49m
+##[[0;93;49mAction] [0;32;49m[Discount after threshold]: Is a category discount[0;39;49m
+##[[0;93;49mAction] [0;32;49m[Discount after threshold]: Total quantity is 1.0[0;39;49m
+##[[0;93;49mAction] [0;32;49m[Discount after threshold]: Minimum price is 300, minimum price item ID is #<OrderItem id: 18, order_id: 5, item_id: 9, quantity: 1.0, created_at: "2016-10-15 11:18:15", updated_at: "2016-10-15 11:18:15", tax_profile_id: 1, item_type_id: 1, activated: nil, behavior: "normal", tax: 20.0, category_id: 4, location_id: nil, refunded: nil, refunded_at: nil, refunded_by: 2, rebate: nil, coupon_id: nil, is_buyback: nil, sku: "THR2", weigh_compulsory: nil, no_inc: nil, action_applied: nil, vendor_id: 1, hidden_by: nil, hidden: nil, hidden_at: nil, company_id: 1, user_id: 1, discount: nil, calculate_part_price: nil, drawer_id: 1, price_cents: 300, gift_card_amount_cents: 0, tax_amount_cents: 0, coupon_amount_cents: 0, discount_amount_cents: 0, rebate_amount_cents: 0, total_cents: 0, completed_at: nil, currency: "USD", is_proforma: nil, is_quote: nil, is_unpaid: nil, paid: nil, paid_at: nil, refund_payment_method_item_id: nil>[0;39;49m
+##[[0;93;49mAction] [0;32;49m[Discount after threshold]: num_discountables is 0[0;39;49m
+##[[0;93;49mAction] [0;32;49mXXXX[Discount after threshold]: num_discountables is not sufficient[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mModifying price for gs1[0;39;49m
+##[[0;93;49mOrder] [0;32;49mCalculating Totals[0;39;49m
+##[[0;93;49mOrder] [0;32;49mTotal is: 360 and tax is 60[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49m[RECURSION]] [0;94;49m [THR2] Called with diff = -1.0[0;39;49m
+##[[0;93;49m[RECURSION]] [0;94;49m[THR2] No recursion. Making a stock transaction with diff=-1.0 directly.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mItemsController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mItemsController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrder] [0;32;49mOrderItem not found on order, or existing OrderItem is set to no_inc. Will not increment.[0;39;49m
+##[[0;93;49mOrder] [0;32;49mno_inc is: nil[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mModifying price for actions[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mmodify_price_for_actions[0;39;49m
+##[[0;93;49mAction] [0;91;49mrun called for add_to_order[0;39;49m
+##[[0;93;49mAction] [0;32;49mAction.apply_action B5G6 for Category ADD action_id:6[0;39;49m
+##[[0;93;49mAction] [0;32;49m[Discount after threshold]: called[0;39;49m
+##[[0;93;49mAction] [0;32;49m[Discount after threshold]: Is a category discount[0;39;49m
+##[[0;93;49mAction] [0;32;49m[Discount after threshold]: Total quantity is 1.0[0;39;49m
+##[[0;93;49mAction] [0;32;49m[Discount after threshold]: Minimum price is 300, minimum price item ID is #<OrderItem id: 19, order_id: 6, item_id: 9, quantity: 1.0, created_at: "2016-10-15 11:18:55", updated_at: "2016-10-15 11:18:55", tax_profile_id: 1, item_type_id: 1, activated: nil, behavior: "normal", tax: 20.0, category_id: 4, location_id: nil, refunded: nil, refunded_at: nil, refunded_by: 1, rebate: nil, coupon_id: nil, is_buyback: nil, sku: "THR2", weigh_compulsory: nil, no_inc: nil, action_applied: nil, vendor_id: 1, hidden_by: nil, hidden: nil, hidden_at: nil, company_id: 1, user_id: 1, discount: nil, calculate_part_price: nil, drawer_id: 1, price_cents: 300, gift_card_amount_cents: 0, tax_amount_cents: 0, coupon_amount_cents: 0, discount_amount_cents: 0, rebate_amount_cents: 0, total_cents: 0, completed_at: nil, currency: "USD", is_proforma: nil, is_quote: nil, is_unpaid: nil, paid: nil, paid_at: nil, refund_payment_method_item_id: nil>[0;39;49m
+##[[0;93;49mAction] [0;32;49m[Discount after threshold]: num_discountables is 0[0;39;49m
+##[[0;93;49mAction] [0;32;49mXXXX[Discount after threshold]: num_discountables is not sufficient[0;39;49m
+##[[0;93;49mOrderItem] [0;32;49mModifying price for gs1[0;39;49m
+##[[0;93;49mOrder] [0;32;49mCalculating Totals[0;39;49m
+##[[0;93;49mOrder] [0;32;49mTotal is: 360 and tax is 60[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49m[RECURSION]] [0;94;49m [THR2] Called with diff = -1.0[0;39;49m
+##[[0;93;49m[RECURSION]] [0;94;49m[THR2] No recursion. Making a stock transaction with diff=-1.0 directly.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mItemsController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mItemsController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mItemsController] [0;32;49mEnd of request.[0;39;49m

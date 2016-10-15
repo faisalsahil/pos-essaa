@@ -153,7 +153,7 @@ class ItemsController < ApplicationController
       if params[:keywords].empty? then
         @items = @current_vendor.items.page(params[:page]).per(@current_vendor.pagination)
       else
-        @items = @current_vendor.items.where("lower(name) LIKE ? OR lower(sku) like ?", "%"+params[:keywords].downcase+"%", "%"+params[:keywords].downcase+"%")
+        @items = @current_vendor.items.where("(lower(name) LIKE ? OR lower(sku) like ? ) AND quantity > ?", "%"+params[:keywords].downcase+"%", "%"+params[:keywords].downcase+"%", 0)
         # @items = @current_vendor.items.by_keywords(params[:keywords]).page(params[:page]).per(@current_vendor.pagination)
       end
     elsif params[:klass] == 'Order'
