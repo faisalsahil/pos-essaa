@@ -1,0 +1,48 @@
+<div id="invoice-header">
+  <% 
+    @date = Time.now
+    @time = Time.now.strftime("%I:%M %p")
+  %>
+  <span class="invoice-header-span2" style="font-size: 35px; text-align: center">
+    <%= "NASEEM PHARMACY" %>
+  </span>
+  <br/>
+  <br/>
+  <div class="invoice-header-span1" style="font-size: 14px">
+    <%= "#{@date.day}" + '-' + "#{@date.month}" + '-' + "#{@date.year}" %> 
+    <span style="margin-left:62%;">
+      <%= @time %>
+    </span>
+  </div>
+  
+</div>
+<table class="striped-table2">
+  <tr>
+    <th style="width: 8px">
+      <%= t("activerecord.attributes.letter") %>
+    </th>
+    <th style="width: 100px">
+      <%= t("activerecord.attributes.name") %>
+    </th>
+    <th style="width: 8px">
+      <%= t("activerecord.attributes.price") %>
+    </th>
+    <th style="width: 8px">
+      <%= t("activerecord.attributes.quantity") %>
+    </th>
+    <th style="width: 20px">
+      <%= t("activerecord.attributes.total") %>
+    </th>
+  </tr>
+  <% @report[:list_of_items_raw][item_start..item_end].each do |item| %>
+    <% formatted_item = format_item(item) %>
+    <tr>
+      <% formatted_item.each do |k,v| %>
+        <% next if k == :type %>
+        <td class="<%= k %>">
+          <%= v %>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
