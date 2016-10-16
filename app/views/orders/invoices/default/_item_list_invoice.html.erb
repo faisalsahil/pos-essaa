@@ -1,7 +1,8 @@
 <div id="invoice-header">
   <% 
     @date = Time.now
-    @time = Time.now.strftime("%I:%M %p")
+    @time = Time.now + 5.hours
+    @time = @time.strftime('%I:%M %p')
   %>
   <span class="invoice-header-span2" style="font-size: 35px; text-align: center">
     <%= "NASEEM PHARMACY" %>
@@ -19,7 +20,7 @@
 <table class="striped-table2">
   <tr>
     <th style="width: 8px">
-      <%= t("activerecord.attributes.letter") %>
+      <%= "Sr#" %>
     </th>
     <th style="width: 100px">
       <%= t("activerecord.attributes.name") %>
@@ -34,8 +35,8 @@
       <%= t("activerecord.attributes.total") %>
     </th>
   </tr>
-  <% @report[:list_of_items_raw][item_start..item_end].each do |item| %>
-    <% formatted_item = format_item(item) %>
+  <% @report[:list_of_items_raw][item_start..item_end].each_with_index do |item, index| %>
+    <% formatted_item = format_item(item, index) %>
     <tr>
       <% formatted_item.each do |k,v| %>
         <% next if k == :type %>
