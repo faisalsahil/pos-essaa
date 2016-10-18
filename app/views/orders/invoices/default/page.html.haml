@@ -29,8 +29,24 @@
     = render :partial => 'orders/invoices/default/item_list_invoice', :locals => { :item_start => 0, :item_end => item_pagination_count_one - 1 }
     
   = render :partial => 'orders/invoices/default/totals' if additional_page_count.zero?
-  
-    
+  %br/
+  %br/
+  %h3
+  %b Address: Petergill colony LDA quarter Walton road Lahore. 
+  %br/
+  %b Phone#:   042 359 20 231  
+
+
+  %br/
+  %br/
+  %br/
+  %br/
+  %br/
+  %br/
+  %br/
+  %br/
+
+  %b{:style => "margin-left: 10%"} Powered by: Faisal Bhatti | 0332- 416 77 29
 
 - additional_page_count.times do |i|
   - item_start = item_pagination_count_one + i * item_pagination_count_other

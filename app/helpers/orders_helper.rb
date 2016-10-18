@@ -6,7 +6,7 @@
 # See license.txt for the license applying to all files within this software.
 module OrdersHelper
 
-  def format_item(item)
+  def format_item(item, index)
     item[:name] = item[:name][0..35]
     if item[:type] == 'integer'
       item[:price] =  item[:price].exchange_to(@ec) if item[:price]
@@ -21,7 +21,17 @@ module OrdersHelper
       item[:price] = number_to_percentage item[:price].exchange_to(@ec) if item[:price]
       item[:quantity] = Integer(item[:quantity])
     end
-    return item
+    
+    item1 = {
+      index: index + 1,
+      # letter:   item[:letter],
+      name:     item[:name],
+      price:    item[:price],
+      quantity: item[:quantity],
+      total:    item[:total],
+      type:     item[:type]
+    }
+    return item1
   end
 
   def format_tax(tax)
