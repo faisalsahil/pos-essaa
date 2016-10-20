@@ -214,7 +214,7 @@ sr.fn.pos_core.drawOrderItemRow = function(item, mode) {
               get(string, filename);
               sr.fn.focus.set($('#main_sku_field'));
             }else{
-              alert("Not enough stock available.dddd");
+              alert("Not enough stock available.");
             }
           });
         }
