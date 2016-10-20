@@ -1,0 +1,33 @@
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mSessionsController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mSessionsController] [0;32;49mNo locale is set, trying to detect from browser[0;39;49m
+##[[0;93;49mSessionsController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mSessionsController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mSessionsController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mSessionsController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mSessionsController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mSessionsController] [0;32;49mEnd of request.[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49m-----------------------------------
+
+
+
+
+[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49msession[:locale] is set to en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mLocale is now set to: en[0;39;49m
+##[[0;93;49mOrdersController] [0;32;49mEnd of request.[0;39;49m

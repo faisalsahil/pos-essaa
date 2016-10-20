@@ -246,9 +246,9 @@ class OrdersController < ApplicationController
         @order.user = tmp_user
         @order.save!
         
-        SalorBase.log_action("OrdersController","tmp_user swapped")
+        # SalorBase.log_action("OrdersController","tmp_user swapped")
       else
-        SalorBase.log_action("OrdersController","tmp_user does not belong to this store")
+        # SalorBase.log_action("OrdersController","tmp_user does not belong to this store")
         render :js => "alert('InCorrectUser');" and return
       end
     end

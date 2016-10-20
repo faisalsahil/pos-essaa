@@ -76,16 +76,16 @@ class ApplicationController < ActionController::Base
   def set_locale
 
     if params[:l] and I18n.available_locales.include? params[:l].to_sym
-      log_action "params[:l] is set to #{params[:l]}"
+      # log_action "params[:l] is set to #{params[:l]}"
       I18n.locale = @locale = session[:locale] = params[:l]
     elsif session[:locale]
-      log_action "session[:locale] is set to #{session[:locale]}"
+      # log_action "session[:locale] is set to #{session[:locale]}"
       I18n.locale = @locale = session[:locale]
     elsif @current_user
-      log_action "Users Locale is: #{@current_user.language}"
+      # log_action "Users Locale is: #{@current_user.language}"
       I18n.locale = @locale = session[:locale] = @current_user.language
     else
-      log_action "No locale is set, trying to detect from browser"
+      # log_action "No locale is set, trying to detect from browser"
       unless request.env['HTTP_ACCEPT_LANGUAGE'].nil?
         browser_language = request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first
         browser_language = 'gn' if browser_language == 'de'
@@ -96,7 +96,7 @@ class ApplicationController < ActionController::Base
         I18n.locale = @locale = session[:locale] = browser_language
       end
     end
-    log_action "Locale is now set to: #{I18n.locale}"
+    # log_action "Locale is now set to: #{I18n.locale}"
     @region = @current_vendor.region if @current_vendor
   end
   
@@ -109,7 +109,7 @@ class ApplicationController < ActionController::Base
   def customerscreen_push_notification
     t = SalorRetail.tailor
     if t and @order
-      log_action "[TAILOR] Sending CUSTOMERSCREENEVENT"
+      # log_action "[TAILOR] Sending CUSTOMERSCREENEVENT"
       t.puts "CUSTOMERSCREENEVENT|#{@current_vendor.hash_id}|#{ @current_register.name }|/orders/#{ @order.id }/customer_display"
     end
   end
@@ -129,9 +129,9 @@ class ApplicationController < ActionController::Base
     if session[:user_id_hash].blank?
       redirect_to new_session_path and return 
     end
-    puts '-'*120
+    # puts '-'*120
     puts session[:user_id_hash].inspect
-    puts '-'*120
+    # puts '-'*120
     
     @current_user = User.find_by_id_hash(session[:user_id_hash])
     if @current_user.nil?
@@ -172,7 +172,7 @@ class ApplicationController < ActionController::Base
   
   def loadup
     #debugger
-    log_action "-----------------------------------\n\n\n\n\n"
+    # log_action "-----------------------------------\n\n\n\n\n"
 #     $COMPANYID = nil
 #     $VENDORID = nil
     $USERID = nil
@@ -198,7 +198,7 @@ class ApplicationController < ActionController::Base
     $PARAMS = nil
     $REQUEST = nil
     $MESSAGES = {}
-    log_action "End of request."
+    # log_action "End of request."
   end
   
   def copy_messages_to_flash
@@ -221,19 +221,19 @@ class ApplicationController < ActionController::Base
   
     t = SalorRetail.tailor
     if t
-      log_action "[TAILOR] Checking if socket #{ t.inspect } is healthy"
+      # log_action "[TAILOR] Checking if socket #{ t.inspect } is healthy"
       begin
         t.puts "PING|#{ @current_vendor.hash_id }|#{ Process.pid }"
       rescue Errno::EPIPE
-        log_action "[TAILOR] Error: Broken pipe for #{ t.inspect } #{ t }"
+        # log_action "[TAILOR] Error: Broken pipe for #{ t.inspect } #{ t }"
         SalorRetail.old_tailors << t
         t = nil
       rescue Errno::ECONNRESET
-        log_action "[TAILOR] Error: Connection reset by peer for #{ t.inspect } #{ t }"
+        # log_action "[TAILOR] Error: Connection reset by peer for #{ t.inspect } #{ t }"
         SalorRetail.old_tailors << t
         t = nil
       rescue Exception => e
-        log_action "[TAILOR] Other Error: #{ e.inspect } for #{ t.inspect } #{ t }"
+        # log_action "[TAILOR] Other Error: #{ e.inspect } for #{ t.inspect } #{ t }"
         SalorRetail.old_tailors << t
         t = nil
       end
@@ -242,10 +242,10 @@ class ApplicationController < ActionController::Base
     if t.nil?
       begin
         t = TCPSocket.new 'localhost', 2001
-        log_action "[TAILOR] Info: New TCPSocket #{ t.inspect } #{ t } created"
+        # log_action "[TAILOR] Info: New TCPSocket #{ t.inspect } #{ t } created"
       rescue Errno::ECONNREFUSED
         t = nil
-        log_action "[TAILOR] Warning: Connection refused. No tailor.rb server running?"
+        # log_action "[TAILOR] Warning: Connection refused. No tailor.rb server running?"
       end
       SalorRetail.tailor = t
     end

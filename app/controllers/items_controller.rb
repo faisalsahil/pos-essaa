@@ -26,15 +26,15 @@ class ItemsController < ApplicationController
     if @keywords
       @items = @current_vendor.items.by_keywords(@keywords).where("items.sku NOT LIKE 'DMY%'")
       child_item_skus = []
-      log_action "XXXXX[recursive find]: @items #{ @items.collect{ |i| i.sku } }"
+      # log_action "XXXXX[recursive find]: @items #{ @items.collect{ |i| i.sku } }"
       @items.each do |i|
-        log_action "XXXXX[recursive find]: finding upmost parent for Item id #{ i.id }"
+        # log_action "XXXXX[recursive find]: finding upmost parent for Item id #{ i.id }"
         upmost_parent_sku = i.recursive_parent_sku_chain.last
-        log_action "XXXXX[recursive find]: upmost parent sku is #{ upmost_parent_sku }"
+        # log_action "XXXXX[recursive find]: upmost parent sku is #{ upmost_parent_sku }"
         upmost_parent = @current_vendor.items.find_by_sku(upmost_parent_sku)
         
         bottom_most_child = upmost_parent.recursive_child_sku_chain.last
-        log_action "XXXXX[recursive find]: bottom most child sku is #{ bottom_most_child }"
+        # log_action "XXXXX[recursive find]: bottom most child sku is #{ bottom_most_child }"
         child_item_skus << bottom_most_child
       end
       @items = @current_vendor.items.where(:sku => child_item_skus).page(params[:page]).per(@current_vendor.pagination)

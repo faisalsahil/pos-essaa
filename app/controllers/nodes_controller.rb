@@ -17,11 +17,11 @@ class NodesController < ApplicationController
     if node then
       url = uri.parse(node.url)
       req.body = node.payload
-      log_action "sending single msg #{node.id}"
+      # log_action "sending single msg #{node.id}"
       req2 = net::http.new(url.host, url.port)
       response = req2.start {|http| http.request(req) }
       response_parse = json.parse(response.body)
-      log_action("received from node: " + response.body)
+      # log_action("received from node: " + response.body)
       node.update_attribute :is_handled, true
     end
     redirect_to request.referer
@@ -121,22 +121,22 @@ class NodesController < ApplicationController
   end
   def receive
     begin
-    SalorBase.log_action("NodesController","Starting Receive action")
+    # SalorBase.log_action("NodesController","Starting Receive action")
     if params[:node] then
-      SalorBase.log_action("NodesController","looking for node")
+      # SalorBase.log_action("NodesController","looking for node")
       @node = Node.where(:sku => params[:node][:sku]).first
       if @node then
-        SalorBase.log_action("NodesController","node found, handling")
+        # SalorBase.log_action("NodesController","node found, handling")
         n = Cue.new(:source_sku =>params[:node][:sku], :destination_sku => params[:target][:sku],:to_receive => true, :payload => request.body.read)
         n.save
         #render :json => @node.handle(SalorBase.symbolize_keys(JSON.parse(request.body.read))).to_json and return
         render :json => {:success => true}.to_json and return
       else
-        SalorBase.log_action("NodesController","Node #{params[:node][:sku]} Could Not Be Found")
+        # SalorBase.log_action("NodesController","Node #{params[:node][:sku]} Could Not Be Found")
         render :json => {:error => "Node could not be found"}.to_json
       end
     else
-      SalorBase.log_action("NodesController","no node specified")
+      # SalorBase.log_action("NodesController","no node specified")
       render :json => {:error => "No Node"}.to_json
     end
     rescue => e
