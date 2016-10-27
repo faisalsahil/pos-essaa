@@ -13,13 +13,13 @@
           <%= item.name %>
         </td>
         <td id="pos-table-left-column-items" class="pos-table-left-column-items">
-          <% if item.quantity <= 5 %>
+          <% if item.quantity.present? && item.quantity <= 5 %>
             <div class="editmedone editme pointer no-select" style="background-color: red;">
-              <%= item.quantity %>
+              <%= item.try(:quantity) %>
             </div>
           <% else %>
             <div class="editmedone editme pointer no-select">
-              <%= item.quantity %>
+              <%= item.try(:quantity) %>
             </div>
           <% end %>  
         </td>
