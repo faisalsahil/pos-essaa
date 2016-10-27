@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20151215070845) do
+ActiveRecord::Schema.define(:version => 20161027124641) do
 
   create_table "actions", :force => true do |t|
     t.string   "name"
@@ -550,6 +550,7 @@ ActiveRecord::Schema.define(:version => 20151215070845) do
     t.integer  "created_by"
     t.string   "longname"
     t.string   "shortname"
+    t.date     "expiry_date"
   end
 
   add_index "items", ["category_id"], :name => "index_items_on_category_id"

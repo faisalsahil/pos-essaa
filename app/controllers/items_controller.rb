@@ -76,7 +76,6 @@ class ItemsController < ApplicationController
     end
   end
 
-
   def create
     @item = Item.new
     @item.vendor = @current_vendor
@@ -221,7 +220,8 @@ class ItemsController < ApplicationController
       # search function should display recursive items
       @items = @current_vendor.items.by_keywords(params[:keywords]).where("items.sku NOT LIKE 'DMY%'").page(params[:page]).per(@current_vendor.pagination).order(orderby)
     else
-      @items = @current_vendor.items.where("items.sku NOT LIKE 'DMY%'").where('child_id = 0 or child_id IS  NULL').page(params[:page]).per(@current_vendor.pagination).order(orderby)
+      # @items = @current_vendor.items.where("items.sku NOT LIKE 'DMY%'").where('child_id = 0 or child_id IS  NULL').page(params[:page]).per(@current_vendor.pagination).order(orderby)
+      @items = @current_vendor.items.where("items.sku NOT LIKE 'DMY%'").where('child_id = 0 or child_id IS  NULL').order(orderby)      
     end
     data = render_to_string :layout => false
     send_data(data,:filename => 'items.csv', :type => 'text/csv')

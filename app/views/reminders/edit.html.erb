@@ -1,0 +1,17 @@
+<div style="text-align: left;">
+	<h2><%= @item.name %></h2>
+	<br/>
+	<%= form_for @item,:url=>reminder_path(@item),:method=>:put do |f| %>
+	  Quantity:<%= f.text_field :quantity, value: 0, style: "width: 50px;margin-left: 34px;" %>
+	  <br/>
+	  Expiry Date: <%= f.date_select :expiry_date %> 
+	  <br/>
+	  
+	  <%= f.submit t('helpers.submit.save'), style: "width: 55px;"%>
+	<% end %>
+
+	<br/><br/><br/>
+
+	<%= link_to "Go Back", reminders_path%> 
+
+</div>

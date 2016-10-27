@@ -101,6 +101,14 @@
         <td> <%= f.label I18n.t("activerecord.attributes.quantity") %> </td>
         <td> <%= f.text_field :quantity%> </td>
       </tr>
+
+      <tr>
+        <td> <%= f.label I18n.t("activerecord.attributes.expiry_date") %> </td>
+        <td>
+          <%= f.date_select :expiry_date, :value => Time.now.strftime('%Y-%m-%d') %>  
+          <%#= f.text_field :expiry_date, class: "datepicker", placeholder: "MM/DD/YYYY"%> 
+        </td>
+      </tr>
       
       
       <tr>
