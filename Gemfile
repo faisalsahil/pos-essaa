@@ -33,5 +33,5 @@ gem 'money-rails', '0.8.1'
 
 group :development do
   gem 'i18n-js'
-  # gem 'debugger'
+  gem 'debugger'
 end
