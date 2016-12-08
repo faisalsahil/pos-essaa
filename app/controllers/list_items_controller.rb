@@ -33,7 +33,7 @@ class ListItemsController < ApplicationController
 				@list_item          = @purchase_item.list_items.build
 				@list_item.name     = item.try(:name)
 				@list_item.sku      = item.try(:sku)
-				@list_item.quantity = item.try(:quantity)
+				@list_item.stock = item.try(:quantity)
 				@list_item.save
 			end
 		end

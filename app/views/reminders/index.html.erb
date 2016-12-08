@@ -1,16 +1,18 @@
 <h2 id="alert-note"></h2>
 <br/>
-<div>
-  Select Purchase File: <%= select_tag 'purchase_file', options_from_collection_for_select(@purchase_items, 'id', 'name') %>
-</div>
-<%= link_to 'Add to List', 'javascript:void(0)', id: 'add_items_to_list', class: 'button-print', style: 'margin-left:80%;' %>
+<% if @current_user.role_cache == 'manager' %>
+  <div>
+    Select Purchase File: <%= select_tag 'purchase_file', options_from_collection_for_select(@purchase_items, 'id', 'name') %>
+  </div>
+  <%= link_to 'Add to List', 'javascript:void(0)', id: 'add_items_to_list', class: 'button-print', style: 'margin-left:80%;' %>
+<% end %>
 <br/>
 <br/>
 <table class="items_index list-table">
   <thead>
     <th>Sr#</th>
     <th>NAME</th>
-    <th>QUANTITY</th>
+    <th>Stock</th>
     <th>Expiry</th>
   </thead>
   <tbody>
@@ -43,8 +45,10 @@
           <% end %> 
         </td>
         <td>
-          <%= link_to "Edit", edit_reminder_path(item)%> |
-          <%= check_box_tag 'add_to_list[]', item.id, false, class: 'items_to_list' %>
+          <% if @current_user.role_cache == 'manager' %>
+            <%= link_to "Edit", edit_reminder_path(item)%> |
+            <%= check_box_tag 'add_to_list[]', item.id, false, class: 'items_to_list' %>
+          <% end %>
           <%#= link_to 'Add to List', 'javascript:void(0)', class: 'add_to_list', value: item.id %>
           <%# if @current_user.can(:edit_items) %>
             <%#= form_for item,:url=>reminder_path(item),:method=>:put do |f| %>
@@ -68,7 +72,7 @@
       $('.items_to_list:checkbox:checked').each(function() {
         items_array.push(this.value);
       });
-      window.location.href = "http://medicos.herokuapp.com/list_items/item_added?item_ids=" + items_array + "&purchase_item_id=" + purchase_item;
+      window.location.href = "http://localhost:3000/list_items/item_added?item_ids=" + items_array + "&purchase_item_id=" + purchase_item;
     })
   })
 </script>

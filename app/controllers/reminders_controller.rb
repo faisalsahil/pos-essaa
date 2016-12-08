@@ -4,7 +4,6 @@ class RemindersController < ApplicationController
 		@items = Item.where("quantity <= ? OR expiry_date <= ? OR expiry_date IS NULL", 5, Date.today + 5.day)
 		@items.sort_by!{ |m| m.name.downcase }
 		@purchase_items = PurchaseItem.all
-
 	end
 
 	def edit

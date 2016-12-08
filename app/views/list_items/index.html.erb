@@ -7,7 +7,7 @@
   <%= link_to "Add List", new_purchase_item_list_item_path(@purchase_item), class: "pull-right", style: "background-color: #ed8b00;    margin-left: 93%;" %>
   <table class="items_index">
     <tr>
-      <% cols = [:name,:quantity] %>
+      <% cols = [:name,:stock, :quantity] %>
       <% custom_columns = [] %>
       <% custom_columns = @current_plugin_manager.apply_filter('item_list_columns',custom_columns) %>
       <% cols += custom_columns + ['',''] %>
@@ -32,6 +32,9 @@
         <%#= render :partial => 'item_row', :locals => { :item => item, :depth => 0, :custom_columns => custom_columns, :current_plugin_manager => @current_plugin_manager } %>
         <td class="left">
           <%= item.name %>
+        </td>
+        <td>
+          <%= item.stock %>
         </td>
         <td>
           <%= item.quantity %>
@@ -71,6 +74,9 @@
         <%= "Name" %>
       </th>
       <th>
+        <%= "Stock" %>
+      </th>
+      <th>
         <%= "Quantity" %>
       </th>
       <th>
@@ -85,6 +91,9 @@
         </td>
         <td>
           <%= arr.name  %>
+        </td>
+        <td>
+          <%= arr.stock %>
         </td>
         <td>
           <%= arr.quantity %>

@@ -170,6 +170,7 @@ en:
       shipper_name: Shipper
       shipper_sku: Shipper SKU
       sku: Code
+      stock: Stock
       start_amount: start amount
       start_date: start date
       state: state
