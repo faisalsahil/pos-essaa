@@ -227,7 +227,7 @@ class Item < ActiveRecord::Base
   
     def self.csv_headers
     return [
-                :class, :name, :sku, :price, :quantity, :behavior, 
+                :class, :name, :sku, :price, :quantity, :behavior,
                 :child_sku, :tax_profile_name, :tax_profile_amount, 
                 :category_name, :location_name
     ]

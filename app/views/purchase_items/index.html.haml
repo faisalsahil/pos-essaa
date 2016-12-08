@@ -14,6 +14,6 @@
           %th.pointer{ :onclick => "window.location = '?order_by=#{ key }&page=#{ params[:page] }';", :class => "#{ 'left' if key==:name }"}= I18n.t("activerecord.attributes.#{ key }")
         - else
           %th.pointer{ :onclick => "window.location = '?order_by=#{ key }&page=#{ params[:page] }';", :class => "#{ 'left' if key==:name }"}= key[@current_user.language.to_sym]
-        
+
   - @purchase_items.each do |item|
     %tr.even= render :partial => 'item_row', :locals => { :item => item, :depth => 0, :custom_columns => custom_columns, :current_plugin_manager => @current_plugin_manager }

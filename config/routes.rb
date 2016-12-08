@@ -159,7 +159,11 @@ SalorRetail::Application.routes.draw do
   resources :purchase_items do
     resources :list_items  
   end  
-  resources :list_items
+  resources :list_items do
+    collection do
+      get 'item_added'
+    end
+  end
   resources :reminders
   
   resources :inventory_reports

@@ -32,6 +32,7 @@ en:
       child_sku: Child SKU
       city: city
       color: color
+      code:  Code
       company_id: Company
       company_name: company name
       completed_at: completed at
@@ -168,7 +169,7 @@ en:
         stock_location_id: Stock location
       shipper_name: Shipper
       shipper_sku: Shipper SKU
-      sku: SKU
+      sku: Code
       start_amount: start amount
       start_date: start date
       state: state
