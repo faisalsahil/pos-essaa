@@ -6,7 +6,7 @@ class RemindersController < ApplicationController
 		else
 			@items = Item.where("lower(name) like ?", "%#{params[:keyword]}%".downcase)
 		end
-		@items = @items.page(params[:page]).per(10)
+		@items = @items.page(params[:page]).per(100)
 		@items.sort_by!{ |m| m.name.downcase }
 		@purchase_items = PurchaseItem.all
 	end
