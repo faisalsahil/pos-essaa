@@ -11,12 +11,12 @@
 </div>
 
 
-<% if @current_user.role_cache == 'manager' %>
+<%# if @current_user.role_cache == 'manager' %>
   <div style="text-align: right">
     Select Purchase File: <%= select_tag 'purchase_file', options_from_collection_for_select(@purchase_items, 'id', 'name') %>
     <%= link_to 'Add to List', 'javascript:void(0)', id: 'add_items_to_list', class: 'button-print', style: 'margin-left:80%;' %>
   </div>
-<% end %>
+<%# end %>
 <br/>
 <br/>
 <table class="items_index list-table">
@@ -58,8 +58,8 @@
         <td>
           <% if @current_user.role_cache == 'manager' %>
             <%= link_to "Edit", edit_reminder_path(item)%> |
-            <%= check_box_tag 'add_to_list[]', item.id, false, class: 'items_to_list' %>
           <% end %>
+          <%= check_box_tag 'add_to_list[]', item.id, false, class: 'items_to_list' %>
           <%#= link_to 'Add to List', 'javascript:void(0)', class: 'add_to_list', value: item.id %>
           <%# if @current_user.can(:edit_items) %>
             <%#= form_for item,:url=>reminder_path(item),:method=>:put do |f| %>

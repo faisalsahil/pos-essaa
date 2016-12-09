@@ -40,14 +40,14 @@
           <%= item.quantity %>
         </td>
         <td>
-          <% if @current_user.can(:edit_items) %>
+          <%# if @current_user.can(:edit_items) %>
             <%= link_to salor_icon(:edit,{},32), edit_purchase_item_list_item_path(@purchase_item.id,item) %>
-          <% end %>
+          <%# end %>
         </td>
         <td>
-          <% if @current_user.can(:destroy_items) %>
+          <%# if @current_user.can(:destroy_items) %>
             <%= link_to(salor_icon(:delete,{},32), item, :confirm => 'Are you sure?', :method => :delete) %>
-          <% end %>
+          <%# end %>
         </td>
       </tr>
     <% end %>
