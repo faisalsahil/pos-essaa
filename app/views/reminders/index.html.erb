@@ -1,10 +1,21 @@
 <h2 id="alert-note"></h2>
 <br/>
+
+<div style="margin-left:38%;">
+  <%= form_tag reminders_path, method: 'get' do %>
+    <p>
+      <%= text_field_tag :keyword, params[:keyword], autofocus: true %>
+      <%= submit_tag 'search', name: nil, style: 'width:70px;'%>
+    </p>
+  <% end %>
+</div>
+
+
 <% if @current_user.role_cache == 'manager' %>
-  <div>
+  <div style="text-align: right">
     Select Purchase File: <%= select_tag 'purchase_file', options_from_collection_for_select(@purchase_items, 'id', 'name') %>
+    <%= link_to 'Add to List', 'javascript:void(0)', id: 'add_items_to_list', class: 'button-print', style: 'margin-left:80%;' %>
   </div>
-  <%= link_to 'Add to List', 'javascript:void(0)', id: 'add_items_to_list', class: 'button-print', style: 'margin-left:80%;' %>
 <% end %>
 <br/>
 <br/>
@@ -75,7 +86,7 @@
       $('.items_to_list:checkbox:checked').each(function() {
         items_array.push(this.value);
       });
-      window.location.href = "http://medicos.herokuapp.com/list_items/item_added?item_ids=" + items_array + "&purchase_item_id=" + purchase_item;
+      window.location.href = "http://localhost:3000/list_items/item_added?item_ids=" + items_array + "&purchase_item_id=" + purchase_item;
     })
   })
 </script>

@@ -1,8 +1,12 @@
 class RemindersController < ApplicationController
 
 	def index
-		@items = Item.where("quantity <= ? OR expiry_date <= ? OR expiry_date IS NULL", 5, Date.today + 5.day)
-		@items = @items.page(params[:page]).per(100)
+		if params[:keyword].blank?
+			@items = Item.where("quantity <= ? OR expiry_date <= ? OR expiry_date IS NULL", 5, Date.today + 5.day)
+		else
+			@items = Item.where("lower(name) like ?", "%#{params[:keyword]}%".downcase)
+		end
+		@items = @items.page(params[:page]).per(10)
 		@items.sort_by!{ |m| m.name.downcase }
 		@purchase_items = PurchaseItem.all
 	end

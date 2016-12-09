@@ -8,7 +8,8 @@ backup.sh
 gitchanges.sh
 dump.rdb
 
-log/*
+log/development.log
+log/development-history.log
 tmp/*
 
 db/*.sqlite3
