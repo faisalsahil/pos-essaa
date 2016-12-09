@@ -79,11 +79,12 @@
           </div>
         </td>
       </tr> -->
-      
-      <tr>
-        <td> <%= f.label I18n.t("activerecord.attributes.sku") %> </td>
-        <td> <%= f.text_field :sku, :class => "keyboardable", :style => "width: 80%;" %> </td>
-      </tr>
+      <% if @item.new_record? %>
+        <tr>
+          <td> <%= f.label I18n.t("activerecord.attributes.sku") %> </td>
+          <td> <%= f.text_field :sku, :class => "keyboardable", :style => "width: 80%;", value: @sku.to_s %> </td>
+        </tr>
+      <% end %>
       
       <tr>
         <td> <%= f.label Item.human_attribute_name :description %> </td>

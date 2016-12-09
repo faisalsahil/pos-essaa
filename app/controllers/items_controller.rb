@@ -61,6 +61,7 @@ class ItemsController < ApplicationController
   
   def new
     @item = @current_vendor.items.build
+    @sku  = Item.last.sku.to_i + 1
     @histories = @item.histories.order("created_at DESC").limit(20)
   end
 
@@ -90,6 +91,7 @@ class ItemsController < ApplicationController
       redirect_to items_path
     else
       @histories = @item.histories.order("created_at DESC").limit(20)
+      @sku       = Item.last.sku.to_i + 1
       render :new
     end
   end
