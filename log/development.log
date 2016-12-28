@@ -1,0 +1,1326 @@
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-16 18:21:36 +0500
+Connecting to database specified by database.yml
+Processing by OrdersController#new as HTML
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :fetch_current_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2016-12-16 18:21:38 +0500
+Processing by SessionsController#new as HTML
+  [1m[36mCompany Load (17.1ms)[0m  [1mSELECT "companies".* FROM "companies" LIMIT 1[0m
+  [1m[35mVendor Load (20.4ms)[0m  SELECT "vendors".* FROM "vendors" WHERE "vendors"."company_id" = 1 LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (46.6ms)
+  Rendered shared/_clockin.html.haml (1.8ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_shared__messages_html_erb___3810052703388824826_70175209678100 at /home/appsgenii/projects/pos/app/views/shared/_messages.html.erb:2)
+  Rendered shared/_messagesjs.js.erb (0.5ms)
+  Rendered shared/_messages.html.erb (1.6ms)
+Completed 200 OK in 1231ms (Views: 651.3ms | ActiveRecord: 44.0ms)
+
+
+Started GET "/assets/generic.css?body=1" for 127.0.0.1 at 2016-12-16 18:21:39 +0500
+Served asset /generic.css - 200 OK (9ms)
+
+
+Started GET "/assets/dropzone.css?body=1" for 127.0.0.1 at 2016-12-16 18:21:39 +0500
+Served asset /dropzone.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:39 +0500
+Served asset /jquery.js - 200 OK (17ms)
+
+
+Started GET "/assets/ui-min.css?body=1" for 127.0.0.1 at 2016-12-16 18:21:39 +0500
+Served asset /ui-min.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:39 +0500
+Served asset /jquery-ui.js - 200 OK (5ms)
+
+
+Started GET "/assets/workstation.css?body=1" for 127.0.0.1 at 2016-12-16 18:21:39 +0500
+Served asset /workstation.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:39 +0500
+Served asset /jquery_ujs.js - 200 OK (4ms)
+
+
+Started GET "/assets/sprintf.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:39 +0500
+Served asset /sprintf.js - 200 OK (2ms)
+
+
+Started GET "/assets/documentready.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:39 +0500
+Served asset /documentready.js - 200 OK (65ms)
+
+
+Started GET "/assets/invoices.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /invoices.js - 200 OK (1ms)
+
+
+Started GET "/assets/user_logins.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /user_logins.js - 200 OK (3ms)
+
+
+Started GET "/assets/math.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /math.js - 200 OK (2ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /items.js - 200 OK (2ms)
+
+
+Started GET "/assets/buttons.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /buttons.js - 200 OK (3ms)
+
+
+Started GET "/assets/debug.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /debug.js - 200 OK (1ms)
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /customers.js - 200 OK (5ms)
+
+
+Started GET "/assets/inplace_edit.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /inplace_edit.js - 200 OK (1ms)
+
+
+Started GET "/assets/focus.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /focus.js - 200 OK (3ms)
+
+
+Started GET "/assets/onscreenkeyboard.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /onscreenkeyboard.js - 200 OK (2ms)
+
+
+Started GET "/assets/salor_bin.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /salor_bin.js - 200 OK (1ms)
+
+
+Started GET "/assets/inventory.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /inventory.js - 200 OK (3ms)
+
+
+Started GET "/assets/shared.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /shared.js - 200 OK (1ms)
+
+
+Started GET "/assets/pos_core.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /pos_core.js - 200 OK (14ms)
+
+
+Started GET "/assets/refund.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /refund.js - 200 OK (4ms)
+
+
+Started GET "/assets/shipments.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /shipments.js - 200 OK (5ms)
+
+
+Started GET "/assets/coin_calculator.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /coin_calculator.js - 200 OK (2ms)
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /search.js - 200 OK (2ms)
+
+
+Started GET "/assets/shippers.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /shippers.js - 200 OK (2ms)
+
+
+Started GET "/assets/globals.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /globals.js - 200 OK (1ms)
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /messages.js - 200 OK (4ms)
+
+
+Started GET "/assets/complete-order-payment.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /complete-order-payment.js - 200 OK (1ms)
+
+
+Started GET "/assets/complete-order-change.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /complete-order-change.js - 200 OK (1ms)
+
+
+Started GET "/assets/complete-order.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /complete-order.js - 200 OK (2ms)
+
+
+Started GET "/assets/drawer-transaction.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /drawer-transaction.js - 200 OK (5ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /session.js - 200 OK (1ms)
+
+
+Started GET "/assets/translations.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /translations.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.modcoder.excolor.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /jquery.modcoder.excolor.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.keyboard.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /jquery.keyboard.js - 200 OK (69ms)
+
+
+Started GET "/assets/jquery.checkbox.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /jquery.checkbox.js - 200 OK (1ms)
+
+
+Started GET "/assets/jsclock-0.8.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /jsclock-0.8.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.ui.datepicker-en.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /jquery.ui.datepicker-en.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /application.js - 200 OK (41ms)
+
+
+Started GET "/assets/dropzone.js?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /dropzone.js - 200 OK (2ms)
+
+
+Started GET "/assets/print.css?body=1" for 127.0.0.1 at 2016-12-16 18:21:40 +0500
+Served asset /print.css - 200 OK (2ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2016-12-16 18:21:43 +0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gprpys76uf881djWR0thw/JZAn4zHA2Vd5yizYVs/D4=", "code"=>"000"}
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies" LIMIT 1[0m
+  [1m[35mUser Load (34.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."company_id" = 1 AND "users"."encrypted_password" = '2ac9a6746aca543af8dff39894cfe8173afba21eb01c6fae33d52947222855ef' LIMIT 1
+  [1m[36mVendor Load (1.2ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRole Load (10.5ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles"."id" = "roles_users"."role_id" WHERE "roles_users"."user_id" = 1[0m
+  [1m[35mUserLogin Load (10.3ms)[0m  SELECT "user_logins".* FROM "user_logins" WHERE "user_logins"."user_id" = 1 ORDER BY "user_logins"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "user_logins".* FROM "user_logins" WHERE "user_logins"."user_id" = 1 ORDER BY "user_logins"."id" DESC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  UPDATE "users" SET "sign_in_count" = 10, "current_sign_in_at" = '2016-12-16 13:21:43.631014', "updated_at" = '2016-12-16 13:21:43.688513' WHERE "users"."id" = 1
+  [1m[36m (21.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 494ms (ActiveRecord: 108.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-16 18:21:43 +0500
+Processing by OrdersController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.6ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (18.6ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (32.1ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" IS NULL LIMIT 1
+  [1m[36mCashRegister Load (0.4ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mOrder Load (18.9ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND "orders"."completed_at" IS NULL AND "orders"."id" = 1 LIMIT 1[0m
+  [1m[35mOrder Load (0.9ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND (completed_at IS NOT NULL) ORDER BY completed_at DESC LIMIT 1
+  [1m[36m (46.5ms)[0m  [1mSELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = 1[0m
+  Rendered orders/_menu.html.erb (1.0ms)
+  [1m[35mCategory Load (2.5ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."vendor_id" = 1 AND "categories"."button_category" = 't' ORDER BY position
+  [1m[36mButton Load (0.9ms)[0m  [1mSELECT "buttons".* FROM "buttons" WHERE "buttons"."category_id" = 8 ORDER BY position[0m
+  [1m[35mItem Load (32.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU11' LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU12' LIMIT 1[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU13' LIMIT 1
+  [1m[36mButton Load (0.4ms)[0m  [1mSELECT "buttons".* FROM "buttons" WHERE "buttons"."category_id" = 7 ORDER BY position[0m
+  [1m[35mItem Load (1.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU03' LIMIT 1
+  [1m[36mItem Load (1.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU04' LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU10' LIMIT 1
+  [1m[36mButton Load (0.3ms)[0m  [1mSELECT "buttons".* FROM "buttons" WHERE "buttons"."category_id" = 6 ORDER BY position[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU00' LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU01' LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU02' LIMIT 1
+  [1m[36mButton Load (0.4ms)[0m  [1mSELECT "buttons".* FROM "buttons" WHERE "buttons"."category_id" = 5 ORDER BY position[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION0' LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION1' LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION2' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION3' LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION4' LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION7' LIMIT 1[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'THR0' LIMIT 1
+  [1m[36mItem Load (0.7ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'THR1' LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'THR2' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'PIECE' LIMIT 1[0m
+  [1m[35mItem Load (0.7ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'PACK' LIMIT 1
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'CARTON' LIMIT 1[0m
+  [1m[35mItem Load (1.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'WEIGHITEM' LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'MUSTCHANGEPRICE' LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'DEFAULTBUYBACK' LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'BUYBACKCHANGEPRICE' LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'G000000000000' LIMIT 1
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'TESTCOUPON0' LIMIT 1[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'TESTCOUPON1' LIMIT 1
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'TESTCOUPON2' LIMIT 1[0m
+  Rendered buttons/_popup.html.haml (202.2ms)
+  Rendered shared/_search.html.erb (1.1ms)
+  Rendered orders/_complete_order.html.erb (1.0ms)
+  [1m[35mOrder Load (0.6ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND "orders"."completed_at" IS NULL ORDER BY updated_at DESC LIMIT 5
+  [1m[36mCashRegister Load (0.4ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND (completed_at IS NOT NULL) ORDER BY nr DESC LIMIT 5[0m
+  Rendered orders/_last_orders.html.haml (13.8ms)
+  Rendered orders/new.html.erb within layouts/application (302.9ms)
+  [1m[35mShipper Load (17.0ms)[0m  SELECT "shippers".* FROM "shippers" WHERE "shippers"."vendor_id" = 1
+  [1m[36mVendor Load (0.7ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1[0m
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."vendor_id" = 1
+  [1m[36mLocation Load (11.3ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."vendor_id" = 1[0m
+  [1m[35mItemType Load (11.2ms)[0m  SELECT "item_types".* FROM "item_types" WHERE "item_types"."vendor_id" = 1
+  [1m[36mSaleType Load (0.9ms)[0m  [1mSELECT "sale_types".* FROM "sale_types" WHERE "sale_types"."vendor_id" = 1[0m
+  [1m[35mCountry Load (16.6ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."vendor_id" = 1
+  [1m[36mPaymentMethod Load (1.1ms)[0m  [1mSELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL AND "payment_methods"."unpaid" IS NULL AND "payment_methods"."quote" IS NULL ORDER BY name ASC[0m
+  [1m[35mPaymentMethod Load (0.4ms)[0m  SELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL ORDER BY name ASC
+  [1m[36mTaxProfile Load (1.2ms)[0m  [1mSELECT "tax_profiles".* FROM "tax_profiles" WHERE "tax_profiles"."vendor_id" = 1[0m
+  [1m[35mDrawer Load (10.9ms)[0m  SELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1
+  Rendered shared/_application_js.html.erb (407.9ms)
+  Rendered shared/_generic_search.html.haml (1.2ms)
+  Rendered shared/_header_menu.html.erb (26.5ms)
+  [1m[36mTransactionTag Load (11.7ms)[0m  [1mSELECT "transaction_tags".* FROM "transaction_tags" WHERE "transaction_tags"."vendor_id" = 1[0m
+  Rendered shared/_dt_tags.html.erb (89.4ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" INNER JOIN "users_vendors" ON "users"."id" = "users_vendors"."user_id" WHERE "users_vendors"."vendor_id" = 1
+  [1m[36mDrawerTransaction Load (34.2ms)[0m  [1mSELECT "drawer_transactions".* FROM "drawer_transactions" WHERE "drawer_transactions"."vendor_id" = 1 ORDER BY "drawer_transactions"."id" DESC LIMIT 1[0m
+  Rendered shared/_cash_drop.html.erb (153.3ms)
+  Rendered shared/_clockin.html.haml (0.1ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_shared__messages_html_erb___3810052703388824826_70175209678100 at /home/appsgenii/projects/pos/app/views/shared/_messages.html.erb:2)
+  Rendered shared/_messagesjs.js.erb (0.1ms)
+  Rendered shared/_messages.html.erb (0.7ms)
+Completed 200 OK in 1584ms (Views: 730.4ms | ActiveRecord: 341.0ms)
+
+
+Started GET "/items/search?keywords=tes&klass=Item&page=1" for 127.0.0.1 at 2016-12-16 18:21:48 +0500
+Processing by ItemsController#search as */*
+  Parameters: {"keywords"=>"tes", "klass"=>"Item", "page"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.6ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.3ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.4ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%tes%' OR lower(sku) like '%tes%') AND quantity > 0 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%tes%' OR lower(sku) like '%tes%') AND quantity > 0 )
+  [1m[36mItem Load (1.0ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%tes%' OR lower(sku) like '%tes%') AND quantity > 0 )[0m
+  Rendered items/search.js.erb (47.7ms)
+Completed 200 OK in 139ms (Views: 127.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/items/search?keywords=test&klass=Item&page=1" for 127.0.0.1 at 2016-12-16 18:21:52 +0500
+Processing by ItemsController#search as */*
+  Parameters: {"keywords"=>"test", "klass"=>"Item", "page"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.4ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.7ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.4ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.5ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%test%' OR lower(sku) like '%test%') AND quantity > 0 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%test%' OR lower(sku) like '%test%') AND quantity > 0 )
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%test%' OR lower(sku) like '%test%') AND quantity > 0 )[0m
+  Rendered items/search.js.erb (3.6ms)
+Completed 200 OK in 21ms (Views: 8.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/items/search?keywords=item&klass=Item&page=1" for 127.0.0.1 at 2016-12-16 18:21:55 +0500
+Processing by ItemsController#search as */*
+  Parameters: {"keywords"=>"item", "klass"=>"Item", "page"=>"1"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.5ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.3ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.3ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%item%' OR lower(sku) like '%item%') AND quantity > 0 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%item%' OR lower(sku) like '%item%') AND quantity > 0 )
+  Rendered items/search.js.erb (2.6ms)
+Completed 200 OK in 17ms (Views: 5.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/items/search?keywords=Item&klass=Item&page=1" for 127.0.0.1 at 2016-12-16 18:22:01 +0500
+Processing by ItemsController#search as */*
+  Parameters: {"keywords"=>"Item", "klass"=>"Item", "page"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (0.6ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.3ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.5ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%item%' OR lower(sku) like '%item%') AND quantity > 0 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%item%' OR lower(sku) like '%item%') AND quantity > 0 )[0m
+  Rendered items/search.js.erb (2.9ms)
+Completed 200 OK in 19ms (Views: 6.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/items/search?keywords=item&klass=Item&page=1" for 127.0.0.1 at 2016-12-16 18:22:04 +0500
+Processing by ItemsController#search as */*
+  Parameters: {"keywords"=>"item", "klass"=>"Item", "page"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.9ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.7ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.3ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (1.0ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%item%' OR lower(sku) like '%item%') AND quantity > 0 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%item%' OR lower(sku) like '%item%') AND quantity > 0 )
+  Rendered items/search.js.erb (2.6ms)
+Completed 200 OK in 20ms (Views: 6.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/items/search?keywords=test&klass=Item&page=1" for 127.0.0.1 at 2016-12-16 18:22:07 +0500
+Processing by ItemsController#search as */*
+  Parameters: {"keywords"=>"test", "klass"=>"Item", "page"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.3ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (0.6ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.3ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.6ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%test%' OR lower(sku) like '%test%') AND quantity > 0 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%test%' OR lower(sku) like '%test%') AND quantity > 0 )[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%test%' OR lower(sku) like '%test%') AND quantity > 0 )
+  Rendered items/search.js.erb (4.1ms)
+Completed 200 OK in 22ms (Views: 7.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/orders/add_item_ajax?order_id=1&sku=43&quantity=2" for 127.0.0.1 at 2016-12-16 18:22:10 +0500
+Processing by OrdersController#add_item_ajax as */*
+  Parameters: {"order_id"=>"1", "sku"=>"43", "quantity"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.8ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (0.8ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.4ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.5ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.5ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND "orders"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "users_vendors" ON "users"."id" = "users_vendors"."user_id" WHERE "users_vendors"."vendor_id" = 1 AND "users"."current_order_id" = 1 LIMIT 1[0m
+  [1m[35mOrderItem Load (0.6ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 1 AND "order_items"."no_inc" IS NULL AND "order_items"."sku" = '43' LIMIT 1
+  [1m[36mVendor Load (0.6ms)[0m  [1mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = '43' LIMIT 1
+  [1m[36mItemType Load (0.4ms)[0m  [1mSELECT "item_types".* FROM "item_types" WHERE "item_types"."id" = 1 LIMIT 1[0m
+  [1m[35mDrawer Load (0.4ms)[0m  SELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mTaxProfile Load (0.5ms)[0m  SELECT "tax_profiles".* FROM "tax_profiles" WHERE "tax_profiles"."id" = 1 LIMIT 1
+  [1m[36mTaxProfile Load (0.6ms)[0m  [1mSELECT "tax_profiles".* FROM "tax_profiles" WHERE "tax_profiles"."vendor_id" = 1 AND (value between 19.8 and 20.2) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (11.9ms)[0m  [1mINSERT INTO "order_items" ("action_applied", "activated", "behavior", "calculate_part_price", "category_id", "company_id", "completed_at", "coupon_amount_cents", "coupon_id", "created_at", "currency", "discount", "discount_amount_cents", "drawer_id", "gift_card_amount_cents", "hidden", "hidden_at", "hidden_by", "is_buyback", "is_proforma", "is_quote", "is_unpaid", "item_id", "item_type_id", "location_id", "no_inc", "order_id", "paid", "paid_at", "price_cents", "quantity", "rebate", "rebate_amount_cents", "refund_payment_method_item_id", "refunded", "refunded_at", "refunded_by", "sku", "tax", "tax_amount_cents", "tax_profile_id", "total_cents", "updated_at", "user_id", "vendor_id", "weigh_compulsory") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32, $33, $34, $35, $36, $37, $38, $39, $40, $41, $42, $43, $44, $45, $46) RETURNING "id"[0m  [["action_applied", nil], ["activated", nil], ["behavior", "normal"], ["calculate_part_price", nil], ["category_id", nil], ["company_id", 1], ["completed_at", nil], ["coupon_amount_cents", 0], ["coupon_id", nil], ["created_at", Fri, 16 Dec 2016 14:22:10 CET +01:00], ["currency", "USD"], ["discount", nil], ["discount_amount_cents", 0], ["drawer_id", 1], ["gift_card_amount_cents", 0], ["hidden", nil], ["hidden_at", nil], ["hidden_by", nil], ["is_buyback", nil], ["is_proforma", nil], ["is_quote", nil], ["is_unpaid", nil], ["item_id", 43], ["item_type_id", 1], ["location_id", nil], ["no_inc", nil], ["order_id", 1], ["paid", nil], ["paid_at", nil], ["price_cents", 1200], ["quantity", 1.0], ["rebate", nil], ["rebate_amount_cents", 0], ["refund_payment_method_item_id", nil], ["refunded", nil], ["refunded_at", nil], ["refunded_by", 2], ["sku", "43"], ["tax", 20.0], ["tax_amount_cents", 0], ["tax_profile_id", 1], ["total_cents", 0], ["updated_at", Fri, 16 Dec 2016 14:22:10 CET +01:00], ["user_id", 1], ["vendor_id", 1], ["weigh_compulsory", nil]]
+  [1m[35m (17.7ms)[0m  COMMIT
+  [1m[36mAction Load (28.0ms)[0m  [1mSELECT "actions".* FROM "actions" WHERE "actions"."vendor_id" = 1 AND "actions"."model_type" = 'Vendor' AND "actions"."model_id" = 1 AND (whento = 'add_to_order' or whento = 'always')[0m
+  [1m[35mAction Load (0.3ms)[0m  SELECT "actions".* FROM "actions" WHERE "actions"."model_id" = 43 AND "actions"."model_type" = 'Item' AND (whento = 'add_to_order' or whento = 'always') ORDER BY weight asc
+  [1m[36mOrderItem Load (0.9ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 43 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mVendor Load (0.4ms)[0m  [1mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mDiscount Load (101.2ms)[0m  SELECT "discounts".* FROM "discounts" WHERE "discounts"."vendor_id" = 1 AND "discounts"."applies_to" = 'Vendor' AND (start_date < '2016-12-16 18:22:10 +0500' AND end_date > '2016-12-16 18:22:10 +0500') LIMIT 1
+  [1m[36mDiscount Load (0.5ms)[0m  [1mSELECT "discounts".* FROM "discounts" WHERE "discounts"."vendor_id" = 1 AND "discounts"."applies_to" = 'Category' AND "discounts"."category_id" IS NULL AND (start_date < '2016-12-16 18:22:10 +0500' AND end_date > '2016-12-16 18:22:10 +0500') LIMIT 1[0m
+  [1m[35mDiscount Load (0.6ms)[0m  SELECT "discounts".* FROM "discounts" WHERE "discounts"."vendor_id" = 1 AND "discounts"."applies_to" = 'Location' AND "discounts"."location_id" IS NULL AND (start_date < '2016-12-16 18:22:10 +0500' AND end_date > '2016-12-16 18:22:10 +0500') LIMIT 1
+  [1m[36mDiscount Load (0.4ms)[0m  [1mSELECT "discounts".* FROM "discounts" WHERE "discounts"."vendor_id" = 1 AND "discounts"."applies_to" = 'Item' AND "discounts"."item_sku" = '43' AND (start_date < '2016-12-16 18:22:10 +0500' AND end_date > '2016-12-16 18:22:10 +0500') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mUPDATE "order_items" SET "total_cents" = 1440, "tax_amount_cents" = 240, "updated_at" = '2016-12-16 13:22:10.810062' WHERE "order_items"."id" = 1[0m
+  [1m[35m (15.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mSELECT SUM("order_items"."total_cents") AS sum_id FROM "order_items" WHERE "order_items"."order_id" = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM("order_items"."tax_amount_cents") AS sum_id FROM "order_items" WHERE "order_items"."order_id" = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  UPDATE "orders" SET "tax_amount_cents" = 240, "total_cents" = 1440, "updated_at" = '2016-12-16 13:22:10.834612' WHERE "orders"."id" = 1
+  [1m[36m (6.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mDrawer Load (0.3ms)[0m  SELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = 1[0m
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_orders_update_pos_display_js_erb__3219685564188910541_70175035084820 at /home/appsgenii/projects/pos/app/views/orders/update_pos_display.js.erb:55)
+  Rendered shared/_messagesjs.js.erb (0.1ms)
+  Rendered orders/update_pos_display.js.erb (5.7ms)
+Completed 200 OK in 429ms (Views: 24.6ms | ActiveRecord: 217.8ms)
+
+
+Started GET "/orders/getItem?id=1" for 127.0.0.1 at 2016-12-16 18:22:10 +0500
+Processing by OrdersController#getItem as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.4ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.7ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.6ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.8ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mOrderItem Load (0.5ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItem Load (1.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 43 LIMIT 1
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:22:10 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"display_change", "order_id"=>"1", "paymentTotal"=>"0", "ototal"=>"14.4", "change"=>"0", "called_from"=>"update_pos_display"}
+  [1m[36mUser Load (4.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.6ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (1.1ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.5ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.7ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 99ms (Views: 75.6ms | ActiveRecord: 7.1ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:22:14 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"complete_order_show", "order_id"=>"1"}
+  [1m[35mUser Load (3.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.7ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (1.7ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (3.0ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (3.7ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 32ms (Views: 1.1ms | ActiveRecord: 12.7ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:22:14 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"add_payment_method", "order_id"=>"1", "value"=>"pmid2"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.6ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (1.3ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.3ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.7ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 16ms (Views: 0.6ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:22:14 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"display_change", "order_id"=>"1", "paymentTotal"=>"14.4", "ototal"=>"14.4", "change"=>"0", "called_from"=>"function add_payment_method"}
+  [1m[35mUser Load (2.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.4ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.9ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.4ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.5ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 16ms (Views: 0.5ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:22:14 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"display_change", "order_id"=>"1", "paymentTotal"=>"14.4", "ototal"=>"14.4", "change"=>"0", "called_from"=>"function complete_order_show"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (4.1ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.5ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.6ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 22ms (Views: 0.8ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:22:21 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"add_payment_method", "order_id"=>"1", "value"=>"pmid1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (1.1ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.6ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (1.3ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 17ms (Views: 1.5ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:22:21 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"display_change", "order_id"=>"1", "paymentTotal"=>"14.4", "ototal"=>"14.4", "change"=>"0", "called_from"=>"function add_payment_method"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (1.7ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.4ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.4ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 17ms (Views: 0.5ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:22:23 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"add_payment_method", "order_id"=>"1", "value"=>"pmid4"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (1.1ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.4ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.5ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 16ms (Views: 1.6ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:22:23 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"display_change", "order_id"=>"1", "paymentTotal"=>"14.4", "ototal"=>"14.4", "change"=>"0", "called_from"=>"function add_payment_method"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (0.7ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.7ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (2.0ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 16ms (Views: 0.4ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:22:24 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"add_payment_method", "order_id"=>"1", "value"=>"pmid3"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (1.7ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.9ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.4ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.7ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:22:24 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"display_change", "order_id"=>"1", "paymentTotal"=>"14.4", "ototal"=>"14.4", "change"=>"0", "called_from"=>"function add_payment_method"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.6ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (1.1ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (3.3ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.5ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:22:25 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"add_payment_method", "order_id"=>"1", "value"=>"null"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.7ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.4ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (1.5ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:22:58 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"complete_order_hide", "order_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (1.1ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (3.1ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.6ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.7ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 24ms (Views: 1.1ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:23:01 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"complete_order_show", "order_id"=>"1"}
+  [1m[35mUser Load (3.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (3.1ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.3ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.4ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 87ms (Views: 0.4ms | ActiveRecord: 7.5ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:23:01 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"add_payment_method", "order_id"=>"1", "value"=>"pmid2"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.3ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (1.0ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.4ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.6ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:23:01 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"display_change", "order_id"=>"1", "paymentTotal"=>"14.4", "ototal"=>"14.4", "change"=>"0", "called_from"=>"function add_payment_method"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.4ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.8ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.3ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.3ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:23:01 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"display_change", "order_id"=>"1", "paymentTotal"=>"14.4", "ototal"=>"14.4", "change"=>"0", "called_from"=>"function complete_order_show"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (0.8ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.3ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.4ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/orders/complete" for 127.0.0.1 at 2016-12-16 18:23:03 +0500
+Processing by OrdersController#complete as */*
+  Parameters: {"order_id"=>"1", "change"=>"NaN", "print"=>"false", "payment_method_items"=>{"pmid2"=>{"id"=>"2", "name"=>"Card00", "cash"=>"null", "amount"=>"14.40"}}}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.7ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.3ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.4ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND "orders"."completed_at" IS NULL AND "orders"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mDrawer Load (0.2ms)[0m  [1mSELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mUPDATE "orders" SET "completed_at" = '2016-12-16 13:23:03.995735', "updated_at" = '2016-12-16 13:23:03.999099' WHERE "orders"."id" = 1[0m
+  [1m[35m (18.5ms)[0m  COMMIT
+  [1m[36mOrderItem Load (1.1ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 43 LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."part_id" = 43[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."child_id" = 43 LIMIT 1
+  [1m[36m (23.1ms)[0m  [1mSELECT COUNT(*) FROM "item_stocks" WHERE "item_stocks"."item_id" = 43[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "item_stocks" WHERE "item_stocks"."item_id" = 43
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mVendor Load (0.5ms)[0m  SELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND (sku = '43' AND NOT id = 43)[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" IS NULL LIMIT 1
+  [1m[36mItemType Load (0.3ms)[0m  [1mSELECT "item_types".* FROM "item_types" WHERE "item_types"."vendor_id" = 1 AND "item_types"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mItem Load (0.7ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND (sku = '43' AND NOT id = 43)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."child_id" = 43 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "item_types".* FROM "item_types" WHERE "item_types"."vendor_id" = 1 AND "item_types"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  UPDATE "items" SET "quantity" = 1.0, "updated_at" = '2016-12-16 13:23:04.108660' WHERE "items"."id" = 43
+  [1m[36m (8.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrderItem Load (0.5ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 1 AND "order_items"."behavior" = 'gift_card' AND "order_items"."activated" IS NULL
+  [1m[36mOrderItem Load (0.3ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 1 AND "order_items"."behavior" = 'gift_card' AND "order_items"."activated" = 't'[0m
+  [1m[35m (22.2ms)[0m  SELECT COUNT(*) FROM "payment_method_items" WHERE "payment_method_items"."order_id" = 1 AND "payment_method_items"."unpaid" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "payment_method_items" WHERE "payment_method_items"."order_id" = 1 AND "payment_method_items"."quote" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT SUM("payment_method_items"."amount_cents") AS sum_id FROM "payment_method_items" WHERE "payment_method_items"."order_id" = 1 AND "payment_method_items"."unpaid" IS NULL AND "payment_method_items"."quote" IS NULL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  UPDATE "orders" SET "paid" = 't', "paid_at" = '2016-12-16 13:23:04.155526', "updated_at" = '2016-12-16 13:23:04.157205' WHERE "orders"."id" = 1
+  [1m[36m (8.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (6.7ms)[0m  UPDATE "order_items" SET "completed_at" = '2016-12-16 13:23:03.995735', "paid_at" = '2016-12-16 13:23:04.155526', "paid" = 't', "is_proforma" = NULL, "is_quote" = NULL, "is_unpaid" = NULL, "user_id" = 1, "drawer_id" = 1 WHERE "order_items"."order_id" = 1
+  [1m[36mVendor Load (0.5ms)[0m  [1mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mOrder Load (0.6ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND (nr is not NULL OR nr <> 0) ORDER BY "orders"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+hash_id is already set.
+  [1m[35m (0.4ms)[0m  UPDATE "vendors" SET "largest_order_number" = 1, "updated_at" = '2016-12-16 13:23:04.181904', "unused_order_numbers" = '--- []
+
+', "unused_quote_numbers" = '--- []
+
+' WHERE "vendors"."id" = 1
+  [1m[36m (8.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mUPDATE "orders" SET "nr" = 1, "updated_at" = '2016-12-16 13:23:04.194701' WHERE "orders"."id" = 1[0m
+  [1m[35m (4.2ms)[0m  COMMIT
+  [1m[36mDrawer Load (0.4ms)[0m  [1mSELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (8.4ms)[0m  [1mINSERT INTO "orders" ("buy_order", "cash_cents", "cash_register_id", "change_cents", "company_id", "completed_at", "created_at", "currency", "customer_id", "delivery_note_comment", "destination_country_id", "drawer_id", "hidden", "hidden_at", "hidden_by", "invoice_comment", "is_proforma", "is_quote", "is_unpaid", "lc_amount_cents", "lc_points", "location_id", "noncash_cents", "nr", "origin_country_id", "paid", "paid_at", "payment_due", "payment_total_cents", "proforma_order_id", "qnr", "rebate", "rebate_amount_cents", "sale_type_id", "sku", "subscription", "subscription_interval", "subscription_last", "subscription_next", "subscription_order_id", "subscription_start", "tag", "tax", "tax_amount_cents", "tax_profile_id", "total_cents", "updated_at", "user_id", "vendor_id", "was_printed") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32, $33, $34, $35, $36, $37, $38, $39, $40, $41, $42, $43, $44, $45, $46, $47, $48, $49, $50) RETURNING "id"[0m  [["buy_order", nil], ["cash_cents", 0], ["cash_register_id", 2], ["change_cents", 0], ["company_id", 1], ["completed_at", nil], ["created_at", Fri, 16 Dec 2016 14:23:04 CET +01:00], ["currency", "USD"], ["customer_id", nil], ["delivery_note_comment", nil], ["destination_country_id", nil], ["drawer_id", 1], ["hidden", nil], ["hidden_at", nil], ["hidden_by", nil], ["invoice_comment", nil], ["is_proforma", nil], ["is_quote", nil], ["is_unpaid", nil], ["lc_amount_cents", 0], ["lc_points", nil], ["location_id", nil], ["noncash_cents", 0], ["nr", nil], ["origin_country_id", nil], ["paid", nil], ["paid_at", nil], ["payment_due", nil], ["payment_total_cents", 0], ["proforma_order_id", nil], ["qnr", nil], ["rebate", nil], ["rebate_amount_cents", 0], ["sale_type_id", nil], ["sku", nil], ["subscription", nil], ["subscription_interval", nil], ["subscription_last", nil], ["subscription_next", nil], ["subscription_order_id", nil], ["subscription_start", nil], ["tag", nil], ["tax", nil], ["tax_amount_cents", 0], ["tax_profile_id", nil], ["total_cents", 0], ["updated_at", Fri, 16 Dec 2016 14:23:04 CET +01:00], ["user_id", 1], ["vendor_id", 1], ["was_printed", nil]]
+  [1m[35m (18.6ms)[0m  COMMIT
+  [1m[36mVendor Load (1.0ms)[0m  [1mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles"."id" = "roles_users"."role_id" WHERE "roles_users"."user_id" = 1[0m
+  [1m[35mUserLogin Load (0.2ms)[0m  SELECT "user_logins".* FROM "user_logins" WHERE "user_logins"."user_id" = 1 ORDER BY "user_logins"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "user_logins".* FROM "user_logins" WHERE "user_logins"."user_id" = 1 ORDER BY "user_logins"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  UPDATE "users" SET "current_order_id" = 4, "updated_at" = '2016-12-16 13:23:04.238562' WHERE "users"."id" = 1
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = 4
+  [1m[36mOrder Load (0.6ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND "orders"."completed_at" IS NULL ORDER BY updated_at DESC LIMIT 5[0m
+  [1m[35mCashRegister Load (0.3ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.4ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND (completed_at IS NOT NULL) ORDER BY nr DESC LIMIT 5
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered orders/_last_orders.html.haml (71.8ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_orders_complete_js_erb___1419426700987267376_70174901855760 at /home/appsgenii/projects/pos/app/views/orders/complete.js.erb:13)
+  Rendered shared/_messagesjs.js.erb (0.1ms)
+  Rendered orders/complete.js.erb (77.7ms)
+Completed 200 OK in 358ms (Views: 94.4ms | ActiveRecord: 151.6ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:23:04 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"get:complete_order_ajax:callback", "order_id"=>"4", "require_password"=>"[FILTERED]"}
+  [1m[36mUser Load (5.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (1.0ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (3.8ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.4ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.6ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 24ms (Views: 0.6ms | ActiveRecord: 11.5ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:23:08 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"complete_order_hide", "order_id"=>"4"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.4ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (1.5ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.4ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.6ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/cash_registers/end_of_day" for 127.0.0.1 at 2016-12-16 18:23:10 +0500
+Processing by CashRegistersController#end_of_day as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.3ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (0.7ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.3ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.4ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35mDrawer Load (0.4ms)[0m  SELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1
+  [1m[36mDrawer Load (0.5ms)[0m  [1mSELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cash_registers/end_of_day.html.erb within layouts/application (5.0ms)
+  [1m[35mShipper Load (0.4ms)[0m  SELECT "shippers".* FROM "shippers" WHERE "shippers"."vendor_id" = 1
+  [1m[36mVendor Load (0.9ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1[0m
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."vendor_id" = 1
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."vendor_id" = 1[0m
+  [1m[35mItemType Load (0.3ms)[0m  SELECT "item_types".* FROM "item_types" WHERE "item_types"."vendor_id" = 1
+  [1m[36mSaleType Load (0.2ms)[0m  [1mSELECT "sale_types".* FROM "sale_types" WHERE "sale_types"."vendor_id" = 1[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."vendor_id" = 1
+  [1m[36mPaymentMethod Load (0.4ms)[0m  [1mSELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL AND "payment_methods"."unpaid" IS NULL AND "payment_methods"."quote" IS NULL ORDER BY name ASC[0m
+  [1m[35mPaymentMethod Load (0.3ms)[0m  SELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL ORDER BY name ASC
+  [1m[36mTaxProfile Load (0.3ms)[0m  [1mSELECT "tax_profiles".* FROM "tax_profiles" WHERE "tax_profiles"."vendor_id" = 1[0m
+  Rendered shared/_application_js.html.erb (16.3ms)
+  Rendered shared/_generic_search.html.haml (0.6ms)
+  Rendered shared/_header_menu.html.erb (4.2ms)
+  [1m[35mTransactionTag Load (0.4ms)[0m  SELECT "transaction_tags".* FROM "transaction_tags" WHERE "transaction_tags"."vendor_id" = 1
+  Rendered shared/_dt_tags.html.erb (1.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "users_vendors" ON "users"."id" = "users_vendors"."user_id" WHERE "users_vendors"."vendor_id" = 1[0m
+  [1m[35mDrawerTransaction Load (0.5ms)[0m  SELECT "drawer_transactions".* FROM "drawer_transactions" WHERE "drawer_transactions"."vendor_id" = 1 ORDER BY "drawer_transactions"."id" DESC LIMIT 1
+  Rendered shared/_cash_drop.html.erb (5.3ms)
+  Rendered shared/_clockin.html.haml (0.1ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_shared__messages_html_erb___3810052703388824826_70175209678100 at /home/appsgenii/projects/pos/app/views/shared/_messages.html.erb:2)
+  Rendered shared/_messagesjs.js.erb (0.1ms)
+  Rendered shared/_messages.html.erb (0.7ms)
+Completed 200 OK in 132ms (Views: 116.6ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/vendors/sales_statistics" for 127.0.0.1 at 2016-12-16 18:23:11 +0500
+Processing by VendorsController#sales_statistics as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.3ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (0.6ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.3ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.4ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  SELECT category_id, item_id, sku, SUM(total_cents) as sum, SUM(quantity) as quantity FROM order_items WHERE vendor_id = 1 AND completed_at BETWEEN '2016-12-16 00:00:00' AND '2016-12-16 23:59:59' GROUP BY sku,category_id, item_id
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."vendor_id" = 1[0m
+  [1m[35mItem Load (0.8ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."id" = 43 LIMIT 1
+  Rendered vendors/sales_statistics.html.haml within layouts/application (87.7ms)
+  [1m[36mShipper Load (0.4ms)[0m  [1mSELECT "shippers".* FROM "shippers" WHERE "shippers"."vendor_id" = 1[0m
+  [1m[35mVendor Load (0.6ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."vendor_id" = 1[0m
+  [1m[35mItemType Load (0.3ms)[0m  SELECT "item_types".* FROM "item_types" WHERE "item_types"."vendor_id" = 1
+  [1m[36mSaleType Load (0.3ms)[0m  [1mSELECT "sale_types".* FROM "sale_types" WHERE "sale_types"."vendor_id" = 1[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."vendor_id" = 1
+  [1m[36mPaymentMethod Load (0.9ms)[0m  [1mSELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL AND "payment_methods"."unpaid" IS NULL AND "payment_methods"."quote" IS NULL ORDER BY name ASC[0m
+  [1m[35mPaymentMethod Load (0.3ms)[0m  SELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL ORDER BY name ASC
+  [1m[36mTaxProfile Load (0.3ms)[0m  [1mSELECT "tax_profiles".* FROM "tax_profiles" WHERE "tax_profiles"."vendor_id" = 1[0m
+  [1m[35mDrawer Load (0.3ms)[0m  SELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1
+  Rendered shared/_application_js.html.erb (20.8ms)
+  Rendered shared/_generic_search.html.haml (0.2ms)
+  Rendered shared/_header_menu.html.erb (2.2ms)
+  [1m[36mTransactionTag Load (0.4ms)[0m  [1mSELECT "transaction_tags".* FROM "transaction_tags" WHERE "transaction_tags"."vendor_id" = 1[0m
+  Rendered shared/_dt_tags.html.erb (1.2ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" INNER JOIN "users_vendors" ON "users"."id" = "users_vendors"."user_id" WHERE "users_vendors"."vendor_id" = 1
+  [1m[36mDrawerTransaction Load (0.4ms)[0m  [1mSELECT "drawer_transactions".* FROM "drawer_transactions" WHERE "drawer_transactions"."vendor_id" = 1 ORDER BY "drawer_transactions"."id" DESC LIMIT 1[0m
+  Rendered shared/_cash_drop.html.erb (5.5ms)
+  Rendered shared/_clockin.html.haml (0.1ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_shared__messages_html_erb___3810052703388824826_70175209678100 at /home/appsgenii/projects/pos/app/views/shared/_messages.html.erb:2)
+  Rendered shared/_messagesjs.js.erb (0.0ms)
+  Rendered shared/_messages.html.erb (0.6ms)
+Completed 200 OK in 285ms (Views: 267.7ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/assets/invoice_default.css?body=1" for 127.0.0.1 at 2016-12-16 18:23:12 +0500
+Served asset /invoice_default.css - 200 OK (3ms)
+
+
+Started GET "/assets/loader.gif" for 127.0.0.1 at 2016-12-16 18:23:12 +0500
+Served asset /loader.gif - 200 OK (89ms)
+
+
+Started GET "/assets/invoice_default_print.css?body=1" for 127.0.0.1 at 2016-12-16 18:23:12 +0500
+Served asset /invoice_default_print.css - 200 OK (2ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2016-12-16 18:23:23 +0500
+Processing by OrdersController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (1.0ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.8ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.3ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.4ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (0.5ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND "orders"."completed_at" IS NULL AND "orders"."id" = 4 LIMIT 1
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND (completed_at IS NOT NULL) ORDER BY completed_at DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = 4
+  [1m[36mOrderItem Load (0.6ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 1[0m
+  [1m[35mItem Load (1.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 43 LIMIT 1
+  Rendered orders/_menu.html.erb (0.6ms)
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."vendor_id" = 1 AND "categories"."button_category" = 't' ORDER BY position[0m
+  [1m[35mButton Load (0.4ms)[0m  SELECT "buttons".* FROM "buttons" WHERE "buttons"."category_id" = 8 ORDER BY position
+  [1m[36mItem Load (0.8ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU11' LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU12' LIMIT 1
+  [1m[36mItem Load (1.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU13' LIMIT 1[0m
+  [1m[35mButton Load (0.4ms)[0m  SELECT "buttons".* FROM "buttons" WHERE "buttons"."category_id" = 7 ORDER BY position
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU03' LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU04' LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU10' LIMIT 1[0m
+  [1m[35mButton Load (0.4ms)[0m  SELECT "buttons".* FROM "buttons" WHERE "buttons"."category_id" = 6 ORDER BY position
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU00' LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU01' LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU02' LIMIT 1[0m
+  [1m[35mButton Load (0.6ms)[0m  SELECT "buttons".* FROM "buttons" WHERE "buttons"."category_id" = 5 ORDER BY position
+  [1m[36mItem Load (1.6ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION0' LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION1' LIMIT 1
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION2' LIMIT 1[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION3' LIMIT 1
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION4' LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION7' LIMIT 1
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'THR0' LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'THR1' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'THR2' LIMIT 1[0m
+  [1m[35mItem Load (0.7ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'PIECE' LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'PACK' LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'CARTON' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'WEIGHITEM' LIMIT 1[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'MUSTCHANGEPRICE' LIMIT 1
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'DEFAULTBUYBACK' LIMIT 1[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'BUYBACKCHANGEPRICE' LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'G000000000000' LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'TESTCOUPON0' LIMIT 1
+  [1m[36mItem Load (0.8ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'TESTCOUPON1' LIMIT 1[0m
+  [1m[35mItem Load (1.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'TESTCOUPON2' LIMIT 1
+  Rendered buttons/_popup.html.haml (65.3ms)
+  Rendered shared/_search.html.erb (0.4ms)
+  Rendered orders/_complete_order.html.erb (0.4ms)
+  [1m[36mOrder Load (0.6ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND "orders"."completed_at" IS NULL ORDER BY updated_at DESC LIMIT 5[0m
+  [1m[35mCashRegister Load (0.4ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.7ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND (completed_at IS NOT NULL) ORDER BY nr DESC LIMIT 5
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered orders/_last_orders.html.haml (13.0ms)
+  Rendered orders/new.html.erb within layouts/application (89.8ms)
+  [1m[36mShipper Load (0.5ms)[0m  [1mSELECT "shippers".* FROM "shippers" WHERE "shippers"."vendor_id" = 1[0m
+  [1m[35mVendor Load (1.6ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."vendor_id" = 1[0m
+  [1m[35mLocation Load (0.9ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."vendor_id" = 1
+  [1m[36mItemType Load (0.4ms)[0m  [1mSELECT "item_types".* FROM "item_types" WHERE "item_types"."vendor_id" = 1[0m
+  [1m[35mSaleType Load (0.3ms)[0m  SELECT "sale_types".* FROM "sale_types" WHERE "sale_types"."vendor_id" = 1
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."vendor_id" = 1[0m
+  [1m[35mPaymentMethod Load (0.5ms)[0m  SELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL AND "payment_methods"."unpaid" IS NULL AND "payment_methods"."quote" IS NULL ORDER BY name ASC
+  [1m[36mPaymentMethod Load (0.3ms)[0m  [1mSELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL ORDER BY name ASC[0m
+  [1m[35mTaxProfile Load (1.0ms)[0m  SELECT "tax_profiles".* FROM "tax_profiles" WHERE "tax_profiles"."vendor_id" = 1
+  [1m[36mDrawer Load (0.4ms)[0m  [1mSELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1[0m
+  Rendered shared/_application_js.html.erb (28.6ms)
+  Rendered shared/_generic_search.html.haml (0.3ms)
+  Rendered shared/_header_menu.html.erb (2.4ms)
+  [1m[35mTransactionTag Load (0.4ms)[0m  SELECT "transaction_tags".* FROM "transaction_tags" WHERE "transaction_tags"."vendor_id" = 1
+  Rendered shared/_dt_tags.html.erb (1.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "users_vendors" ON "users"."id" = "users_vendors"."user_id" WHERE "users_vendors"."vendor_id" = 1[0m
+  [1m[35mDrawerTransaction Load (0.4ms)[0m  SELECT "drawer_transactions".* FROM "drawer_transactions" WHERE "drawer_transactions"."vendor_id" = 1 ORDER BY "drawer_transactions"."id" DESC LIMIT 1
+  Rendered shared/_cash_drop.html.erb (5.3ms)
+  Rendered shared/_clockin.html.haml (0.1ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_shared__messages_html_erb___3810052703388824826_70175209678100 at /home/appsgenii/projects/pos/app/views/shared/_messages.html.erb:2)
+  Rendered shared/_messagesjs.js.erb (0.0ms)
+  Rendered shared/_messages.html.erb (0.6ms)
+Completed 200 OK in 232ms (Views: 180.2ms | ActiveRecord: 38.3ms)
+
+
+Started GET "/items/search?keywords=item&klass=Item&page=1" for 127.0.0.1 at 2016-12-16 18:23:28 +0500
+Processing by ItemsController#search as */*
+  Parameters: {"keywords"=>"item", "klass"=>"Item", "page"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (1.1ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (0.8ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.3ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.4ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%item%' OR lower(sku) like '%item%') AND quantity > 0 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%item%' OR lower(sku) like '%item%') AND quantity > 0 )[0m
+  Rendered items/search.js.erb (1.7ms)
+Completed 200 OK in 19ms (Views: 5.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/items/search?keywords=Item&klass=Item&page=1" for 127.0.0.1 at 2016-12-16 18:23:32 +0500
+Processing by ItemsController#search as */*
+  Parameters: {"keywords"=>"Item", "klass"=>"Item", "page"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.5ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.3ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.3ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%item%' OR lower(sku) like '%item%') AND quantity > 0 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%item%' OR lower(sku) like '%item%') AND quantity > 0 )
+  Rendered items/search.js.erb (2.6ms)
+Completed 200 OK in 17ms (Views: 6.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/items/search?keywords=CARTON&klass=Item&page=1" for 127.0.0.1 at 2016-12-16 18:23:37 +0500
+Processing by ItemsController#search as */*
+  Parameters: {"keywords"=>"CARTON", "klass"=>"Item", "page"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (0.6ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.3ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.4ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%carton%' OR lower(sku) like '%carton%') AND quantity > 0 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%carton%' OR lower(sku) like '%carton%') AND quantity > 0 )[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND ((lower(name) LIKE '%carton%' OR lower(sku) like '%carton%') AND quantity > 0 )
+  Rendered items/search.js.erb (3.3ms)
+Completed 200 OK in 21ms (Views: 7.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/orders/add_item_ajax?order_id=4&sku=32&quantity=20" for 127.0.0.1 at 2016-12-16 18:23:39 +0500
+Processing by OrdersController#add_item_ajax as */*
+  Parameters: {"order_id"=>"4", "sku"=>"32", "quantity"=>"20"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (1.1ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (1.5ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.6ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.7ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.7ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND "orders"."id" = 4 LIMIT 1
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "users_vendors" ON "users"."id" = "users_vendors"."user_id" WHERE "users_vendors"."vendor_id" = 1 AND "users"."current_order_id" = 4 LIMIT 1[0m
+  [1m[35mOrderItem Load (0.8ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4 AND "order_items"."no_inc" IS NULL AND "order_items"."sku" = '32' LIMIT 1
+  [1m[36mVendor Load (1.0ms)[0m  [1mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mItem Load (0.9ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = '32' LIMIT 1
+  [1m[36mItemType Load (0.4ms)[0m  [1mSELECT "item_types".* FROM "item_types" WHERE "item_types"."id" = 1 LIMIT 1[0m
+  [1m[35mDrawer Load (0.5ms)[0m  SELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mTaxProfile Load (0.4ms)[0m  SELECT "tax_profiles".* FROM "tax_profiles" WHERE "tax_profiles"."id" = 1 LIMIT 1
+  [1m[36mTaxProfile Load (0.4ms)[0m  [1mSELECT "tax_profiles".* FROM "tax_profiles" WHERE "tax_profiles"."vendor_id" = 1 AND (value between 19.8 and 20.2) LIMIT 1[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "order_items" ("action_applied", "activated", "behavior", "calculate_part_price", "category_id", "company_id", "completed_at", "coupon_amount_cents", "coupon_id", "created_at", "currency", "discount", "discount_amount_cents", "drawer_id", "gift_card_amount_cents", "hidden", "hidden_at", "hidden_by", "is_buyback", "is_proforma", "is_quote", "is_unpaid", "item_id", "item_type_id", "location_id", "no_inc", "order_id", "paid", "paid_at", "price_cents", "quantity", "rebate", "rebate_amount_cents", "refund_payment_method_item_id", "refunded", "refunded_at", "refunded_by", "sku", "tax", "tax_amount_cents", "tax_profile_id", "total_cents", "updated_at", "user_id", "vendor_id", "weigh_compulsory") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32, $33, $34, $35, $36, $37, $38, $39, $40, $41, $42, $43, $44, $45, $46) RETURNING "id"  [["action_applied", nil], ["activated", nil], ["behavior", "normal"], ["calculate_part_price", nil], ["category_id", 5], ["company_id", 1], ["completed_at", nil], ["coupon_amount_cents", 0], ["coupon_id", nil], ["created_at", Fri, 16 Dec 2016 14:23:39 CET +01:00], ["currency", "USD"], ["discount", nil], ["discount_amount_cents", 0], ["drawer_id", 1], ["gift_card_amount_cents", 0], ["hidden", nil], ["hidden_at", nil], ["hidden_by", nil], ["is_buyback", nil], ["is_proforma", nil], ["is_quote", nil], ["is_unpaid", nil], ["item_id", 32], ["item_type_id", 1], ["location_id", nil], ["no_inc", nil], ["order_id", 4], ["paid", nil], ["paid_at", nil], ["price_cents", 4000], ["quantity", 1.0], ["rebate", nil], ["rebate_amount_cents", 0], ["refund_payment_method_item_id", nil], ["refunded", nil], ["refunded_at", nil], ["refunded_by", 20], ["sku", "32"], ["tax", 20.0], ["tax_amount_cents", 0], ["tax_profile_id", 1], ["total_cents", 0], ["updated_at", Fri, 16 Dec 2016 14:23:39 CET +01:00], ["user_id", 1], ["vendor_id", 1], ["weigh_compulsory", nil]]
+  [1m[36m (20.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mAction Load (0.4ms)[0m  SELECT "actions".* FROM "actions" WHERE "actions"."vendor_id" = 1 AND "actions"."model_type" = 'Vendor' AND "actions"."model_id" = 1 AND (whento = 'add_to_order' or whento = 'always')
+  [1m[36mAction Load (0.3ms)[0m  [1mSELECT "actions".* FROM "actions" WHERE "actions"."model_id" = 32 AND "actions"."model_type" = 'Item' AND (whento = 'add_to_order' or whento = 'always') ORDER BY weight asc[0m
+  [1m[35mAction Load (0.3ms)[0m  SELECT "actions".* FROM "actions" WHERE "actions"."model_id" = 5 AND "actions"."model_type" = 'Category' AND (whento = 'add_to_order' or whento = 'always') ORDER BY weight asc
+  [1m[36mOrderItem Load (0.4ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 32 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mVendor Load (0.4ms)[0m  [1mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mDiscount Load (0.3ms)[0m  SELECT "discounts".* FROM "discounts" WHERE "discounts"."vendor_id" = 1 AND "discounts"."applies_to" = 'Vendor' AND (start_date < '2016-12-16 18:23:39 +0500' AND end_date > '2016-12-16 18:23:39 +0500') LIMIT 1
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mDiscount Load (0.3ms)[0m  SELECT "discounts".* FROM "discounts" WHERE "discounts"."vendor_id" = 1 AND "discounts"."applies_to" = 'Category' AND "discounts"."category_id" = 5 AND (start_date < '2016-12-16 18:23:39 +0500' AND end_date > '2016-12-16 18:23:39 +0500') LIMIT 1
+  [1m[36mDiscount Load (0.3ms)[0m  [1mSELECT "discounts".* FROM "discounts" WHERE "discounts"."vendor_id" = 1 AND "discounts"."applies_to" = 'Location' AND "discounts"."location_id" IS NULL AND (start_date < '2016-12-16 18:23:39 +0500' AND end_date > '2016-12-16 18:23:39 +0500') LIMIT 1[0m
+  [1m[35mDiscount Load (0.3ms)[0m  SELECT "discounts".* FROM "discounts" WHERE "discounts"."vendor_id" = 1 AND "discounts"."applies_to" = 'Item' AND "discounts"."item_sku" = '32' AND (start_date < '2016-12-16 18:23:39 +0500' AND end_date > '2016-12-16 18:23:39 +0500') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  UPDATE "order_items" SET "total_cents" = 4800, "tax_amount_cents" = 800, "updated_at" = '2016-12-16 13:23:39.213364' WHERE "order_items"."id" = 2
+  [1m[36m (9.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  SELECT SUM("order_items"."total_cents") AS sum_id FROM "order_items" WHERE "order_items"."order_id" = 4
+  [1m[36m (0.3ms)[0m  [1mSELECT SUM("order_items"."tax_amount_cents") AS sum_id FROM "order_items" WHERE "order_items"."order_id" = 4[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mUPDATE "orders" SET "tax_amount_cents" = 800, "total_cents" = 4800, "updated_at" = '2016-12-16 13:23:39.229347' WHERE "orders"."id" = 4[0m
+  [1m[35m (10.2ms)[0m  COMMIT
+  [1m[36mDrawer Load (0.3ms)[0m  [1mSELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = 4
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_orders_update_pos_display_js_erb__3219685564188910541_70175035084820 at /home/appsgenii/projects/pos/app/views/orders/update_pos_display.js.erb:55)
+  Rendered shared/_messagesjs.js.erb (0.1ms)
+  Rendered orders/update_pos_display.js.erb (4.3ms)
+Completed 200 OK in 191ms (Views: 8.1ms | ActiveRecord: 59.2ms)
+
+
+Started GET "/orders/getItem?id=2" for 127.0.0.1 at 2016-12-16 18:23:39 +0500
+Processing by OrdersController#getItem as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (0.7ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.3ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.4ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35mOrderItem Load (0.5ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mItem Load (0.8ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 32 LIMIT 1[0m
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:23:39 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"display_change", "order_id"=>"4", "paymentTotal"=>"0", "ototal"=>"48", "change"=>"0", "called_from"=>"update_pos_display"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.9ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (1.1ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (1.0ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.6ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 16ms (Views: 0.8ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:23:46 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"complete_order_show", "order_id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (2.6ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (2.0ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (1.1ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (1.3ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 22ms (Views: 0.4ms | ActiveRecord: 7.6ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:23:46 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"add_payment_method", "order_id"=>"4", "value"=>"pmid2"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (1.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (2.3ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.5ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (1.0ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 20ms (Views: 0.5ms | ActiveRecord: 5.9ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:23:46 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"display_change", "order_id"=>"4", "paymentTotal"=>"48", "ototal"=>"48", "change"=>"0", "called_from"=>"function add_payment_method"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (0.8ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.4ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.4ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 28ms (Views: 0.4ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:23:46 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"display_change", "order_id"=>"4", "paymentTotal"=>"48", "ototal"=>"48", "change"=>"0", "called_from"=>"function complete_order_show"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.7ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.4ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (1.2ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 16ms (Views: 2.2ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:23:55 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"display_change", "order_id"=>"4", "paymentTotal"=>"50", "ototal"=>"48", "change"=>"2", "called_from"=>"pieces-button 50"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.3ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (0.8ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.9ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.6ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 14ms (Views: 0.5ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:23:55 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"pieces-button", "value"=>"50", "order_id"=>"4"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.4ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.7ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.3ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.9ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/orders/complete" for 127.0.0.1 at 2016-12-16 18:24:17 +0500
+Processing by OrdersController#complete as */*
+  Parameters: {"order_id"=>"4", "change"=>"NaN", "print"=>"false", "payment_method_items"=>{"pmid2"=>{"id"=>"2", "name"=>"Card00", "cash"=>"null", "amount"=>"50"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (1.1ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (0.8ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.3ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.5ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.4ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND "orders"."completed_at" IS NULL AND "orders"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mDrawer Load (0.3ms)[0m  SELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  UPDATE "orders" SET "completed_at" = '2016-12-16 13:24:17.926451', "updated_at" = '2016-12-16 13:24:17.929729' WHERE "orders"."id" = 4
+  [1m[36m (24.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrderItem Load (0.6ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 32 LIMIT 1[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."part_id" = 32
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."child_id" = 32 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "item_stocks" WHERE "item_stocks"."item_id" = 32
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "item_stocks" WHERE "item_stocks"."item_id" = 32[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mVendor Load (0.5ms)[0m  [1mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND (sku = '32' AND NOT id = 32)
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 31 LIMIT 1[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 30 LIMIT 1
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = '31' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."child_id" = 31 AND (sku != '32')
+  [1m[36mItemType Load (0.3ms)[0m  [1mSELECT "item_types".* FROM "item_types" WHERE "item_types"."vendor_id" = 1 AND "item_types"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND (sku = '32' AND NOT id = 32)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 31 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 30 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."child_id" = 32 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = '31' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."child_id" = 31 AND (sku != '32')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "item_types".* FROM "item_types" WHERE "item_types"."vendor_id" = 1 AND "item_types"."id" = 1 LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mUPDATE "items" SET "quantity" = 19.0, "updated_at" = '2016-12-16 13:24:17.985254' WHERE "items"."id" = 32[0m
+  [1m[35m (10.3ms)[0m  COMMIT
+  [1m[36mOrderItem Load (0.6ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4 AND "order_items"."behavior" = 'gift_card' AND "order_items"."activated" IS NULL[0m
+  [1m[35mOrderItem Load (0.6ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4 AND "order_items"."behavior" = 'gift_card' AND "order_items"."activated" = 't'
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "payment_method_items" WHERE "payment_method_items"."order_id" = 4 AND "payment_method_items"."unpaid" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "payment_method_items" WHERE "payment_method_items"."order_id" = 4 AND "payment_method_items"."quote" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT SUM("payment_method_items"."amount_cents") AS sum_id FROM "payment_method_items" WHERE "payment_method_items"."order_id" = 4 AND "payment_method_items"."unpaid" IS NULL AND "payment_method_items"."quote" IS NULL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mUPDATE "orders" SET "paid" = 't', "paid_at" = '2016-12-16 13:24:18.005442', "updated_at" = '2016-12-16 13:24:18.007198' WHERE "orders"."id" = 4[0m
+  [1m[35m (5.1ms)[0m  COMMIT
+  [1m[36mSQL (6.8ms)[0m  [1mUPDATE "order_items" SET "completed_at" = '2016-12-16 13:24:17.926451', "paid_at" = '2016-12-16 13:24:18.005442', "paid" = 't', "is_proforma" = NULL, "is_quote" = NULL, "is_unpaid" = NULL, "user_id" = 1, "drawer_id" = 1 WHERE "order_items"."order_id" = 4[0m
+  [1m[35mVendor Load (0.6ms)[0m  SELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+hash_id is already set.
+  [1m[35m (0.4ms)[0m  UPDATE "vendors" SET "largest_order_number" = 2, "updated_at" = '2016-12-16 13:24:18.024564', "unused_order_numbers" = '--- []
+
+', "unused_quote_numbers" = '--- []
+
+' WHERE "vendors"."id" = 1
+  [1m[36m (12.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mUPDATE "orders" SET "nr" = 2, "updated_at" = '2016-12-16 13:24:18.040532' WHERE "orders"."id" = 4[0m
+  [1m[35m (4.7ms)[0m  COMMIT
+  [1m[36mDrawer Load (0.4ms)[0m  [1mSELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "orders" ("buy_order", "cash_cents", "cash_register_id", "change_cents", "company_id", "completed_at", "created_at", "currency", "customer_id", "delivery_note_comment", "destination_country_id", "drawer_id", "hidden", "hidden_at", "hidden_by", "invoice_comment", "is_proforma", "is_quote", "is_unpaid", "lc_amount_cents", "lc_points", "location_id", "noncash_cents", "nr", "origin_country_id", "paid", "paid_at", "payment_due", "payment_total_cents", "proforma_order_id", "qnr", "rebate", "rebate_amount_cents", "sale_type_id", "sku", "subscription", "subscription_interval", "subscription_last", "subscription_next", "subscription_order_id", "subscription_start", "tag", "tax", "tax_amount_cents", "tax_profile_id", "total_cents", "updated_at", "user_id", "vendor_id", "was_printed") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32, $33, $34, $35, $36, $37, $38, $39, $40, $41, $42, $43, $44, $45, $46, $47, $48, $49, $50) RETURNING "id"[0m  [["buy_order", nil], ["cash_cents", 0], ["cash_register_id", 2], ["change_cents", 0], ["company_id", 1], ["completed_at", nil], ["created_at", Fri, 16 Dec 2016 14:24:18 CET +01:00], ["currency", "USD"], ["customer_id", nil], ["delivery_note_comment", nil], ["destination_country_id", nil], ["drawer_id", 1], ["hidden", nil], ["hidden_at", nil], ["hidden_by", nil], ["invoice_comment", nil], ["is_proforma", nil], ["is_quote", nil], ["is_unpaid", nil], ["lc_amount_cents", 0], ["lc_points", nil], ["location_id", nil], ["noncash_cents", 0], ["nr", nil], ["origin_country_id", nil], ["paid", nil], ["paid_at", nil], ["payment_due", nil], ["payment_total_cents", 0], ["proforma_order_id", nil], ["qnr", nil], ["rebate", nil], ["rebate_amount_cents", 0], ["sale_type_id", nil], ["sku", nil], ["subscription", nil], ["subscription_interval", nil], ["subscription_last", nil], ["subscription_next", nil], ["subscription_order_id", nil], ["subscription_start", nil], ["tag", nil], ["tax", nil], ["tax_amount_cents", 0], ["tax_profile_id", nil], ["total_cents", 0], ["updated_at", Fri, 16 Dec 2016 14:24:18 CET +01:00], ["user_id", 1], ["vendor_id", 1], ["was_printed", nil]]
+  [1m[35m (11.1ms)[0m  COMMIT
+  [1m[36mVendor Load (0.7ms)[0m  [1mSELECT "vendors".* FROM "vendors" WHERE "vendors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRole Load (0.4ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles"."id" = "roles_users"."role_id" WHERE "roles_users"."user_id" = 1[0m
+  [1m[35mUserLogin Load (0.4ms)[0m  SELECT "user_logins".* FROM "user_logins" WHERE "user_logins"."user_id" = 1 ORDER BY "user_logins"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "user_logins".* FROM "user_logins" WHERE "user_logins"."user_id" = 1 ORDER BY "user_logins"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  UPDATE "users" SET "current_order_id" = 5, "updated_at" = '2016-12-16 13:24:18.069069' WHERE "users"."id" = 1
+  [1m[36m (9.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = 5
+  [1m[36mOrder Load (0.6ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND "orders"."completed_at" IS NULL ORDER BY updated_at DESC LIMIT 5[0m
+  [1m[35mCashRegister Load (0.4ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.6ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND (completed_at IS NOT NULL) ORDER BY nr DESC LIMIT 5
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered orders/_last_orders.html.haml (14.9ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_orders_complete_js_erb___1419426700987267376_70174901855760 at /home/appsgenii/projects/pos/app/views/orders/complete.js.erb:13)
+  Rendered shared/_messagesjs.js.erb (0.1ms)
+  Rendered orders/complete.js.erb (20.7ms)
+Completed 200 OK in 193ms (Views: 22.4ms | ActiveRecord: 107.6ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:24:18 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"get:complete_order_ajax:callback", "order_id"=>"5", "require_password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (1.1ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (1.1ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.6ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 18ms (Views: 0.5ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/orders/log" for 127.0.0.1 at 2016-12-16 18:24:19 +0500
+Processing by OrdersController#log as */*
+  Parameters: {"log_action"=>"complete_order_hide", "order_id"=>"5"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (1.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (1.2ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.5ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.4ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 15ms (Views: 0.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/cash_registers/end_of_day" for 127.0.0.1 at 2016-12-16 18:24:21 +0500
+Processing by CashRegistersController#end_of_day as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (0.7ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.4ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (1.1ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35mDrawer Load (0.9ms)[0m  SELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1
+  [1m[36mDrawer Load (0.4ms)[0m  [1mSELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cash_registers/end_of_day.html.erb within layouts/application (5.1ms)
+  [1m[35mShipper Load (0.5ms)[0m  SELECT "shippers".* FROM "shippers" WHERE "shippers"."vendor_id" = 1
+  [1m[36mVendor Load (0.7ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."vendor_id" = 1
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."vendor_id" = 1[0m
+  [1m[35mItemType Load (0.3ms)[0m  SELECT "item_types".* FROM "item_types" WHERE "item_types"."vendor_id" = 1
+  [1m[36mSaleType Load (0.2ms)[0m  [1mSELECT "sale_types".* FROM "sale_types" WHERE "sale_types"."vendor_id" = 1[0m
+  [1m[35mCountry Load (0.2ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."vendor_id" = 1
+  [1m[36mPaymentMethod Load (0.3ms)[0m  [1mSELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL AND "payment_methods"."unpaid" IS NULL AND "payment_methods"."quote" IS NULL ORDER BY name ASC[0m
+  [1m[35mPaymentMethod Load (0.3ms)[0m  SELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL ORDER BY name ASC
+  [1m[36mTaxProfile Load (0.2ms)[0m  [1mSELECT "tax_profiles".* FROM "tax_profiles" WHERE "tax_profiles"."vendor_id" = 1[0m
+  Rendered shared/_application_js.html.erb (16.7ms)
+  Rendered shared/_generic_search.html.haml (0.3ms)
+  Rendered shared/_header_menu.html.erb (2.2ms)
+  [1m[35mTransactionTag Load (0.3ms)[0m  SELECT "transaction_tags".* FROM "transaction_tags" WHERE "transaction_tags"."vendor_id" = 1
+  Rendered shared/_dt_tags.html.erb (1.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "users_vendors" ON "users"."id" = "users_vendors"."user_id" WHERE "users_vendors"."vendor_id" = 1[0m
+  [1m[35mDrawerTransaction Load (0.5ms)[0m  SELECT "drawer_transactions".* FROM "drawer_transactions" WHERE "drawer_transactions"."vendor_id" = 1 ORDER BY "drawer_transactions"."id" DESC LIMIT 1
+  Rendered shared/_cash_drop.html.erb (6.1ms)
+  Rendered shared/_clockin.html.haml (0.1ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_shared__messages_html_erb___3810052703388824826_70175209678100 at /home/appsgenii/projects/pos/app/views/shared/_messages.html.erb:2)
+  Rendered shared/_messagesjs.js.erb (0.1ms)
+  Rendered shared/_messages.html.erb (1.4ms)
+Completed 200 OK in 138ms (Views: 120.4ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/vendors/sales_statistics" for 127.0.0.1 at 2016-12-16 18:24:22 +0500
+Processing by VendorsController#sales_statistics as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1[0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36mVendor Load (0.8ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1[0m
+  [1m[35mPlugin Load (0.3ms)[0m  SELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1
+  [1m[36mCashRegister Load (0.4ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT category_id, item_id, sku, SUM(total_cents) as sum, SUM(quantity) as quantity FROM order_items WHERE vendor_id = 1 AND completed_at BETWEEN '2016-12-16 00:00:00' AND '2016-12-16 23:59:59' GROUP BY sku,category_id, item_id
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."vendor_id" = 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."id" = 43 LIMIT 1
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."vendor_id" = 1 AND "categories"."id" = 5 LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."id" = 32 LIMIT 1
+  Rendered vendors/sales_statistics.html.haml within layouts/application (97.1ms)
+  [1m[36mShipper Load (0.4ms)[0m  [1mSELECT "shippers".* FROM "shippers" WHERE "shippers"."vendor_id" = 1[0m
+  [1m[35mVendor Load (0.7ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."vendor_id" = 1[0m
+  [1m[35mItemType Load (0.4ms)[0m  SELECT "item_types".* FROM "item_types" WHERE "item_types"."vendor_id" = 1
+  [1m[36mSaleType Load (0.3ms)[0m  [1mSELECT "sale_types".* FROM "sale_types" WHERE "sale_types"."vendor_id" = 1[0m
+  [1m[35mCountry Load (0.4ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."vendor_id" = 1
+  [1m[36mPaymentMethod Load (0.5ms)[0m  [1mSELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL AND "payment_methods"."unpaid" IS NULL AND "payment_methods"."quote" IS NULL ORDER BY name ASC[0m
+  [1m[35mPaymentMethod Load (0.3ms)[0m  SELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL ORDER BY name ASC
+  [1m[36mTaxProfile Load (0.3ms)[0m  [1mSELECT "tax_profiles".* FROM "tax_profiles" WHERE "tax_profiles"."vendor_id" = 1[0m
+  [1m[35mDrawer Load (0.3ms)[0m  SELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1
+  Rendered shared/_application_js.html.erb (22.7ms)
+  Rendered shared/_generic_search.html.haml (0.2ms)
+  Rendered shared/_header_menu.html.erb (2.2ms)
+  [1m[36mTransactionTag Load (0.4ms)[0m  [1mSELECT "transaction_tags".* FROM "transaction_tags" WHERE "transaction_tags"."vendor_id" = 1[0m
+  Rendered shared/_dt_tags.html.erb (1.3ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" INNER JOIN "users_vendors" ON "users"."id" = "users_vendors"."user_id" WHERE "users_vendors"."vendor_id" = 1
+  [1m[36mDrawerTransaction Load (0.4ms)[0m  [1mSELECT "drawer_transactions".* FROM "drawer_transactions" WHERE "drawer_transactions"."vendor_id" = 1 ORDER BY "drawer_transactions"."id" DESC LIMIT 1[0m
+  Rendered shared/_cash_drop.html.erb (5.2ms)
+  Rendered shared/_clockin.html.haml (0.1ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_shared__messages_html_erb___3810052703388824826_70175209678100 at /home/appsgenii/projects/pos/app/views/shared/_messages.html.erb:2)
+  Rendered shared/_messagesjs.js.erb (0.0ms)
+  Rendered shared/_messages.html.erb (0.7ms)
+Completed 200 OK in 232ms (Views: 212.6ms | ActiveRecord: 10.3ms)

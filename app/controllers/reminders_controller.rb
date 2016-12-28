@@ -2,7 +2,7 @@ class RemindersController < ApplicationController
 
 	def index
 		if params[:keyword].blank?
-			@items = Item.where("quantity <= ? OR expiry_date <= ? OR expiry_date IS NULL", 5, Date.today + 5.day)
+			@items = Item.where("quantity = ? OR expiry_date <= ? OR expiry_date IS NULL", 0, Date.today + 5.day)
 		else
 			@items = Item.where("lower(name) like ?", "%#{params[:keyword]}%".downcase)
 		end
