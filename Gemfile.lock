@@ -28,7 +28,6 @@ GEM
     activesupport (3.2.6)
       i18n (~> 0.6)
       multi_json (~> 1.0)
-    addressable (2.3.8)
     arel (3.0.3)
     builder (3.0.4)
     coffee-rails (3.2.2)
@@ -51,19 +50,9 @@ GEM
     escper (1.2.1)
       rmagick
       serialport
-    excon (0.45.4)
     execjs (2.0.2)
     haml (4.0.0)
       tilt
-    heroku (3.12.1)
-      heroku-api (~> 0.3.19)
-      launchy (>= 0.3.2)
-      netrc (~> 0.7.7)
-      rest-client (= 1.6.7)
-      rubyzip (= 0.9.9)
-    heroku-api (0.3.23)
-      excon (~> 0.44)
-      multi_json (~> 1.8)
     hike (1.2.3)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
@@ -79,8 +68,6 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kramdown (0.13.7)
-    launchy (2.4.3)
-      addressable (~> 2.3)
     libv8 (3.11.8.17)
     mail (2.4.4)
       i18n (>= 0.4.0)
@@ -106,7 +93,6 @@ GEM
     mysql2 (0.3.14)
     net-http-digest_auth (1.4)
     net-http-persistent (2.9)
-    netrc (0.7.9)
     nokogiri (1.5.5)
     ntlm-http (0.1.1)
     pg (0.18.4)
@@ -137,8 +123,6 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.5)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
     rmagick (2.13.4)
     rubyzip (0.9.9)
     sass (3.1.19)
@@ -176,7 +160,6 @@ DEPENDENCIES
   debugger
   escper (= 1.2.1)
   haml (= 4.0.0)
-  heroku
   i18n-js
   jquery-rails (= 2.0.2)
   json (= 1.7.3)

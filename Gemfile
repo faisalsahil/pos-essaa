@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
+# ruby '1.9.3'
 # The following gems are already part of Debian Wheezy and do NOT cause a dependency to the online API of rubygems.org
 gem 'rails', '3.2.6'
 gem 'rake', '0.9.2.2'
@@ -14,7 +14,7 @@ gem 'nokogiri', '1.5.5'
 gem 'json', '1.7.3'
 gem 'serialport', '1.1.0'
 gem 'mechanize'
-gem 'heroku'
+# gem 'heroku'
 group :production do
    gem 'pg'
 end

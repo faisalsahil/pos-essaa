@@ -58,3 +58,8 @@
   <% @date = Time.now %>
   <span style="font-size:100px;"><%= @date.strftime("#{@date.day}-#{@date.month}-%Y")%></span>
 </div>
+
+<div id="day_div">
+  <% @date = Time.now %>
+  <span style="font-size:80px;"><%= @date.strftime("%A")%></span>
+</div>
