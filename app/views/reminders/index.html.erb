@@ -46,11 +46,11 @@
         </td>
         <td id="pos-table-left-column-items" class="pos-table-left-column-items">
           <% if item.expiry_date.present? && item.expiry_date <= Date.today %>
-            <div class="editmedone editme pointer no-select" style="background-color: yellow;color: black;">
+            <div class="editmedone editme pointer no-select" style="background-color: red;">
               <%= item.try(:expiry_date) %>
             </div>
           <% elsif  item.expiry_date.present? && item.expiry_date <= Date.today + 1.month %>
-            <div class="editmedone editme pointer no-select" style="background-color: red;">
+            <div class="editmedone editme pointer no-select" style="background-color: yellow;color: black;">
               <%= item.try(:expiry_date) %>
             </div>
           <% else %>
