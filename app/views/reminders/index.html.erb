@@ -34,7 +34,7 @@
           <%= item.name %>
         </td>
         <td id="pos-table-left-column-items" class="pos-table-left-column-items">
-          <% if item.quantity.present? && item.quantity <= 5 %>
+          <% if item.quantity.present? && item.quantity == 0 %>
             <div class="editmedone editme pointer no-select" style="background-color: red;">
               <%= item.try(:quantity) %>
             </div>
@@ -45,7 +45,11 @@
           <% end %>  
         </td>
         <td id="pos-table-left-column-items" class="pos-table-left-column-items">
-          <% if item.expiry_date.present? && item.expiry_date <= Date.today + 5.day %>
+          <% if item.expiry_date.present? && item.expiry_date <= Date.today %>
+            <div class="editmedone editme pointer no-select" style="background-color: yellow;color: black;">
+              <%= item.try(:expiry_date) %>
+            </div>
+          <% elsif  item.expiry_date.present? && item.expiry_date <= Date.today + 1.month %>
             <div class="editmedone editme pointer no-select" style="background-color: red;">
               <%= item.try(:expiry_date) %>
             </div>

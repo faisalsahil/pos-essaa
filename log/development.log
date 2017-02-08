@@ -1594,3 +1594,1440 @@ Served asset /dropzone.js - 200 OK (2ms)
 
 Started GET "/assets/print.css?body=1" for 127.0.0.1 at 2017-02-06 22:17:12 +0500
 Served asset /print.css - 200 OK (3ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-08 16:41:50 +0500
+Connecting to database specified by database.yml
+Processing by OrdersController#new as HTML
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :fetch_current_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-08 16:41:53 +0500
+Processing by OrdersController#new as HTML
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :fetch_current_user rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2017-02-08 16:41:53 +0500
+Processing by SessionsController#new as HTML
+  [1m[36mCompany Load (46.9ms)[0m  [1mSELECT "companies".* FROM "companies" LIMIT 1[0m
+  [1m[35mVendor Load (52.7ms)[0m  SELECT "vendors".* FROM "vendors" WHERE "vendors"."company_id" = 1 LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (4.9ms)
+  Rendered shared/_clockin.html.haml (2.1ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_shared__messages_html_erb___1894693055948561287_70213320894320 at /home/appsgenii/projects/pos/app/views/shared/_messages.html.erb:2)
+  Rendered shared/_messagesjs.js.erb (0.6ms)
+  Rendered shared/_messages.html.erb (2.3ms)
+Completed 200 OK in 1476ms (Views: 799.6ms | ActiveRecord: 143.7ms)
+
+
+Started GET "/assets/ui-min.css?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /ui-min.css - 200 OK (4ms)
+
+
+Started GET "/assets/workstation.css?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /workstation.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /jquery.js - 200 OK (67ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /jquery-ui.js - 200 OK (5ms)
+
+
+Started GET "/assets/generic.css?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /generic.css - 200 OK (2ms)
+
+
+Started GET "/assets/dropzone.css?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /dropzone.css - 200 OK (8ms)
+
+
+Started GET "/assets/sprintf.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /sprintf.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/documentready.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /documentready.js - 200 OK (1ms)
+
+
+Started GET "/assets/invoices.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /invoices.js - 200 OK (2ms)
+
+
+Started GET "/assets/user_logins.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /user_logins.js - 200 OK (2ms)
+
+
+Started GET "/assets/math.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /math.js - 200 OK (2ms)
+
+
+Started GET "/assets/buttons.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /buttons.js - 200 OK (2ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /items.js - 200 OK (4ms)
+
+
+Started GET "/assets/debug.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /debug.js - 200 OK (2ms)
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /customers.js - 200 OK (2ms)
+
+
+Started GET "/assets/focus.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /focus.js - 200 OK (1ms)
+
+
+Started GET "/assets/inplace_edit.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /inplace_edit.js - 200 OK (4ms)
+
+
+Started GET "/assets/onscreenkeyboard.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /onscreenkeyboard.js - 200 OK (2ms)
+
+
+Started GET "/assets/salor_bin.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /salor_bin.js - 200 OK (1ms)
+
+
+Started GET "/assets/inventory.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /inventory.js - 200 OK (4ms)
+
+
+Started GET "/assets/shared.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:54 +0500
+Served asset /shared.js - 200 OK (2ms)
+
+
+Started GET "/assets/pos_core.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /pos_core.js - 200 OK (2ms)
+
+
+Started GET "/assets/refund.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /refund.js - 200 OK (4ms)
+
+
+Started GET "/assets/shipments.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /shipments.js - 200 OK (1ms)
+
+
+Started GET "/assets/shippers.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /shippers.js - 200 OK (1ms)
+
+
+Started GET "/assets/coin_calculator.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /coin_calculator.js - 200 OK (1ms)
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /search.js - 200 OK (61ms)
+
+
+Started GET "/assets/complete-order-payment.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /complete-order-payment.js - 200 OK (3ms)
+
+
+Started GET "/assets/complete-order-change.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /complete-order-change.js - 200 OK (1ms)
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /messages.js - 200 OK (5ms)
+
+
+Started GET "/assets/globals.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /globals.js - 200 OK (3ms)
+
+
+Started GET "/assets/complete-order.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /complete-order.js - 200 OK (1ms)
+
+
+Started GET "/assets/drawer-transaction.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /drawer-transaction.js - 200 OK (3ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /session.js - 200 OK (2ms)
+
+
+Started GET "/assets/translations.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /translations.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.modcoder.excolor.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /jquery.modcoder.excolor.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.keyboard.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /jquery.keyboard.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.checkbox.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /jquery.checkbox.js - 200 OK (3ms)
+
+
+Started GET "/assets/jsclock-0.8.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /jsclock-0.8.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /application.js - 200 OK (87ms)
+
+
+Started GET "/assets/jquery.ui.datepicker-en.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /jquery.ui.datepicker-en.js - 200 OK (1ms)
+
+
+Started GET "/assets/dropzone.js?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /dropzone.js - 200 OK (2ms)
+
+
+Started GET "/assets/print.css?body=1" for 127.0.0.1 at 2017-02-08 16:41:55 +0500
+Served asset /print.css - 200 OK (4ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2017-02-08 16:41:58 +0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TwWKuMA4J6vAf0Ob/2+iKKkJpB9gNZk+54jse9s/mr8=", "code"=>"000"}
+  [1m[36mCompany Load (0.4ms)[0m  [1mSELECT "companies".* FROM "companies" LIMIT 1[0m
+  [1m[35mUser Load (34.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."company_id" = 1 AND "users"."encrypted_password" = '2ac9a6746aca543af8dff39894cfe8173afba21eb01c6fae33d52947222855ef' LIMIT 1
+  [1m[36mVendor Load (1.4ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRole Load (10.6ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles"."id" = "roles_users"."role_id" WHERE "roles_users"."user_id" = 1[0m
+  [1m[35mUserLogin Load (8.2ms)[0m  SELECT "user_logins".* FROM "user_logins" WHERE "user_logins"."user_id" = 1 ORDER BY "user_logins"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "user_logins".* FROM "user_logins" WHERE "user_logins"."user_id" = 1 ORDER BY "user_logins"."id" DESC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  UPDATE "users" SET "sign_in_count" = 16, "current_sign_in_at" = '2017-02-08 11:41:58.340285', "updated_at" = '2017-02-08 11:41:58.479751' WHERE "users"."id" = 1
+  [1m[36m (22.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 483ms (ActiveRecord: 117.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-08 16:41:58 +0500
+Processing by OrdersController#new as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.7ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.8ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (16.8ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (33.3ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" IS NULL LIMIT 1
+  [1m[36mCashRegister Load (1.5ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mOrder Load (5.4ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND "orders"."completed_at" IS NULL AND "orders"."id" = 5 LIMIT 1[0m
+  [1m[35mOrder Load (0.9ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND (completed_at IS NOT NULL) ORDER BY completed_at DESC LIMIT 1
+  [1m[36m (71.7ms)[0m  [1mSELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = 5[0m
+  [1m[35mOrderItem Load (0.7ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4
+  [1m[36mItem Load (123.9ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 32 LIMIT 1[0m
+  Rendered orders/_menu.html.erb (1.7ms)
+  [1m[35mCategory Load (19.4ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."vendor_id" = 1 AND "categories"."button_category" = 't' ORDER BY position
+  [1m[36mButton Load (15.1ms)[0m  [1mSELECT "buttons".* FROM "buttons" WHERE "buttons"."category_id" = 8 ORDER BY position[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU11' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU12' LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU13' LIMIT 1
+  [1m[36mButton Load (0.3ms)[0m  [1mSELECT "buttons".* FROM "buttons" WHERE "buttons"."category_id" = 7 ORDER BY position[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU03' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU04' LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU10' LIMIT 1
+  [1m[36mButton Load (0.3ms)[0m  [1mSELECT "buttons".* FROM "buttons" WHERE "buttons"."category_id" = 6 ORDER BY position[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU00' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU01' LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU02' LIMIT 1
+  [1m[36mButton Load (0.3ms)[0m  [1mSELECT "buttons".* FROM "buttons" WHERE "buttons"."category_id" = 5 ORDER BY position[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION0' LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION1' LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION2' LIMIT 1
+  [1m[36mItem Load (1.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION3' LIMIT 1[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION4' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION7' LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'THR0' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'THR1' LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'THR2' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'PIECE' LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'PACK' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'CARTON' LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'WEIGHITEM' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'MUSTCHANGEPRICE' LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'DEFAULTBUYBACK' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'BUYBACKCHANGEPRICE' LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'G000000000000' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'TESTCOUPON0' LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'TESTCOUPON1' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'TESTCOUPON2' LIMIT 1[0m
+  Rendered buttons/_popup.html.haml (142.7ms)
+  Rendered shared/_search.html.erb (2.0ms)
+  Rendered orders/_complete_order.html.erb (1.7ms)
+  [1m[35mOrder Load (0.6ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND "orders"."completed_at" IS NULL ORDER BY updated_at DESC LIMIT 5
+  [1m[36mCashRegister Load (0.3ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mOrder Load (0.4ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND (completed_at IS NOT NULL) ORDER BY nr DESC LIMIT 5[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered orders/_last_orders.html.haml (16.9ms)
+  Rendered orders/new.html.erb within layouts/application (594.6ms)
+  [1m[35mShipper Load (13.9ms)[0m  SELECT "shippers".* FROM "shippers" WHERE "shippers"."vendor_id" = 1
+  [1m[36mVendor Load (0.8ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."vendor_id" = 1
+  [1m[36mLocation Load (163.5ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."vendor_id" = 1[0m
+  [1m[35mItemType Load (43.7ms)[0m  SELECT "item_types".* FROM "item_types" WHERE "item_types"."vendor_id" = 1
+  [1m[36mSaleType Load (0.9ms)[0m  [1mSELECT "sale_types".* FROM "sale_types" WHERE "sale_types"."vendor_id" = 1[0m
+  [1m[35mCountry Load (0.9ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."vendor_id" = 1
+  [1m[36mPaymentMethod Load (1.1ms)[0m  [1mSELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL AND "payment_methods"."unpaid" IS NULL AND "payment_methods"."quote" IS NULL ORDER BY name ASC[0m
+  [1m[35mPaymentMethod Load (0.6ms)[0m  SELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL ORDER BY name ASC
+  [1m[36mTaxProfile Load (1.2ms)[0m  [1mSELECT "tax_profiles".* FROM "tax_profiles" WHERE "tax_profiles"."vendor_id" = 1[0m
+  [1m[35mDrawer Load (16.4ms)[0m  SELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1
+  Rendered shared/_application_js.html.erb (593.0ms)
+  Rendered shared/_generic_search.html.haml (1.6ms)
+  Rendered shared/_header_menu.html.erb (40.9ms)
+  [1m[36mTransactionTag Load (8.7ms)[0m  [1mSELECT "transaction_tags".* FROM "transaction_tags" WHERE "transaction_tags"."vendor_id" = 1[0m
+  Rendered shared/_dt_tags.html.erb (76.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" INNER JOIN "users_vendors" ON "users"."id" = "users_vendors"."user_id" WHERE "users_vendors"."vendor_id" = 1
+  [1m[36mDrawerTransaction Load (15.5ms)[0m  [1mSELECT "drawer_transactions".* FROM "drawer_transactions" WHERE "drawer_transactions"."vendor_id" = 1 ORDER BY "drawer_transactions"."id" DESC LIMIT 1[0m
+  Rendered shared/_cash_drop.html.erb (111.4ms)
+  Rendered shared/_clockin.html.haml (0.1ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_shared__messages_html_erb___1894693055948561287_70213320894320 at /home/appsgenii/projects/pos/app/views/shared/_messages.html.erb:2)
+  Rendered shared/_messagesjs.js.erb (0.2ms)
+  Rendered shared/_messages.html.erb (1.1ms)
+Completed 200 OK in 2124ms (Views: 876.8ms | ActiveRecord: 650.4ms)
+
+
+Started GET "/reminders" for 127.0.0.1 at 2017-02-08 16:48:15 +0500
+Processing by RemindersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.5ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.3ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.5ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mItem Load (29.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE (quantity = 0 OR Date(expiry_date) <= '2017-03-08' OR expiry_date IS NULL) LIMIT 100 OFFSET 0[0m
+  [1m[35mPurchaseItem Load (19.6ms)[0m  SELECT "purchase_items".* FROM "purchase_items" 
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE (quantity = 0 OR Date(expiry_date) <= '2017-03-08' OR expiry_date IS NULL)[0m
+  Rendered reminders/index.html.erb within layouts/application (26.1ms)
+  [1m[35mShipper Load (0.4ms)[0m  SELECT "shippers".* FROM "shippers" WHERE "shippers"."vendor_id" = 1
+  [1m[36mVendor Load (0.6ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1[0m
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."vendor_id" = 1
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."vendor_id" = 1[0m
+  [1m[35mItemType Load (0.3ms)[0m  SELECT "item_types".* FROM "item_types" WHERE "item_types"."vendor_id" = 1
+  [1m[36mSaleType Load (0.3ms)[0m  [1mSELECT "sale_types".* FROM "sale_types" WHERE "sale_types"."vendor_id" = 1[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."vendor_id" = 1
+  [1m[36mPaymentMethod Load (0.4ms)[0m  [1mSELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL AND "payment_methods"."unpaid" IS NULL AND "payment_methods"."quote" IS NULL ORDER BY name ASC[0m
+  [1m[35mPaymentMethod Load (0.3ms)[0m  SELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL ORDER BY name ASC
+  [1m[36mTaxProfile Load (0.3ms)[0m  [1mSELECT "tax_profiles".* FROM "tax_profiles" WHERE "tax_profiles"."vendor_id" = 1[0m
+  [1m[35mDrawer Load (0.3ms)[0m  SELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1
+  Rendered shared/_application_js.html.erb (16.4ms)
+  Rendered shared/_generic_search.html.haml (0.2ms)
+  Rendered shared/_header_menu.html.erb (1.6ms)
+  [1m[36mTransactionTag Load (0.4ms)[0m  [1mSELECT "transaction_tags".* FROM "transaction_tags" WHERE "transaction_tags"."vendor_id" = 1[0m
+  Rendered shared/_dt_tags.html.erb (1.3ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" INNER JOIN "users_vendors" ON "users"."id" = "users_vendors"."user_id" WHERE "users_vendors"."vendor_id" = 1
+  [1m[36mDrawerTransaction Load (1.1ms)[0m  [1mSELECT "drawer_transactions".* FROM "drawer_transactions" WHERE "drawer_transactions"."vendor_id" = 1 ORDER BY "drawer_transactions"."id" DESC LIMIT 1[0m
+  Rendered shared/_cash_drop.html.erb (8.1ms)
+  Rendered shared/_clockin.html.haml (0.1ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_shared__messages_html_erb___1894693055948561287_70213320894320 at /home/appsgenii/projects/pos/app/views/shared/_messages.html.erb:2)
+  Rendered shared/_messagesjs.js.erb (0.0ms)
+  Rendered shared/_messages.html.erb (0.6ms)
+Completed 200 OK in 231ms (Views: 107.1ms | ActiveRecord: 60.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:16 +0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:16 +0500
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:16 +0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sprintf.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:16 +0500
+Served asset /sprintf.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inplace_edit.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:16 +0500
+Served asset /inplace_edit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inventory.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:16 +0500
+Served asset /inventory.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/onscreenkeyboard.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:16 +0500
+Served asset /onscreenkeyboard.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/salor_bin.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:16 +0500
+Served asset /salor_bin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pos_core.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:16 +0500
+Served asset /pos_core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:16 +0500
+Served asset /shared.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.keyboard.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:16 +0500
+Served asset /jquery.keyboard.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.modcoder.excolor.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:16 +0500
+Served asset /jquery.modcoder.excolor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropzone.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:16 +0500
+Served asset /dropzone.js - 304 Not Modified (0ms)
+
+
+Started GET "/reminders" for 127.0.0.1 at 2017-02-08 16:48:59 +0500
+Processing by RemindersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.6ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.4ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.5ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mItem Load (1.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE (quantity = 0 OR Date(expiry_date) <= '2017-03-08' OR expiry_date IS NULL) LIMIT 100 OFFSET 0[0m
+  [1m[35mPurchaseItem Load (0.5ms)[0m  SELECT "purchase_items".* FROM "purchase_items" 
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE (quantity = 0 OR Date(expiry_date) <= '2017-03-08' OR expiry_date IS NULL)[0m
+  Rendered reminders/index.html.erb within layouts/application (16.4ms)
+  [1m[35mShipper Load (0.3ms)[0m  SELECT "shippers".* FROM "shippers" WHERE "shippers"."vendor_id" = 1
+  [1m[36mVendor Load (0.5ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."vendor_id" = 1
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."vendor_id" = 1[0m
+  [1m[35mItemType Load (0.3ms)[0m  SELECT "item_types".* FROM "item_types" WHERE "item_types"."vendor_id" = 1
+  [1m[36mSaleType Load (0.3ms)[0m  [1mSELECT "sale_types".* FROM "sale_types" WHERE "sale_types"."vendor_id" = 1[0m
+  [1m[35mCountry Load (0.2ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."vendor_id" = 1
+  [1m[36mPaymentMethod Load (0.5ms)[0m  [1mSELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL AND "payment_methods"."unpaid" IS NULL AND "payment_methods"."quote" IS NULL ORDER BY name ASC[0m
+  [1m[35mPaymentMethod Load (0.3ms)[0m  SELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL ORDER BY name ASC
+  [1m[36mTaxProfile Load (0.3ms)[0m  [1mSELECT "tax_profiles".* FROM "tax_profiles" WHERE "tax_profiles"."vendor_id" = 1[0m
+  [1m[35mDrawer Load (0.3ms)[0m  SELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1
+  Rendered shared/_application_js.html.erb (18.8ms)
+  Rendered shared/_generic_search.html.haml (0.2ms)
+  Rendered shared/_header_menu.html.erb (1.9ms)
+  [1m[36mTransactionTag Load (0.5ms)[0m  [1mSELECT "transaction_tags".* FROM "transaction_tags" WHERE "transaction_tags"."vendor_id" = 1[0m
+  Rendered shared/_dt_tags.html.erb (2.0ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" INNER JOIN "users_vendors" ON "users"."id" = "users_vendors"."user_id" WHERE "users_vendors"."vendor_id" = 1
+  [1m[36mDrawerTransaction Load (0.3ms)[0m  [1mSELECT "drawer_transactions".* FROM "drawer_transactions" WHERE "drawer_transactions"."vendor_id" = 1 ORDER BY "drawer_transactions"."id" DESC LIMIT 1[0m
+  Rendered shared/_cash_drop.html.erb (5.6ms)
+  Rendered shared/_clockin.html.haml (0.1ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_shared__messages_html_erb___1894693055948561287_70213320894320 at /home/appsgenii/projects/pos/app/views/shared/_messages.html.erb:2)
+  Rendered shared/_messagesjs.js.erb (0.1ms)
+  Rendered shared/_messages.html.erb (0.7ms)
+Completed 200 OK in 183ms (Views: 109.9ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:59 +0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:59 +0500
+Served asset /jquery-ui.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/inplace_edit.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:59 +0500
+Served asset /inplace_edit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:59 +0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sprintf.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:59 +0500
+Served asset /sprintf.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/onscreenkeyboard.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:59 +0500
+Served asset /onscreenkeyboard.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/salor_bin.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:59 +0500
+Served asset /salor_bin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inventory.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:59 +0500
+Served asset /inventory.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shared.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:59 +0500
+Served asset /shared.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pos_core.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:59 +0500
+Served asset /pos_core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.modcoder.excolor.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:59 +0500
+Served asset /jquery.modcoder.excolor.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/dropzone.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:59 +0500
+Served asset /dropzone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.keyboard.js?body=1" for 127.0.0.1 at 2017-02-08 16:48:59 +0500
+Served asset /jquery.keyboard.js - 304 Not Modified (0ms)
+
+
+Started GET "/reminders" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Processing by RemindersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.6ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.3ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.4ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mItem Load (1.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE (quantity = 0 OR Date(expiry_date) <= '2017-03-08' OR expiry_date IS NULL) LIMIT 100 OFFSET 0[0m
+  [1m[35mPurchaseItem Load (0.3ms)[0m  SELECT "purchase_items".* FROM "purchase_items" 
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE (quantity = 0 OR Date(expiry_date) <= '2017-03-08' OR expiry_date IS NULL)[0m
+  Rendered reminders/index.html.erb within layouts/application (62.4ms)
+  [1m[35mShipper Load (0.5ms)[0m  SELECT "shippers".* FROM "shippers" WHERE "shippers"."vendor_id" = 1
+  [1m[36mVendor Load (0.7ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1[0m
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."vendor_id" = 1
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."vendor_id" = 1[0m
+  [1m[35mItemType Load (0.3ms)[0m  SELECT "item_types".* FROM "item_types" WHERE "item_types"."vendor_id" = 1
+  [1m[36mSaleType Load (0.3ms)[0m  [1mSELECT "sale_types".* FROM "sale_types" WHERE "sale_types"."vendor_id" = 1[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."vendor_id" = 1
+  [1m[36mPaymentMethod Load (0.4ms)[0m  [1mSELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL AND "payment_methods"."unpaid" IS NULL AND "payment_methods"."quote" IS NULL ORDER BY name ASC[0m
+  [1m[35mPaymentMethod Load (0.3ms)[0m  SELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL ORDER BY name ASC
+  [1m[36mTaxProfile Load (0.3ms)[0m  [1mSELECT "tax_profiles".* FROM "tax_profiles" WHERE "tax_profiles"."vendor_id" = 1[0m
+  [1m[35mDrawer Load (0.4ms)[0m  SELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1
+  Rendered shared/_application_js.html.erb (64.0ms)
+  Rendered shared/_generic_search.html.haml (0.3ms)
+  Rendered shared/_header_menu.html.erb (2.6ms)
+  [1m[36mTransactionTag Load (0.4ms)[0m  [1mSELECT "transaction_tags".* FROM "transaction_tags" WHERE "transaction_tags"."vendor_id" = 1[0m
+  Rendered shared/_dt_tags.html.erb (1.3ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" INNER JOIN "users_vendors" ON "users"."id" = "users_vendors"."user_id" WHERE "users_vendors"."vendor_id" = 1
+  [1m[36mDrawerTransaction Load (0.3ms)[0m  [1mSELECT "drawer_transactions".* FROM "drawer_transactions" WHERE "drawer_transactions"."vendor_id" = 1 ORDER BY "drawer_transactions"."id" DESC LIMIT 1[0m
+  Rendered shared/_cash_drop.html.erb (4.7ms)
+  Rendered shared/_clockin.html.haml (0.1ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_shared__messages_html_erb___1894693055948561287_70213320894320 at /home/appsgenii/projects/pos/app/views/shared/_messages.html.erb:2)
+  Rendered shared/_messagesjs.js.erb (0.0ms)
+  Rendered shared/_messages.html.erb (0.6ms)
+Completed 200 OK in 170ms (Views: 148.8ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/assets/ui-min.css?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /ui-min.css - 200 OK (3ms)
+
+
+Started GET "/assets/dropzone.css?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /dropzone.css - 200 OK (0ms)
+
+
+Started GET "/assets/workstation.css?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /workstation.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /jquery-ui.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /jquery.js - 200 OK (6ms)
+
+
+Started GET "/assets/generic.css?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /generic.css - 200 OK (0ms)
+
+
+Started GET "/assets/sprintf.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /sprintf.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/documentready.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /documentready.js - 200 OK (0ms)
+
+
+Started GET "/assets/invoices.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /invoices.js - 200 OK (0ms)
+
+
+Started GET "/assets/user_logins.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /user_logins.js - 200 OK (0ms)
+
+
+Started GET "/assets/math.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /math.js - 200 OK (0ms)
+
+
+Started GET "/assets/buttons.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /buttons.js - 200 OK (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /items.js - 200 OK (0ms)
+
+
+Started GET "/assets/focus.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /focus.js - 200 OK (0ms)
+
+
+Started GET "/assets/debug.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /debug.js - 200 OK (0ms)
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /customers.js - 200 OK (0ms)
+
+
+Started GET "/assets/inplace_edit.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /inplace_edit.js - 200 OK (0ms)
+
+
+Started GET "/assets/onscreenkeyboard.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /onscreenkeyboard.js - 200 OK (0ms)
+
+
+Started GET "/assets/salor_bin.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /salor_bin.js - 200 OK (0ms)
+
+
+Started GET "/assets/inventory.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /inventory.js - 200 OK (0ms)
+
+
+Started GET "/assets/shared.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /shared.js - 200 OK (0ms)
+
+
+Started GET "/assets/pos_core.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /pos_core.js - 200 OK (0ms)
+
+
+Started GET "/assets/refund.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /refund.js - 200 OK (0ms)
+
+
+Started GET "/assets/shipments.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /shipments.js - 200 OK (0ms)
+
+
+Started GET "/assets/shippers.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /shippers.js - 200 OK (0ms)
+
+
+Started GET "/assets/coin_calculator.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /coin_calculator.js - 200 OK (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /search.js - 200 OK (1ms)
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /messages.js - 200 OK (0ms)
+
+
+Started GET "/assets/globals.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /globals.js - 200 OK (0ms)
+
+
+Started GET "/assets/complete-order-payment.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /complete-order-payment.js - 200 OK (0ms)
+
+
+Started GET "/assets/complete-order-change.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /complete-order-change.js - 200 OK (0ms)
+
+
+Started GET "/assets/translations.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /translations.js - 200 OK (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /session.js - 200 OK (0ms)
+
+
+Started GET "/assets/complete-order.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /complete-order.js - 200 OK (0ms)
+
+
+Started GET "/assets/drawer-transaction.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /drawer-transaction.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.modcoder.excolor.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /jquery.modcoder.excolor.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.keyboard.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /jquery.keyboard.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.checkbox.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /jquery.checkbox.js - 200 OK (1ms)
+
+
+Started GET "/assets/jsclock-0.8.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /jsclock-0.8.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.ui.datepicker-en.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /jquery.ui.datepicker-en.js - 200 OK (0ms)
+
+
+Started GET "/assets/dropzone.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /dropzone.js - 200 OK (0ms)
+
+
+Started GET "/assets/print.css?body=1" for 127.0.0.1 at 2017-02-08 16:51:32 +0500
+Served asset /print.css - 200 OK (0ms)
+
+
+Started GET "/reminders" for 127.0.0.1 at 2017-02-08 16:51:46 +0500
+Processing by RemindersController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (0.5ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.3ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.3ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mItem Load (1.0ms)[0m  [1mSELECT "items".* FROM "items" WHERE (quantity = 0 OR Date(expiry_date) <= '2017-03-08' OR expiry_date IS NULL) LIMIT 100 OFFSET 0[0m
+  [1m[35mPurchaseItem Load (0.3ms)[0m  SELECT "purchase_items".* FROM "purchase_items" 
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE (quantity = 0 OR Date(expiry_date) <= '2017-03-08' OR expiry_date IS NULL)[0m
+  Rendered reminders/index.html.erb within layouts/application (62.6ms)
+  [1m[35mShipper Load (0.4ms)[0m  SELECT "shippers".* FROM "shippers" WHERE "shippers"."vendor_id" = 1
+  [1m[36mVendor Load (0.6ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."vendor_id" = 1
+  [1m[36mLocation Load (1.3ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."vendor_id" = 1[0m
+  [1m[35mItemType Load (0.5ms)[0m  SELECT "item_types".* FROM "item_types" WHERE "item_types"."vendor_id" = 1
+  [1m[36mSaleType Load (0.3ms)[0m  [1mSELECT "sale_types".* FROM "sale_types" WHERE "sale_types"."vendor_id" = 1[0m
+  [1m[35mCountry Load (0.2ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."vendor_id" = 1
+  [1m[36mPaymentMethod Load (0.3ms)[0m  [1mSELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL AND "payment_methods"."unpaid" IS NULL AND "payment_methods"."quote" IS NULL ORDER BY name ASC[0m
+  [1m[35mPaymentMethod Load (0.3ms)[0m  SELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL ORDER BY name ASC
+  [1m[36mTaxProfile Load (0.4ms)[0m  [1mSELECT "tax_profiles".* FROM "tax_profiles" WHERE "tax_profiles"."vendor_id" = 1[0m
+  [1m[35mDrawer Load (0.3ms)[0m  SELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1
+  Rendered shared/_application_js.html.erb (62.8ms)
+  Rendered shared/_generic_search.html.haml (0.2ms)
+  Rendered shared/_header_menu.html.erb (3.0ms)
+  [1m[36mTransactionTag Load (0.6ms)[0m  [1mSELECT "transaction_tags".* FROM "transaction_tags" WHERE "transaction_tags"."vendor_id" = 1[0m
+  Rendered shared/_dt_tags.html.erb (2.4ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" INNER JOIN "users_vendors" ON "users"."id" = "users_vendors"."user_id" WHERE "users_vendors"."vendor_id" = 1
+  [1m[36mDrawerTransaction Load (0.4ms)[0m  [1mSELECT "drawer_transactions".* FROM "drawer_transactions" WHERE "drawer_transactions"."vendor_id" = 1 ORDER BY "drawer_transactions"."id" DESC LIMIT 1[0m
+  Rendered shared/_cash_drop.html.erb (6.2ms)
+  Rendered shared/_clockin.html.haml (0.1ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_shared__messages_html_erb___1894693055948561287_70213320894320 at /home/appsgenii/projects/pos/app/views/shared/_messages.html.erb:2)
+  Rendered shared/_messagesjs.js.erb (0.0ms)
+  Rendered shared/_messages.html.erb (0.7ms)
+Completed 200 OK in 174ms (Views: 151.0ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/assets/ui-min.css?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /ui-min.css - 200 OK (0ms)
+
+
+Started GET "/assets/generic.css?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /generic.css - 200 OK (0ms)
+
+
+Started GET "/assets/dropzone.css?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /dropzone.css - 200 OK (0ms)
+
+
+Started GET "/assets/workstation.css?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /workstation.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /jquery-ui.js - 200 OK (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/documentready.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /documentready.js - 200 OK (0ms)
+
+
+Started GET "/assets/invoices.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /invoices.js - 200 OK (0ms)
+
+
+Started GET "/assets/sprintf.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /sprintf.js - 200 OK (0ms)
+
+
+Started GET "/assets/user_logins.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /user_logins.js - 200 OK (0ms)
+
+
+Started GET "/assets/math.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /math.js - 200 OK (0ms)
+
+
+Started GET "/assets/buttons.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /buttons.js - 200 OK (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /items.js - 200 OK (0ms)
+
+
+Started GET "/assets/focus.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /focus.js - 200 OK (0ms)
+
+
+Started GET "/assets/debug.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /debug.js - 200 OK (0ms)
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /customers.js - 200 OK (3ms)
+
+
+Started GET "/assets/inplace_edit.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /inplace_edit.js - 200 OK (0ms)
+
+
+Started GET "/assets/onscreenkeyboard.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /onscreenkeyboard.js - 200 OK (0ms)
+
+
+Started GET "/assets/salor_bin.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /salor_bin.js - 200 OK (1ms)
+
+
+Started GET "/assets/inventory.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /inventory.js - 200 OK (0ms)
+
+
+Started GET "/assets/shared.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /shared.js - 200 OK (2ms)
+
+
+Started GET "/assets/pos_core.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /pos_core.js - 200 OK (0ms)
+
+
+Started GET "/assets/refund.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /refund.js - 200 OK (0ms)
+
+
+Started GET "/assets/shipments.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /shipments.js - 200 OK (0ms)
+
+
+Started GET "/assets/shippers.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /shippers.js - 200 OK (0ms)
+
+
+Started GET "/assets/coin_calculator.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /coin_calculator.js - 200 OK (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /search.js - 200 OK (0ms)
+
+
+Started GET "/assets/globals.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /globals.js - 200 OK (0ms)
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /messages.js - 200 OK (0ms)
+
+
+Started GET "/assets/complete-order-payment.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /complete-order-payment.js - 200 OK (0ms)
+
+
+Started GET "/assets/complete-order-change.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /complete-order-change.js - 200 OK (0ms)
+
+
+Started GET "/assets/complete-order.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /complete-order.js - 200 OK (0ms)
+
+
+Started GET "/assets/drawer-transaction.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /drawer-transaction.js - 200 OK (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /session.js - 200 OK (0ms)
+
+
+Started GET "/assets/translations.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /translations.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.modcoder.excolor.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /jquery.modcoder.excolor.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.keyboard.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /jquery.keyboard.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.checkbox.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /jquery.checkbox.js - 200 OK (0ms)
+
+
+Started GET "/assets/jsclock-0.8.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /jsclock-0.8.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /application.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.ui.datepicker-en.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /jquery.ui.datepicker-en.js - 200 OK (0ms)
+
+
+Started GET "/assets/dropzone.js?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /dropzone.js - 200 OK (0ms)
+
+
+Started GET "/assets/print.css?body=1" for 127.0.0.1 at 2017-02-08 16:51:47 +0500
+Served asset /print.css - 200 OK (0ms)
+
+
+Started GET "/reminders" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Processing by RemindersController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (2.4ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.4ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.5ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mItem Load (1.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE (quantity = 0 OR Date(expiry_date) <= '2017-03-08' OR expiry_date IS NULL) LIMIT 100 OFFSET 0[0m
+  [1m[35mPurchaseItem Load (0.5ms)[0m  SELECT "purchase_items".* FROM "purchase_items" 
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE (quantity = 0 OR Date(expiry_date) <= '2017-03-08' OR expiry_date IS NULL)[0m
+  Rendered reminders/index.html.erb within layouts/application (75.0ms)
+  [1m[35mShipper Load (0.3ms)[0m  SELECT "shippers".* FROM "shippers" WHERE "shippers"."vendor_id" = 1
+  [1m[36mVendor Load (0.5ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."vendor_id" = 1
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."vendor_id" = 1[0m
+  [1m[35mItemType Load (0.2ms)[0m  SELECT "item_types".* FROM "item_types" WHERE "item_types"."vendor_id" = 1
+  [1m[36mSaleType Load (0.2ms)[0m  [1mSELECT "sale_types".* FROM "sale_types" WHERE "sale_types"."vendor_id" = 1[0m
+  [1m[35mCountry Load (0.2ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."vendor_id" = 1
+  [1m[36mPaymentMethod Load (0.6ms)[0m  [1mSELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL AND "payment_methods"."unpaid" IS NULL AND "payment_methods"."quote" IS NULL ORDER BY name ASC[0m
+  [1m[35mPaymentMethod Load (0.5ms)[0m  SELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL ORDER BY name ASC
+  [1m[36mTaxProfile Load (0.3ms)[0m  [1mSELECT "tax_profiles".* FROM "tax_profiles" WHERE "tax_profiles"."vendor_id" = 1[0m
+  [1m[35mDrawer Load (0.3ms)[0m  SELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1
+  Rendered shared/_application_js.html.erb (18.4ms)
+  Rendered shared/_generic_search.html.haml (0.2ms)
+  Rendered shared/_header_menu.html.erb (2.8ms)
+  [1m[36mTransactionTag Load (0.4ms)[0m  [1mSELECT "transaction_tags".* FROM "transaction_tags" WHERE "transaction_tags"."vendor_id" = 1[0m
+  Rendered shared/_dt_tags.html.erb (1.3ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" INNER JOIN "users_vendors" ON "users"."id" = "users_vendors"."user_id" WHERE "users_vendors"."vendor_id" = 1
+  [1m[36mDrawerTransaction Load (0.5ms)[0m  [1mSELECT "drawer_transactions".* FROM "drawer_transactions" WHERE "drawer_transactions"."vendor_id" = 1 ORDER BY "drawer_transactions"."id" DESC LIMIT 1[0m
+  Rendered shared/_cash_drop.html.erb (5.1ms)
+  Rendered shared/_clockin.html.haml (0.1ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_shared__messages_html_erb___1894693055948561287_70213320894320 at /home/appsgenii/projects/pos/app/views/shared/_messages.html.erb:2)
+  Rendered shared/_messagesjs.js.erb (0.0ms)
+  Rendered shared/_messages.html.erb (0.5ms)
+Completed 200 OK in 190ms (Views: 164.2ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/assets/ui-min.css?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /ui-min.css - 200 OK (0ms)
+
+
+Started GET "/assets/generic.css?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /generic.css - 200 OK (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/workstation.css?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /workstation.css - 200 OK (0ms)
+
+
+Started GET "/assets/dropzone.css?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /dropzone.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /jquery-ui.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/sprintf.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /sprintf.js - 200 OK (2ms)
+
+
+Started GET "/assets/documentready.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /documentready.js - 200 OK (0ms)
+
+
+Started GET "/assets/invoices.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /invoices.js - 200 OK (0ms)
+
+
+Started GET "/assets/user_logins.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /user_logins.js - 200 OK (0ms)
+
+
+Started GET "/assets/math.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /math.js - 200 OK (0ms)
+
+
+Started GET "/assets/buttons.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /buttons.js - 200 OK (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /items.js - 200 OK (0ms)
+
+
+Started GET "/assets/debug.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /debug.js - 200 OK (2ms)
+
+
+Started GET "/assets/focus.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /focus.js - 200 OK (0ms)
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /customers.js - 200 OK (0ms)
+
+
+Started GET "/assets/inplace_edit.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /inplace_edit.js - 200 OK (0ms)
+
+
+Started GET "/assets/onscreenkeyboard.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /onscreenkeyboard.js - 200 OK (0ms)
+
+
+Started GET "/assets/salor_bin.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /salor_bin.js - 200 OK (0ms)
+
+
+Started GET "/assets/inventory.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /inventory.js - 200 OK (0ms)
+
+
+Started GET "/assets/shared.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /shared.js - 200 OK (0ms)
+
+
+Started GET "/assets/pos_core.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /pos_core.js - 200 OK (0ms)
+
+
+Started GET "/assets/refund.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /refund.js - 200 OK (62ms)
+
+
+Started GET "/assets/coin_calculator.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /coin_calculator.js - 200 OK (0ms)
+
+
+Started GET "/assets/shippers.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /shippers.js - 200 OK (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /search.js - 200 OK (0ms)
+
+
+Started GET "/assets/shipments.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /shipments.js - 200 OK (0ms)
+
+
+Started GET "/assets/globals.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /globals.js - 200 OK (0ms)
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /messages.js - 200 OK (0ms)
+
+
+Started GET "/assets/complete-order-payment.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /complete-order-payment.js - 200 OK (0ms)
+
+
+Started GET "/assets/complete-order-change.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /complete-order-change.js - 200 OK (0ms)
+
+
+Started GET "/assets/complete-order.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /complete-order.js - 200 OK (0ms)
+
+
+Started GET "/assets/drawer-transaction.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /drawer-transaction.js - 200 OK (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /session.js - 200 OK (0ms)
+
+
+Started GET "/assets/translations.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /translations.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.modcoder.excolor.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /jquery.modcoder.excolor.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.keyboard.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:04 +0500
+Served asset /jquery.keyboard.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.checkbox.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:05 +0500
+Served asset /jquery.checkbox.js - 200 OK (0ms)
+
+
+Started GET "/assets/jsclock-0.8.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:05 +0500
+Served asset /jsclock-0.8.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:05 +0500
+Served asset /application.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.ui.datepicker-en.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:05 +0500
+Served asset /jquery.ui.datepicker-en.js - 200 OK (0ms)
+
+
+Started GET "/assets/dropzone.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:05 +0500
+Served asset /dropzone.js - 200 OK (0ms)
+
+
+Started GET "/assets/print.css?body=1" for 127.0.0.1 at 2017-02-08 16:52:05 +0500
+Served asset /print.css - 200 OK (0ms)
+
+
+Started GET "/reminders" for 127.0.0.1 at 2017-02-08 16:52:11 +0500
+Processing by RemindersController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (0.4ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (1.0ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (5.3ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.7ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mItem Load (2.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE (quantity = 0 OR Date(expiry_date) <= '2017-03-08' OR expiry_date IS NULL) LIMIT 100 OFFSET 0[0m
+  [1m[35mPurchaseItem Load (1.7ms)[0m  SELECT "purchase_items".* FROM "purchase_items" 
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE (quantity = 0 OR Date(expiry_date) <= '2017-03-08' OR expiry_date IS NULL)[0m
+  Rendered reminders/index.html.erb within layouts/application (82.4ms)
+  [1m[35mShipper Load (0.8ms)[0m  SELECT "shippers".* FROM "shippers" WHERE "shippers"."vendor_id" = 1
+  [1m[36mVendor Load (1.5ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."vendor_id" = 1
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."vendor_id" = 1[0m
+  [1m[35mItemType Load (0.2ms)[0m  SELECT "item_types".* FROM "item_types" WHERE "item_types"."vendor_id" = 1
+  [1m[36mSaleType Load (0.2ms)[0m  [1mSELECT "sale_types".* FROM "sale_types" WHERE "sale_types"."vendor_id" = 1[0m
+  [1m[35mCountry Load (0.6ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."vendor_id" = 1
+  [1m[36mPaymentMethod Load (0.4ms)[0m  [1mSELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL AND "payment_methods"."unpaid" IS NULL AND "payment_methods"."quote" IS NULL ORDER BY name ASC[0m
+  [1m[35mPaymentMethod Load (0.3ms)[0m  SELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL ORDER BY name ASC
+  [1m[36mTaxProfile Load (0.3ms)[0m  [1mSELECT "tax_profiles".* FROM "tax_profiles" WHERE "tax_profiles"."vendor_id" = 1[0m
+  [1m[35mDrawer Load (0.3ms)[0m  SELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1
+  Rendered shared/_application_js.html.erb (20.9ms)
+  Rendered shared/_generic_search.html.haml (0.2ms)
+  Rendered shared/_header_menu.html.erb (3.0ms)
+  [1m[36mTransactionTag Load (0.3ms)[0m  [1mSELECT "transaction_tags".* FROM "transaction_tags" WHERE "transaction_tags"."vendor_id" = 1[0m
+  Rendered shared/_dt_tags.html.erb (1.4ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" INNER JOIN "users_vendors" ON "users"."id" = "users_vendors"."user_id" WHERE "users_vendors"."vendor_id" = 1
+  [1m[36mDrawerTransaction Load (0.6ms)[0m  [1mSELECT "drawer_transactions".* FROM "drawer_transactions" WHERE "drawer_transactions"."vendor_id" = 1 ORDER BY "drawer_transactions"."id" DESC LIMIT 1[0m
+  Rendered shared/_cash_drop.html.erb (6.5ms)
+  Rendered shared/_clockin.html.haml (0.1ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_shared__messages_html_erb___1894693055948561287_70213320894320 at /home/appsgenii/projects/pos/app/views/shared/_messages.html.erb:2)
+  Rendered shared/_messagesjs.js.erb (0.1ms)
+  Rendered shared/_messages.html.erb (0.8ms)
+Completed 200 OK in 220ms (Views: 184.6ms | ActiveRecord: 19.5ms)
+
+
+Started GET "/assets/ui-min.css?body=1" for 127.0.0.1 at 2017-02-08 16:52:11 +0500
+Served asset /ui-min.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:11 +0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/dropzone.css?body=1" for 127.0.0.1 at 2017-02-08 16:52:11 +0500
+Served asset /dropzone.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /jquery-ui.js - 200 OK (1ms)
+
+
+Started GET "/assets/generic.css?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /generic.css - 200 OK (0ms)
+
+
+Started GET "/assets/workstation.css?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /workstation.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/sprintf.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /sprintf.js - 200 OK (0ms)
+
+
+Started GET "/assets/documentready.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /documentready.js - 200 OK (0ms)
+
+
+Started GET "/assets/invoices.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /invoices.js - 200 OK (0ms)
+
+
+Started GET "/assets/user_logins.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /user_logins.js - 200 OK (2ms)
+
+
+Started GET "/assets/math.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /math.js - 200 OK (0ms)
+
+
+Started GET "/assets/buttons.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /buttons.js - 200 OK (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /items.js - 200 OK (0ms)
+
+
+Started GET "/assets/debug.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /debug.js - 200 OK (0ms)
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /customers.js - 200 OK (0ms)
+
+
+Started GET "/assets/focus.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /focus.js - 200 OK (0ms)
+
+
+Started GET "/assets/inplace_edit.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /inplace_edit.js - 200 OK (0ms)
+
+
+Started GET "/assets/salor_bin.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /salor_bin.js - 200 OK (0ms)
+
+
+Started GET "/assets/onscreenkeyboard.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /onscreenkeyboard.js - 200 OK (0ms)
+
+
+Started GET "/assets/inventory.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /inventory.js - 200 OK (0ms)
+
+
+Started GET "/assets/shared.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /shared.js - 200 OK (0ms)
+
+
+Started GET "/assets/pos_core.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /pos_core.js - 200 OK (0ms)
+
+
+Started GET "/assets/refund.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /refund.js - 200 OK (0ms)
+
+
+Started GET "/assets/shipments.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /shipments.js - 200 OK (7ms)
+
+
+Started GET "/assets/shippers.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /shippers.js - 200 OK (0ms)
+
+
+Started GET "/assets/coin_calculator.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /coin_calculator.js - 200 OK (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /search.js - 200 OK (0ms)
+
+
+Started GET "/assets/globals.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /globals.js - 200 OK (0ms)
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /messages.js - 200 OK (0ms)
+
+
+Started GET "/assets/complete-order-payment.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /complete-order-payment.js - 200 OK (0ms)
+
+
+Started GET "/assets/complete-order-change.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /complete-order-change.js - 200 OK (0ms)
+
+
+Started GET "/assets/complete-order.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /complete-order.js - 200 OK (0ms)
+
+
+Started GET "/assets/drawer-transaction.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /drawer-transaction.js - 200 OK (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /session.js - 200 OK (0ms)
+
+
+Started GET "/assets/translations.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /translations.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.modcoder.excolor.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /jquery.modcoder.excolor.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.keyboard.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /jquery.keyboard.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.checkbox.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /jquery.checkbox.js - 200 OK (0ms)
+
+
+Started GET "/assets/jsclock-0.8.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /jsclock-0.8.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.ui.datepicker-en.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /jquery.ui.datepicker-en.js - 200 OK (0ms)
+
+
+Started GET "/assets/dropzone.js?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /dropzone.js - 200 OK (0ms)
+
+
+Started GET "/assets/print.css?body=1" for 127.0.0.1 at 2017-02-08 16:52:12 +0500
+Served asset /print.css - 200 OK (2ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2017-02-08 16:56:02 +0500
+Processing by OrdersController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id_hash" = 'bSWIHGt7jQEtyeRwMLemG' LIMIT 1
+  [1m[36mCompany Load (1.1ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35mVendor Load (2.1ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1 AND "vendors"."id" = 1 LIMIT 1
+  [1m[36mPlugin Load (0.4ms)[0m  [1mSELECT "plugins".* FROM "plugins" WHERE "plugins"."vendor_id" = 1[0m
+  [1m[35mCashRegister Load (0.5ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."vendor_id" = 1 AND "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "companies".* FROM "companies" WHERE "companies"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (0.4ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND "orders"."completed_at" IS NULL AND "orders"."id" = 5 LIMIT 1
+  [1m[36mOrder Load (0.4ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND (completed_at IS NOT NULL) ORDER BY completed_at DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = 5
+  [1m[36mOrderItem Load (0.4ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 32 LIMIT 1
+  Rendered orders/_menu.html.erb (0.4ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."vendor_id" = 1 AND "categories"."button_category" = 't' ORDER BY position[0m
+  [1m[35mButton Load (0.4ms)[0m  SELECT "buttons".* FROM "buttons" WHERE "buttons"."category_id" = 8 ORDER BY position
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU11' LIMIT 1[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU12' LIMIT 1
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU13' LIMIT 1[0m
+  [1m[35mButton Load (0.4ms)[0m  SELECT "buttons".* FROM "buttons" WHERE "buttons"."category_id" = 7 ORDER BY position
+  [1m[36mItem Load (0.7ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU03' LIMIT 1[0m
+  [1m[35mItem Load (0.8ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU04' LIMIT 1
+  [1m[36mItem Load (0.7ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU10' LIMIT 1[0m
+  [1m[35mButton Load (0.4ms)[0m  SELECT "buttons".* FROM "buttons" WHERE "buttons"."category_id" = 6 ORDER BY position
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU00' LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU01' LIMIT 1
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'SKU02' LIMIT 1[0m
+  [1m[35mButton Load (0.5ms)[0m  SELECT "buttons".* FROM "buttons" WHERE "buttons"."category_id" = 5 ORDER BY position
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION0' LIMIT 1[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION1' LIMIT 1
+  [1m[36mItem Load (0.7ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION2' LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION3' LIMIT 1
+  [1m[36mItem Load (0.7ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION4' LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'ACTION7' LIMIT 1
+  [1m[36mItem Load (0.7ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'THR0' LIMIT 1[0m
+  [1m[35mItem Load (0.7ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'THR1' LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'THR2' LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'PIECE' LIMIT 1
+  [1m[36mItem Load (1.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'PACK' LIMIT 1[0m
+  [1m[35mItem Load (0.9ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'CARTON' LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'WEIGHITEM' LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'MUSTCHANGEPRICE' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'DEFAULTBUYBACK' LIMIT 1[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'BUYBACKCHANGEPRICE' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'G000000000000' LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'TESTCOUPON0' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'TESTCOUPON1' LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."vendor_id" = 1 AND "items"."sku" = 'TESTCOUPON2' LIMIT 1
+  Rendered buttons/_popup.html.haml (56.2ms)
+  Rendered shared/_search.html.erb (0.2ms)
+  Rendered orders/_complete_order.html.erb (0.3ms)
+  [1m[36mOrder Load (0.6ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND "orders"."completed_at" IS NULL ORDER BY updated_at DESC LIMIT 5[0m
+  [1m[35mCashRegister Load (0.3ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mOrder Load (0.6ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."vendor_id" = 1 AND (completed_at IS NOT NULL) ORDER BY nr DESC LIMIT 5
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "cash_registers".* FROM "cash_registers" WHERE "cash_registers"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered orders/_last_orders.html.haml (12.1ms)
+  Rendered orders/new.html.erb within layouts/application (127.3ms)
+  [1m[36mShipper Load (0.4ms)[0m  [1mSELECT "shippers".* FROM "shippers" WHERE "shippers"."vendor_id" = 1[0m
+  [1m[35mVendor Load (0.5ms)[0m  SELECT "vendors".* FROM "vendors" INNER JOIN "users_vendors" ON "vendors"."id" = "users_vendors"."vendor_id" WHERE "users_vendors"."user_id" = 1
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."vendor_id" = 1[0m
+  [1m[35mLocation Load (0.4ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."vendor_id" = 1
+  [1m[36mItemType Load (0.3ms)[0m  [1mSELECT "item_types".* FROM "item_types" WHERE "item_types"."vendor_id" = 1[0m
+  [1m[35mSaleType Load (0.3ms)[0m  SELECT "sale_types".* FROM "sale_types" WHERE "sale_types"."vendor_id" = 1
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."vendor_id" = 1[0m
+  [1m[35mPaymentMethod Load (0.4ms)[0m  SELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL AND "payment_methods"."unpaid" IS NULL AND "payment_methods"."quote" IS NULL ORDER BY name ASC
+  [1m[36mPaymentMethod Load (0.3ms)[0m  [1mSELECT "payment_methods".* FROM "payment_methods" WHERE "payment_methods"."vendor_id" = 1 AND "payment_methods"."change" IS NULL ORDER BY name ASC[0m
+  [1m[35mTaxProfile Load (0.2ms)[0m  SELECT "tax_profiles".* FROM "tax_profiles" WHERE "tax_profiles"."vendor_id" = 1
+  [1m[36mDrawer Load (0.2ms)[0m  [1mSELECT "drawers".* FROM "drawers" WHERE "drawers"."id" = 1 LIMIT 1[0m
+  Rendered shared/_application_js.html.erb (16.0ms)
+  Rendered shared/_generic_search.html.haml (0.3ms)
+  Rendered shared/_header_menu.html.erb (4.2ms)
+  [1m[35mTransactionTag Load (0.4ms)[0m  SELECT "transaction_tags".* FROM "transaction_tags" WHERE "transaction_tags"."vendor_id" = 1
+  Rendered shared/_dt_tags.html.erb (1.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "users_vendors" ON "users"."id" = "users_vendors"."user_id" WHERE "users_vendors"."vendor_id" = 1[0m
+  [1m[35mDrawerTransaction Load (0.5ms)[0m  SELECT "drawer_transactions".* FROM "drawer_transactions" WHERE "drawer_transactions"."vendor_id" = 1 ORDER BY "drawer_transactions"."id" DESC LIMIT 1
+  Rendered shared/_cash_drop.html.erb (53.8ms)
+  Rendered shared/_clockin.html.haml (0.1ms)
+DEPRECATION WARNING: Passing the format in the template name is deprecated. Please pass render with :formats => [:js] instead. (called from _app_views_shared__messages_html_erb___1894693055948561287_70213320894320 at /home/appsgenii/projects/pos/app/views/shared/_messages.html.erb:2)
+  Rendered shared/_messagesjs.js.erb (0.0ms)
+  Rendered shared/_messages.html.erb (0.6ms)
+Completed 200 OK in 239ms (Views: 194.6ms | ActiveRecord: 33.7ms)
