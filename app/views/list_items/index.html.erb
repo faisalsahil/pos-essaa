@@ -34,7 +34,7 @@
           <%= item.name %>
         </td>
         <td>
-          <%= item.stock %>
+          <%= Item.find_by_sku(item.sku).try(:quantity) || nil %>
         </td>
         <td>
           <%= item.quantity %>
@@ -93,7 +93,7 @@
           <%= arr.name  %>
         </td>
         <td>
-          <%= arr.stock %>
+          <%= Item.find_by_sku(arr.sku).try(:quantity) || nil %>
         </td>
         <td>
           <%= arr.quantity %>
