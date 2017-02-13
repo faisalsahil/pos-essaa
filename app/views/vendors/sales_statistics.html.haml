@@ -40,24 +40,25 @@
   
   %table.striped-table2
     %tr
-      %th= t ".category"
+      %th= 'No#'
       %th= t ".item_name"
       %th SKU
       %th= t ".quantity"
+      %th= 'Stock'
       %th= t ".sum"
       /=raise @reports[:order_item_quantities_by_category].inspect 
     - total_cents = 0
-    - @reports[:order_item_quantities_by_category].each do |arr|
+    - @reports[:order_item_quantities_by_category].each_with_index do |arr,index|
       - total_cents += arr["sum"].to_i
       %tr
-        %td
-          - unless arr["category_id"].nil?
-            = @current_vendor.categories.find_by_id(arr["category_id"]).name
+        %td= "#{index+1}"
         %td= @current_vendor.items.find_by_id(arr["item_id"]).name 
         %td= arr["sku"]
         %td= number_with_precision arr["quantity"]
+        %td= Item.find_by_sku(arr['sku']).try(:quantity)
         %td= humanized_money_with_symbol Money.new(arr["sum"], @current_vendor.currency)
     %tr
+      %td
       %td
       %td
       %td
